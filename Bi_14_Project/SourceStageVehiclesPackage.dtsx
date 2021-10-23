@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="SourceStageVehiclesPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{AEB45DF2-A544-4B10-818A-65B49221BC3A}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{70DBF84C-2F58-4049-A711-1DBBCFAE4C71}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,6 +26,18 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=DESKTOP-G8316ET\MSSQLSERVER01;Initial Catalog=BI14LabProjectStageDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{94C808DA-C292-4A0D-A68A-8E39FB2A3539}"
+      DTS:ObjectName="DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-TOL1F2F\MSSQLSERVERBI;Initial Catalog=BI14LabProjectStageDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -497,7 +509,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Vehicles]</property>
+                  name="OpenRowset">[Vehicles]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -540,8 +552,8 @@
               <connections>
                 <connection
                   refId="Package\Vehicles Data Flow\StageDB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-G8316ET\MSSQLSERVER01.BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-G8316ET\MSSQLSERVER01.BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -914,8 +926,8 @@
               <connections>
                 <connection
                   refId="Package\Vehicles Data Flow\Vehicles Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -1610,13 +1622,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="192,41.6"
-          Id="Package\Vehicles Data Flow\Vehicles Flat File Source"
-          TopLeft="52.8571437572946,48.1764712638921" />
-        <NodeLayout
           Size="174.4,41.6"
           Id="Package\Vehicles Data Flow\StageDB Destination"
           TopLeft="249.285718531025,165.941178797851" />
+        <NodeLayout
+          Size="192,41.6"
+          Id="Package\Vehicles Data Flow\Vehicles Flat File Source"
+          TopLeft="52.8571437572946,48.1764712638921" />
         <EdgeLayout
           Id="Package\Vehicles Data Flow.Paths[Flat File Source Output]"
           TopLeft="148.857143757295,89.7764712638921">
