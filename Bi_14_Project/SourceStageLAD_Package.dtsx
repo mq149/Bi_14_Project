@@ -5,17 +5,29 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-TOL1F2F"
   DTS:CreatorName="DESKTOP-TOL1F2F\quany"
-  DTS:DTSID="{8A0A7AEE-FD64-473D-A342-9F445BF2BA03}"
+  DTS:DTSID="{FD7355A3-1232-4455-A8B2-38D7F37F3FA9}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="2057"
-  DTS:ObjectName="SourceStagePCD_OA_LSOA_MSOA_LAD_Package"
+  DTS:ObjectName="SourceStageLAD_Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{215737E8-5896-4D5B-A227-F36C2C52FFCC}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{D8A6C162-47E2-495E-AC14-586085674BD2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{525F0AE1-0AA9-4865-9FDF-0C42F04A22D9}"
+      DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-LCVMLLJ\LEMINH;Initial Catalog=ETL_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
       DTS:CreationName="OLEDB"
@@ -42,7 +54,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\quany\source\repos\Datasets\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU.csv">
+          DTS:ConnectionString="D:\BI\TH\Data\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -51,7 +63,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pcd7"
-              DTS:DTSID="{0CC656E3-449B-41FA-BDD2-9BB23727E909}"
+              DTS:DTSID="{CD7DB8AC-DFF2-49A8-8265-6DC1362ADBAE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -60,7 +72,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pcd8"
-              DTS:DTSID="{DB4B707C-F454-415B-9A21-BB7189AF795C}"
+              DTS:DTSID="{05082CA1-044D-4F68-AB44-6EC56591F0F5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -69,7 +81,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pcds"
-              DTS:DTSID="{F14A7D37-0D81-4741-86A8-BF15788FC006}"
+              DTS:DTSID="{00F85FA8-A44A-458E-A314-5CF34BE27C04}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -78,7 +90,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dointr"
-              DTS:DTSID="{2D5BCC84-B624-4EEE-8A21-9CC79C42109C}"
+              DTS:DTSID="{220C6057-83C7-41BA-9E1B-D7CFFB1DA405}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -87,7 +99,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="doterm"
-              DTS:DTSID="{F53222FE-99F6-49AD-8404-1E34BFD57581}"
+              DTS:DTSID="{2DF06A58-3EBA-4B3D-9A83-F2B77F9077F0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -96,7 +108,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="usertype"
-              DTS:DTSID="{7C4E163C-6926-4D71-8151-AB8F02741E5E}"
+              DTS:DTSID="{68C78587-A63B-41B5-B9C7-9781D5FAC486}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -105,7 +117,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="oa11cd"
-              DTS:DTSID="{686E6FC2-6DA9-4FC4-858F-470911DC06C7}"
+              DTS:DTSID="{CA7AC6FA-8D88-484D-9D1E-35B019812B8B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -114,7 +126,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lsoa11cd"
-              DTS:DTSID="{1E418EA1-891E-4BD6-889F-5EEE697B1DA3}"
+              DTS:DTSID="{187EC93C-3BD5-4F62-B37F-6403BFFAA72C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -123,7 +135,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="msoa11cd"
-              DTS:DTSID="{64E017A4-8D67-4270-B81A-37361E02DC30}"
+              DTS:DTSID="{F15FFFD2-68B4-4DF7-9E93-A0A1436709CF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -132,7 +144,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ladcd"
-              DTS:DTSID="{BDBCA14D-B229-4C86-A138-F58FCE66E7BB}"
+              DTS:DTSID="{64A9B631-3E3D-4552-8617-704D681B2CBC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -141,7 +153,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lsoa11nm"
-              DTS:DTSID="{11DB3FFC-517B-498B-B473-937068341DEF}"
+              DTS:DTSID="{9CE5CD1B-4145-43CE-AB96-F4BEF85FE0A8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -150,7 +162,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="msoa11nm"
-              DTS:DTSID="{AED2DBC6-6D84-4A51-85CE-4AA0696A58B2}"
+              DTS:DTSID="{1E2AF18C-3902-4DDB-AD27-A36CDEB7EF49}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -159,7 +171,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ladnm"
-              DTS:DTSID="{8354AA79-860F-44B5-80A7-FE39C98AF4B9}"
+              DTS:DTSID="{7E7FB922-74FF-43BE-9ABB-CB1A42B90F52}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -168,7 +180,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ladnmw"
-              DTS:DTSID="{69BB6E72-EEC2-4AAB-BF8B-54F4AF6A22C0}"
+              DTS:DTSID="{8F0F61DE-9943-45E5-A5E5-D5E8F0D98C12}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -642,7 +654,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[PCD_OA_LSOA_MSOA_LAD]</property>
+                  name="OpenRowset">[PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -685,8 +697,8 @@
               <connections>
                 <connection
                   refId="Package\PCD_OA_LSOA_MSOA_LAD Data Flow\StageDB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -938,7 +950,7 @@
         <NodeLayout
           Size="257.6,41.6"
           Id="Package\PCD_OA_LSOA_MSOA_LAD Data Flow"
-          TopLeft="404.285721170659,100.176471993173" />
+          TopLeft="221.428575199478,94.0588248485518" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -950,25 +962,25 @@
         <NodeLayout
           Size="247.2,41.6"
           Id="Package\PCD_OA_LSOA_MSOA_LAD Data Flow\PCD_OA_LSOA_MSOA_LAD Flat File"
-          TopLeft="291.428576391571,152.941178615531" />
+          TopLeft="168.571431442183,40.5294123331161" />
         <NodeLayout
           Size="174.4,41.6"
           Id="Package\PCD_OA_LSOA_MSOA_LAD Data Flow\StageDB Destination"
-          TopLeft="320.000005449568,291.352945262586" />
+          TopLeft="199.28571767953,146.058825577832" />
         <EdgeLayout
           Id="Package\PCD_OA_LSOA_MSOA_LAD Data Flow.Paths[Flat File Source Output]"
-          TopLeft="411.114290920569,194.541178615531">
+          TopLeft="289.328574560857,82.1294123331161">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,96.811766647055"
+              EndConnector="0,63.929413244716"
               Start="0,0"
-              End="0,89.311766647055">
+              End="0,56.429413244716">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,89.311766647055" />
+                    End="0,56.429413244716" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
