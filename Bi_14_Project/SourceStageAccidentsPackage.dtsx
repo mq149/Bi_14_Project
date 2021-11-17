@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="SourceStageAccidentsPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="63"
-  DTS:VersionGUID="{D821C304-C7FD-450E-80E7-B0C098092181}">
+  DTS:VersionBuild="64"
+  DTS:VersionGUID="{F93B4F69-57F1-4ED1-82FA-6393DD367385}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1394,13 +1394,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Output].Columns[newDate]} &gt;= @[User::LSET] &amp;&amp; #{Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Output].Columns[newDate]} &lt; @[User::CET]</property>
+                      name="Expression">#{Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Output].Columns[newDate]} &gt;= (DT_DBTIMESTAMP)"01/01/2011" &amp;&amp; #{Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Output].Columns[newDate]} &lt; (DT_DBTIMESTAMP)"01/01/2014"</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">newDate &gt;= @[User::LSET] &amp;&amp; newDate &lt; @[User::CET]</property>
+                      name="FriendlyExpression">newDate &gt;= (DT_DBTIMESTAMP)"01/01/2011" &amp;&amp; newDate &lt; (DT_DBTIMESTAMP)"01/01/2014"</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -2364,14 +2364,14 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,29.0705902193663"
+              EndConnector="0,29.070590219366"
               Start="0,0"
-              End="0,21.5705902193663">
+              End="0,21.570590219366">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.5705902193663" />
+                    End="0,21.570590219366" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2382,18 +2382,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Accidents Flow Task.Paths[Derived Column Output]"
-          TopLeft="337.157147290998,171.80000127624">
+          TopLeft="337.157147290999,171.80000127624">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.1529423454639"
+              EndConnector="0,36.152942345464"
               Start="0,0"
-              End="0,28.6529423454639">
+              End="0,28.652942345464">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.6529423454639" />
+                    End="0,28.652942345464" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

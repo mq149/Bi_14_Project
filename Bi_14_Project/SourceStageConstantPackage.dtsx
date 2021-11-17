@@ -1,0 +1,3145 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/17/2021 10:39:15 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-LCVMLLJ"
+  DTS:CreatorName="DESKTOP-LCVMLLJ\lemin"
+  DTS:DTSID="{5E0345FA-BC7B-4F8D-8243-B6BF99D48D48}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="SourceStageConstantPackage"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{0E9E573E-8B68-49F6-953D-E2895CE72918}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D0284D12-86F9-40F5-A1D7-275EF3CFB4BB}"
+      DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-LCVMLLJ\LEMINH;Initial Catalog=ETL_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{A43A449A-5C16-495F-BE3F-A8BE3306D8F0}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\BI\TH\Data\UK Accidents Data 2011-2014\UK Accidents - Codebook.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Constant Data Flow"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D4845CEC-E1F9-4377-8976-D1E92A640A1D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Constant Data Flow"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Constant Data Flow\Accident_Severity Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Accident_Severity Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Accident_Severity]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Accident_Severity Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Constant Data Flow\Accident_Severity Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Destination.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedDataType="r8"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\Constant Data Flow\Accident_Severity Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Destination.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Constant Data Flow\Accident_Severity Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      lineageId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output].Columns[label]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      dataType="i4"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Accident_Severity Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Constant Data Flow\Accident_Severity Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Accident_Severity Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Accident_Severity Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Accident_Severity Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Accident_Severity Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Accident Severity$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Accident_Severity Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      name="code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      name="label"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      dataType="r8"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      dataType="r8"
+                      lineageId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      name="code" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      name="label" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Age_Band Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Age_Band Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Age_Band]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Age_Band Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Constant Data Flow\Age_Band Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Age_Band Destination.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedDataType="r8"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\Constant Data Flow\Age_Band Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Age_Band Destination.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Constant Data Flow\Age_Band Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      lineageId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output].Columns[label]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Age_Band Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      dataType="i4"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Age_Band Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Age_Band Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Constant Data Flow\Age_Band Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Age_Band Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Age_Band Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Age_Band Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Age_Band Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Age_Band Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Age_Band Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Age Band$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Age_Band Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      name="code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      name="label"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      dataType="r8"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      dataType="r8"
+                      lineageId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      name="code" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      name="label" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Casualty_Severity Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Casualty_Severity Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Casualty_Severity]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Casualty_Severity Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Constant Data Flow\Casualty_Severity Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Destination.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedDataType="r8"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\Constant Data Flow\Casualty_Severity Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Destination.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Constant Data Flow\Casualty_Severity Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      lineageId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output].Columns[label]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      dataType="i4"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Casualty_Severity Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Constant Data Flow\Casualty_Severity Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Casualty_Severity Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Casualty_Severity Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Casualty_Severity Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Casualty_Severity Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Casualty Severity$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Casualty_Severity Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      name="code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      name="label"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      dataType="r8"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      dataType="r8"
+                      lineageId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      name="code" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      name="label" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Casualty_Type Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Casualty_Type Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Casualty_Type]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Casualty_Type Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Constant Data Flow\Casualty_Type Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Destination.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedDataType="r8"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\Constant Data Flow\Casualty_Type Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Destination.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Constant Data Flow\Casualty_Type Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      lineageId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output].Columns[label]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      dataType="i4"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Casualty_Type Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Constant Data Flow\Casualty_Type Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Casualty_Type Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Casualty_Type Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Casualty_Type Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Casualty_Type Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Casualty Type$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Casualty_Type Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      name="code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      name="label"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      dataType="r8"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      dataType="r8"
+                      lineageId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      name="code" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      name="label" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Gender Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Gender Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Gender]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Gender Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Constant Data Flow\Gender Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Gender Destination.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedDataType="r8"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\Constant Data Flow\Gender Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Gender Destination.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Constant Data Flow\Gender Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      lineageId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output].Columns[label]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Gender Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      dataType="i4"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Gender Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Gender Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Constant Data Flow\Gender Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Gender Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Gender Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Gender Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Gender Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Gender Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Gender Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Sex of Casualty$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Gender Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      name="code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      name="label"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      dataType="r8"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      dataType="r8"
+                      lineageId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      name="code" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      name="label" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Journey_Purpose Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Journey_Purpose Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Journey_Purpose]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Journey_Purpose Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Constant Data Flow\Journey_Purpose Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Destination.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedDataType="r8"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\Constant Data Flow\Journey_Purpose Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Destination.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Constant Data Flow\Journey_Purpose Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      lineageId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output].Columns[label]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      dataType="i4"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Journey_Purpose Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Constant Data Flow\Journey_Purpose Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Journey_Purpose Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Journey_Purpose Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Journey_Purpose Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Journey_Purpose Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Journey Purpose$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Journey_Purpose Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      name="code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      name="label"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      dataType="r8"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      dataType="r8"
+                      lineageId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      name="code" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      name="label" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Local_Authority_District Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Local_Authority_District Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Local_Authority_District]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Local_Authority_District Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Constant Data Flow\Local_Authority_District Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Destination.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedDataType="r8"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\Constant Data Flow\Local_Authority_District Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Destination.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Constant Data Flow\Local_Authority_District Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      lineageId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output].Columns[label]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      dataType="i4"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Local_Authority_District Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Constant Data Flow\Local_Authority_District Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Local_Authority_District Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Local_Authority_District Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Local_Authority_District Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Local_Authority_District Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Local Authority (District)$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Local_Authority_District Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      name="code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      name="label"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      dataType="r8"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      dataType="r8"
+                      lineageId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      name="code" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      name="label" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Road_Type Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Road_Type Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Road_Type]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Road_Type Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Constant Data Flow\Road_Type Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Road_Type Destination.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedDataType="r8"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\Constant Data Flow\Road_Type Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Road_Type Destination.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Constant Data Flow\Road_Type Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      lineageId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output].Columns[label]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Road_Type Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      dataType="i4"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Road_Type Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Road_Type Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Constant Data Flow\Road_Type Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Road_Type Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Road_Type Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Road_Type Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Road_Type Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Road_Type Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Road_Type Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Road Type$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Road_Type Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      name="code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      name="label"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      dataType="r8"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      dataType="r8"
+                      lineageId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      name="code" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      name="label" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Urban_or_Rural_Area Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Urban_or_Rural_Area Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Urban_or_Rural_Area]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedDataType="r8"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      lineageId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output].Columns[label]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      dataType="i4"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Urban_or_Rural_Area Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Urban Rural$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      name="code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      name="label"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      dataType="r8"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      dataType="r8"
+                      lineageId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      name="code" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      name="label" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Vehicle_Type Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Vehicle_Type Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Vehicle_Type]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Vehicle_Type Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Constant Data Flow\Vehicle_Type Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Destination.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedDataType="r8"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\Constant Data Flow\Vehicle_Type Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Destination.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Constant Data Flow\Vehicle_Type Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      lineageId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output].Columns[label]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      dataType="i4"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Destination.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Vehicle_Type Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Constant Data Flow\Vehicle_Type Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Vehicle_Type Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Vehicle_Type Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Constant Data Flow\Vehicle_Type Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Vehicle_Type Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Vehicle Type$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Constant Data Flow\Vehicle_Type Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      lineageId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      name="code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      name="label"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      dataType="r8"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      dataType="r8"
+                      lineageId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      name="code" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      name="label" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output]"
+              endId="Package\Constant Data Flow\Gender Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output1]"
+              endId="Package\Constant Data Flow\Age_Band Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output2]"
+              endId="Package\Constant Data Flow\Casualty_Severity Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output3]"
+              endId="Package\Constant Data Flow\Casualty_Type Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output4]"
+              endId="Package\Constant Data Flow\Accident_Severity Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output5]"
+              endId="Package\Constant Data Flow\Local_Authority_District Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output6]"
+              endId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output7]"
+              endId="Package\Constant Data Flow\Road_Type Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output8]"
+              endId="Package\Constant Data Flow\Journey_Purpose Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output9]"
+              endId="Package\Constant Data Flow\Vehicle_Type Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Constant Data Flow"
+          TopLeft="147.142859648685,67.2941185908334" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Constant Data Flow">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Constant Data Flow\Gender Excel Source"
+          TopLeft="40.7142864076459,13.0000001823201" />
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\Constant Data Flow\Gender Destination"
+          TopLeft="40.714286407646,102.470589672406" />
+        <EdgeLayout
+          Id="Package\Constant Data Flow.Paths[Excel Source Output]"
+          TopLeft="126.714286407646,54.6000001823201">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.8705894900855"
+              Start="0,0"
+              End="0,40.3705894900855">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.3705894900855" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="188.8,41.6"
+          Id="Package\Constant Data Flow\Age_Band Excel Source"
+          TopLeft="268.571433145173,13.0000001823201" />
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\Constant Data Flow\Age_Band Destination"
+          TopLeft="271.428576050973,104.000001458561" />
+        <EdgeLayout
+          Id="Package\Constant Data Flow.Paths[Excel Source Output1]"
+          TopLeft="362.800004598073,54.6000001823201">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.4000012762407"
+              Start="0,0"
+              End="0,41.9000012762407">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.9000012762407" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="224.8,41.6"
+          Id="Package\Constant Data Flow\Casualty_Severity Excel Source"
+          TopLeft="521.428580308448,16.0588237546307" />
+        <NodeLayout
+          Size="217.6,41.6"
+          Id="Package\Constant Data Flow\Casualty_Severity Destination"
+          TopLeft="522.857151761347,101.705883779328" />
+        <EdgeLayout
+          Id="Package\Constant Data Flow.Paths[Excel Source Output2]"
+          TopLeft="632.742866034897,57.6588237546307">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.0470600246971"
+              Start="0,0"
+              End="0,36.5470600246971">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5470600246971" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="209.6,41.6"
+          Id="Package\Constant Data Flow\Casualty_Type Excel Source"
+          TopLeft="43.5714293134455,198.058826307112" />
+        <NodeLayout
+          Size="203.2,41.6"
+          Id="Package\Constant Data Flow\Casualty_Type Destination"
+          TopLeft="42.8571435869956,292.117651155663" />
+        <EdgeLayout
+          Id="Package\Constant Data Flow.Paths[Excel Source Output3]"
+          TopLeft="146.414286450221,239.658826307112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.4588248485512"
+              Start="0,0"
+              End="0,44.9588248485512">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.9588248485512" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="224.8,41.6"
+          Id="Package\Constant Data Flow\Accident_Severity Excel Source"
+          TopLeft="315.000005364418,194.600002370161" />
+        <NodeLayout
+          Size="217.6,41.6"
+          Id="Package\Constant Data Flow\Accident_Severity Destination"
+          TopLeft="315.714291090868,284.070591860246" />
+        <EdgeLayout
+          Id="Package\Constant Data Flow.Paths[Excel Source Output4]"
+          TopLeft="425.957148227643,236.200002370161">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.8705894900853"
+              Start="0,0"
+              End="0,40.3705894900853">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.3705894900853" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="252.8,41.6"
+          Id="Package\Constant Data Flow\Local_Authority_District Excel Source"
+          TopLeft="570.714295433492,195.364708263239" />
+        <NodeLayout
+          Size="245.6,41.6"
+          Id="Package\Constant Data Flow\Local_Authority_District Destination"
+          TopLeft="580.371437828395,281.011768287936" />
+        <EdgeLayout
+          Id="Package\Constant Data Flow.Paths[Excel Source Output5]"
+          TopLeft="700.142866630944,236.964708263239">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.0470600246973"
+              Start="0,0"
+              End="0,36.5470600246973">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5470600246973" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="242.4,41.6"
+          Id="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source"
+          TopLeft="40.7428572644992,375.082357595701" />
+        <NodeLayout
+          Size="236,41.6"
+          Id="Package\Constant Data Flow\Urban_or_Rural_Area Destination"
+          TopLeft="46.7714293134456,471.282357778021" />
+        <EdgeLayout
+          Id="Package\Constant Data Flow.Paths[Excel Source Output6]"
+          TopLeft="163.357143288972,416.682357595701">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.6000001823199"
+              Start="0,0"
+              End="0,47.1000001823199">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.1000001823199" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\Constant Data Flow\Road_Type Excel Source"
+          TopLeft="347.142863054665,375.341178615531" />
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\Constant Data Flow\Road_Type Destination"
+          TopLeft="349.285720234015,473.988238822548" />
+        <EdgeLayout
+          Id="Package\Constant Data Flow.Paths[Excel Source Output7]"
+          TopLeft="443.61429164434,416.941178615531">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.0470602070172"
+              Start="0,0"
+              End="0,49.5470602070172">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5470602070172" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="221.6,41.6"
+          Id="Package\Constant Data Flow\Journey_Purpose Excel Source"
+          TopLeft="594.28572440634,374.647060936297" />
+        <NodeLayout
+          Size="215.2,41.6"
+          Id="Package\Constant Data Flow\Journey_Purpose Destination"
+          TopLeft="595.600009366444,474.82353292947" />
+        <EdgeLayout
+          Id="Package\Constant Data Flow.Paths[Excel Source Output8]"
+          TopLeft="704.142866886392,416.247060936297">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.5764719931726"
+              Start="0,0"
+              End="0,51.0764719931726">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.0764719931726" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="203.2,41.6"
+          Id="Package\Constant Data Flow\Vehicle_Type Excel Source"
+          TopLeft="70.0000005108969,547.541180985692" />
+        <NodeLayout
+          Size="196.8,41.6"
+          Id="Package\Constant Data Flow\Vehicle_Type Destination"
+          TopLeft="77.1428577753962,634.035298847245" />
+        <EdgeLayout
+          Id="Package\Constant Data Flow.Paths[Excel Source Output9]"
+          TopLeft="173.571429143147,589.141180985692">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.894117861553"
+              Start="0,0"
+              End="0,37.394117861553">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.394117861553" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Gender Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Gender Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Age_Band Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Age_Band Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Casualty_Severity Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Casualty_Severity Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Casualty_Type Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Casualty_Type Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Accident_Severity Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Accident_Severity Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Local_Authority_District Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Local_Authority_District Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Urban_or_Rural_Area Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Road_Type Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Road_Type Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Journey_Purpose Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Journey_Purpose Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Vehicle_Type Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Constant Data Flow\Vehicle_Type Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
