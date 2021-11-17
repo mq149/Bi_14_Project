@@ -11,16 +11,16 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="SourceStagePostcodesPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{8A310BAF-1C2B-4648-B63C-6ABBE5395837}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{E25508D7-2AB4-4929-9FA5-B5C293E28304}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
+      DTS:refId="Package.ConnectionManagers[Quan\MSSQLSERVERBI.BI14LabProjectStageDB]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{4EE0007A-5A49-4667-BB62-4BAAD2A27360}"
-      DTS:ObjectName="DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB">
+      DTS:ObjectName="Quan\MSSQLSERVERBI.BI14LabProjectStageDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -29,20 +29,10 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB 1]"
-      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{0A16E276-CEF8-4BE5-9966-E3F6818666F3}"
-      DTS:ObjectName="DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-TOL1F2F\MSSQLSERVERBI;Initial Catalog=BI14LabProjectStageDB;Integrated Security=True;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:refId="Package.ConnectionManagers[Quan\postcodes]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{346FCC47-CACD-47C8-B58F-2B8AE00BC360}"
-      DTS:ObjectName="Flat File Connection Manager">
+      DTS:DTSID="{B9112218-1CEC-4EB0-BEF9-4006185A11C5}"
+      DTS:ObjectName="Quan\postcodes">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -52,7 +42,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\quany\source\repos\Bi_14_Project\Datasets\postcodes.csv">
+          DTS:ConnectionString="C:\Users\quany\Documents\HCMUS I-21-22\BI\BI_Lab_Project\postcodes.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -61,7 +51,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="postcode"
-              DTS:DTSID="{C9DA5070-DA0B-4A76-8D8F-2906127B0097}"
+              DTS:DTSID="{4BDA4FD7-F8F7-4322-817C-F1A3A387199A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -70,7 +60,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="easting"
-              DTS:DTSID="{D7E92A20-4925-4927-87A4-C057450D7FE9}"
+              DTS:DTSID="{5F6680E6-9755-4597-9FDA-5CCD9A1A4A74}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -79,7 +69,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="northing"
-              DTS:DTSID="{47D43863-0DA1-4238-9BC7-DE94F46DC0E1}"
+              DTS:DTSID="{D3D26139-A1D7-40D4-9BE1-8B5A97BBD5A4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -88,7 +78,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="latitude"
-              DTS:DTSID="{D6B1A1BC-8996-4F79-874C-3F73B7BEE5D4}"
+              DTS:DTSID="{210E1E95-664E-4EB6-ABAD-D15EB0CDD8E4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -97,7 +87,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="longitude"
-              DTS:DTSID="{8290211B-67B8-464B-A355-1AEE74E35C99}"
+              DTS:DTSID="{12884E41-1F1D-4DD3-BF58-06C56E438831}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -106,7 +96,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="city"
-              DTS:DTSID="{4DDB3777-7F9D-4A08-942C-275A4C242493}"
+              DTS:DTSID="{7EA125A7-B3D8-4F06-950D-030927C1F2BF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -115,7 +105,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="county"
-              DTS:DTSID="{566CE3BC-A167-4E12-9809-38B3F9DB8F09}"
+              DTS:DTSID="{4D282EC6-267B-47BE-AC92-0D204D644AE4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -124,7 +114,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country_code"
-              DTS:DTSID="{A3ED887B-5093-4C25-8B31-6C86CF8F2439}"
+              DTS:DTSID="{6D3F20A4-B3BE-4E1A-8A91-9671B3F7AAF3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -133,7 +123,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country_name"
-              DTS:DTSID="{9AFD919B-004E-4485-8945-4184E86285F6}"
+              DTS:DTSID="{29E01DFC-63D7-402F-8693-F8EF3C4758DA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -142,7 +132,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="iso3166-2"
-              DTS:DTSID="{08F884A3-BB7E-468B-8DB9-5A9A984AFF76}"
+              DTS:DTSID="{41FB1042-D8D1-461E-B9FC-786DCE0F95F4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -151,7 +141,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="region_code"
-              DTS:DTSID="{8D31E1D2-40CD-4157-AFF5-864BE92188FF}"
+              DTS:DTSID="{1AB2A736-DD50-4B1E-9EA6-72065EF127B1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -160,20 +150,10 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="region_name"
-              DTS:DTSID="{7C8EB375-766F-4E52-A026-D650CC86C052}"
+              DTS:DTSID="{0F177CDE-CF6F-43BB-A6A4-680A8936D21C}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Postcodes.txt]"
-      DTS:CreationName="FILE"
-      DTS:DTSID="{C9A22CC9-9A3F-4F93-9CCB-3337573C8B9C}"
-      DTS:ObjectName="Postcodes.txt">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\quany\source\repos\Bi_14_Project\Profiles\Postcodes.txt" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -194,12 +174,12 @@
           version="1">
           <components>
             <component
-              refId="Package\Postcodes Data Flow\Postcodes Flat File"
+              refId="Package\Postcodes Data Flow\Postcodes Source"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="2057"
-              name="Postcodes Flat File"
+              name="Postcodes Source"
               usesDispositions="true"
               version="1">
               <properties>
@@ -214,25 +194,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Postcodes Data Flow\Postcodes Flat File.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  refId="Package\Postcodes Data Flow\Postcodes Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Quan\postcodes]"
+                  connectionManagerRefId="Package.ConnectionManagers[Quan\postcodes]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output]"
+                  refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[postcode]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[postcode]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[postcode]"
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[postcode]"
                       length="50"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[postcode]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[postcode]"
                       name="postcode"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -247,102 +227,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[easting]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[city]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[easting]"
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[city]"
                       length="50"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[easting]"
-                      name="easting"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[northing]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[northing]"
-                      length="50"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[northing]"
-                      name="northing"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[latitude]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[latitude]"
-                      length="50"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[latitude]"
-                      name="latitude"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[longitude]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[longitude]"
-                      length="50"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[longitude]"
-                      name="longitude"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[city]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[city]"
-                      length="50"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[city]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[city]"
                       name="city"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -357,14 +249,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[county]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[county]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[county]"
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[county]"
                       length="50"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[county]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[county]"
                       name="county"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -379,14 +271,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[country_code]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[country_code]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[country_code]"
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[country_code]"
                       length="50"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[country_code]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[country_code]"
                       name="country_code"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -401,14 +293,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[country_name]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[country_name]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[country_name]"
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[country_name]"
                       length="50"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[country_name]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[country_name]"
                       name="country_name"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -423,36 +315,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[iso3166-2]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[region_code]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[iso3166-2]"
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[region_code]"
                       length="50"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[iso3166-2]"
-                      name="iso3166-2"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[region_code]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[region_code]"
-                      length="50"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[region_code]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[region_code]"
                       name="region_code"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -467,14 +337,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[region_name]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[region_name]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[region_name]"
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[region_name]"
                       length="50"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[region_name]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[region_name]"
                       name="region_name"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -492,73 +362,73 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[postcode]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[postcode]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="postcode" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[easting]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[easting]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="easting" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[northing]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[northing]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="northing" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[latitude]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[latitude]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="latitude" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[longitude]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[longitude]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="longitude" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[city]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="city" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[county]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[county]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="county" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[country_code]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[country_code]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="country_code" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[country_name]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[country_name]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="country_name" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[iso3166-2]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[iso3166-2]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="iso3166-2" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[region_code]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[region_code]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="region_code" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].ExternalColumns[region_name]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].ExternalColumns[region_name]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -566,27 +436,27 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Error Output]"
+                  refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -595,11 +465,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Postcodes Data Flow\StageDB Destination"
+              refId="Package\Postcodes Data Flow\Postcodes Stage"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="StageDB Destination"
+              name="Postcodes Stage"
               usesDispositions="true"
               version="4">
               <properties>
@@ -652,187 +522,117 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Postcodes Data Flow\StageDB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  refId="Package\Postcodes Data Flow\Postcodes Stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Quan\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[Quan\MSSQLSERVERBI.BI14LabProjectStageDB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].Columns[postcode]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].Columns[postcode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="postcode"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[postcode]" />
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[postcode]" />
                     <inputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].Columns[easting]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="easting"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[easting]"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[easting]" />
-                    <inputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].Columns[northing]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="northing"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[northing]"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[northing]" />
-                    <inputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].Columns[latitude]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="latitude"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[latitude]" />
-                    <inputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].Columns[longitude]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="longitude"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[longitude]" />
-                    <inputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].Columns[city]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].Columns[city]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="city"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[city]" />
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[city]" />
                     <inputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].Columns[county]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].Columns[county]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="county"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[county]"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[county]" />
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[county]" />
                     <inputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].Columns[country_code]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].Columns[country_code]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="country_code"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[country_code]" />
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[country_code]" />
                     <inputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].Columns[country_name]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].Columns[country_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="country_name"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[country_name]" />
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[country_name]" />
                     <inputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].Columns[iso3166-2]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="iso3166-2"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iso3166-2]"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[iso3166-2]" />
-                    <inputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].Columns[region_code]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].Columns[region_code]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="region_code"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[region_code]" />
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[region_code]" />
                     <inputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].Columns[region_name]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].Columns[region_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="region_name"
-                      externalMetadataColumnId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
-                      lineageId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output].Columns[region_name]" />
+                      externalMetadataColumnId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output].Columns[region_name]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="postcode" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[easting]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="easting" />
-                    <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[northing]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="northing" />
-                    <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="latitude" />
-                    <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="longitude" />
-                    <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[city]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="city" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[county]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="county" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="country_code" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="country_name" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[iso3166-2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="iso3166-2" />
-                    <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="region_code" />
                     <externalMetadataColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -842,22 +642,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Postcodes Data Flow\StageDB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Postcodes Data Flow\Postcodes Stage.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Postcodes Data Flow\StageDB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Postcodes Data Flow\StageDB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Postcodes Data Flow\Postcodes Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Postcodes Data Flow\StageDB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Postcodes Data Flow\Postcodes Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -869,9 +669,9 @@
           <paths>
             <path
               refId="Package\Postcodes Data Flow.Paths[Flat File Source Output]"
-              endId="Package\Postcodes Data Flow\StageDB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Postcodes Data Flow\Postcodes Stage.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
-              startId="Package\Postcodes Data Flow\Postcodes Flat File.Outputs[Flat File Source Output]" />
+              startId="Package\Postcodes Data Flow\Postcodes Source.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -892,7 +692,7 @@
         <NodeLayout
           Size="176,41.6"
           Id="Package\Postcodes Data Flow"
-          TopLeft="449.285721937005,199.588238093267" />
+          TopLeft="344.285720148866,282.176474545653" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -902,27 +702,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\Postcodes Data Flow\StageDB Destination"
-          TopLeft="367.142863395263,282.176474545654" />
+          Size="155.2,41.6"
+          Id="Package\Postcodes Data Flow\Postcodes Stage"
+          TopLeft="378.571435018462,289.823533476431" />
         <NodeLayout
-          Size="165.6,41.6"
-          Id="Package\Postcodes Data Flow\Postcodes Flat File"
+          Size="160.8,41.6"
+          Id="Package\Postcodes Data Flow\Postcodes Source"
           TopLeft="374.285720659762,160.588237546307" />
         <EdgeLayout
           Id="Package\Postcodes Data Flow.Paths[Flat File Source Output]"
-          TopLeft="455.714292027513,202.188237546307">
+          TopLeft="455.428577839112,202.188237546307">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,79.9882369993467"
+              EndConnector="0,87.6352959301235"
               Start="0,0"
-              End="0,72.4882369993467">
+              End="0,80.1352959301235">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,72.4882369993467" />
+                    End="0,80.1352959301235" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -935,7 +735,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Postcodes Data Flow\StageDB Destination">
+    design-time-name="Package\Postcodes Data Flow\Postcodes Stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
