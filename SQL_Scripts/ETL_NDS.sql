@@ -15,7 +15,8 @@ CREATE TABLE Source
 
 SET IDENTITY_INSERT [dbo].[Source] ON
 GO
-INSERT INTO Source (SourceId, Name) VALUES (1, 'csv');
+INSERT INTO Source (SourceId, Name) VALUES (1, 'Accidents-Casualties-Vehicles-Codebook');
+INSERT INTO Source (SourceId, Name) VALUES (2, 'Postcodes-PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU');
 SET IDENTITY_INSERT [dbo].[Source] OFF
 GO
 

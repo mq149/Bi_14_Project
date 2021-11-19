@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="StageNDSGeographicalPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{9BB40471-F6BC-4992-99DF-059E693D5240}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{5B485AD5-5574-499F-BD29-557C9503B903}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -182,13 +182,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">1</property>
+                          name="Expression">2</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">1</property>
+                          name="FriendlyExpression">2</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1191,13 +1191,13 @@ and SourceId=?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">1</property>
+                          name="Expression">2</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">1</property>
+                          name="FriendlyExpression">2</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2279,13 +2279,13 @@ and SourceID=?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">1</property>
+                          name="Expression">2</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">1</property>
+                          name="FriendlyExpression">2</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -3493,13 +3493,13 @@ and SourceId=?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">1</property>
+                          name="Expression">2</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">1</property>
+                          name="FriendlyExpression">2</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -4786,10 +4786,6 @@ and SourceID=?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\LSOA_PCD Profiling"
-          TopLeft="677.142868674531,110.88235449626" />
-        <NodeLayout
           Size="285.6,41.6"
           Id="Package\Postcodes LSOA_PCD Stage to Country NDS"
           TopLeft="14.7857144438491,5.5" />
@@ -4890,6 +4886,23 @@ and SourceID=?</property>
             <s:String>Package.PrecedenceConstraints[Constraint 2]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\LSOA_PCD Profiling"
+          TopLeft="5.5,5.5" />
+        <GroupLayout
+          Text="Group 2"
+          ParentId="Package"
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="180.8,102.4"
+          Size="180.8,145.6"
+          Id="308d344d-221a-49aa-9753-e225009033f0"
+          TopLeft="627.357153634636,91.9117673763359">
+          <GroupLayout.ChildrenIds>
+            <s:String>Package\LSOA_PCD Profiling</s:String>
+          </GroupLayout.ChildrenIds>
+        </GroupLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4899,9 +4912,29 @@ and SourceID=?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="185.6,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to Country NDS\Update date command"
+          TopLeft="137.857145204836,406.823535117311" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to Country NDS\Lookup Country NDS"
+          TopLeft="362.142863310113,180.470590766326" />
+        <NodeLayout
           Size="220,41.6"
           Id="Package\Postcodes LSOA_PCD Stage to Country NDS\Postcodes + LSOA_PCD Stage"
           TopLeft="38.5714292282961,22.9411767923296" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to Country NDS\Add timestamps"
+          TopLeft="608.571438935339,291.976473998693" />
+        <NodeLayout
+          Size="136,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to Country NDS\Update date"
+          TopLeft="164.285717083483,301.917650608703" />
+        <NodeLayout
+          Size="231.2,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to Country NDS\Convert Country code and name"
+          TopLeft="335.000005705016,100.176471993172" />
         <NodeLayout
           Size="139.2,41.6"
           Id="Package\Postcodes LSOA_PCD Stage to Country NDS\Country NDS"
@@ -4932,22 +4965,6 @@ and SourceID=?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="176,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to Country NDS\Lookup Country NDS"
-          TopLeft="362.142863310113,180.470590766326" />
-        <NodeLayout
-          Size="136,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to Country NDS\Update date"
-          TopLeft="164.285717083483,301.917650608703" />
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to Country NDS\Add timestamps"
-          TopLeft="608.571438935339,291.976473998693" />
-        <NodeLayout
-          Size="185.6,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to Country NDS\Update date command"
-          TopLeft="137.857145204836,406.823535117311" />
         <EdgeLayout
           Id="Package\Postcodes LSOA_PCD Stage to Country NDS.Paths[Lookup Match Output]"
           TopLeft="422.142863310113,222.070590766326">
@@ -5021,19 +5038,19 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to Country NDS.Paths[Derived Column Output]"
-          TopLeft="231.47143114416,343.517650608703">
+          Id="Package\Postcodes LSOA_PCD Stage to Country NDS.Paths[Derived Column Output2]"
+          TopLeft="451.92857737079,67.6000003646403">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63.3058845086083"
+              EndConnector="0,32.5764716285322"
               Start="0,0"
-              End="0,55.8058845086083">
+              End="0,25.0764716285322">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.8058845086083" />
+                    End="0,25.0764716285322" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5064,24 +5081,20 @@ and SourceID=?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="231.2,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to Country NDS\Convert Country code and name"
-          TopLeft="335.000005705016,100.176471993172" />
         <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to Country NDS.Paths[Derived Column Output2]"
-          TopLeft="451.92857737079,67.6000003646403">
+          Id="Package\Postcodes LSOA_PCD Stage to Country NDS.Paths[Derived Column Output]"
+          TopLeft="231.47143114416,343.517650608703">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32.5764716285322"
+              EndConnector="0,63.3058845086083"
               Start="0,0"
-              End="0,25.0764716285322">
+              End="0,55.8058845086083">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.0764716285322" />
+                    End="0,55.8058845086083" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5116,6 +5129,29 @@ and SourceID=?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Postcodes LSOA_PCD Stage to Country NDS\Lookup Country NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Country]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Postcodes LSOA_PCD Stage to Country NDS\Postcodes + LSOA_PCD Stage">
     <Properties>
       <Property>
@@ -5136,23 +5172,291 @@ and SourceID=?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Postcodes LSOA_PCD Stage to County NDS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="220,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Postcodes + LSOA_PCD Stage"
+          TopLeft="298,38" />
+        <NodeLayout
+          Size="185.6,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Update date command"
+          TopLeft="432.666666666666,421.333333333333" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Add timestamps"
+          TopLeft="785.333333333333,324.666666666667" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Lookup Region NDS"
+          TopLeft="631.333333333334,122.666666666667" />
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS\County NDS"
+          TopLeft="801.333333333334,423.333333333333" />
+        <NodeLayout
+          Size="136,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Update date"
+          TopLeft="457.333333333333,318" />
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Add SourceID column"
+          TopLeft="624.666666666667,37" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Lookup County NDS"
+          TopLeft="629.000000000001,218.333333333333" />
+        <EdgeLayout
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[OLE DB Source Output]"
+          TopLeft="518,58.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="106.666666666667,0"
+              Start="0,0"
+              End="99.1666666666671,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="99.1666666666671,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[Lookup Match Output1]"
+          TopLeft="687.666666666668,259.933333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-162.333333333335,58.066666666667"
+              Start="0,0"
+              End="-162.333333333335,50.566666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5477726574502" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5477726574502"
+                    Point2="0,23.5477726574502"
+                    Point3="-4,23.5477726574502" />
+                  <mssgle:LineSegment
+                    End="-158.333333333335,23.5477726574502" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-158.333333333335,23.5477726574502"
+                    Point2="-162.333333333335,23.5477726574502"
+                    Point3="-162.333333333335,27.5477726574502" />
+                  <mssgle:LineSegment
+                    End="-162.333333333335,50.566666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-129.358053385417,28.5477726574502,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[Lookup Match Output]"
+          TopLeft="716.166666666668,164.266666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.066666666666"
+              Start="0,0"
+              End="0,46.566666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.566666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,17.478645833333,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[Lookup Error Output]"
+          TopLeft="742.333333333334,259.933333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120.199999999999,64.733333333334"
+              Start="0,0"
+              End="120.199999999999,57.233333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.251305683564" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.251305683564"
+                    Point2="0,26.251305683564"
+                    Point3="4,26.251305683564" />
+                  <mssgle:LineSegment
+                    End="116.199999999999,26.251305683564" />
+                  <mssgle:CubicBezierSegment
+                    Point1="116.199999999999,26.251305683564"
+                    Point2="120.199999999999,26.251305683564"
+                    Point3="120.199999999999,30.251305683564" />
+                  <mssgle:LineSegment
+                    End="120.199999999999,57.233333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="14.2336132812493,31.251305683564,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[Derived Column Output2]"
+          TopLeft="716.200000000001,78.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.066666666667"
+              Start="0,0"
+              End="0,36.566666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.566666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[Derived Column Output1]"
+          TopLeft="865.733333333334,366.266666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.0666666666659"
+              Start="0,0"
+              End="0,49.5666666666659">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5666666666659" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[Derived Column Output]"
+          TopLeft="525.4,359.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.7333333333333"
+              Start="0,0"
+              End="0,54.2333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.2333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Postcodes LSOA_PCD Stage to Country NDS\Lookup Country NDS">
+    design-time-name="Package\Postcodes LSOA_PCD Stage to County NDS\Postcodes + LSOA_PCD Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Postcodes LSOA_PCD Stage to County NDS\Lookup Region NDS">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Country]</Value>
+          type="q3:string">[dbo].[Region]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Postcodes LSOA_PCD Stage to County NDS\County NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Postcodes LSOA_PCD Stage to County NDS\Lookup County NDS">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[County]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5165,59 +5469,61 @@ and SourceID=?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Lookup Region NDS"
-          TopLeft="629.000000000001,218.333333333333" />
+          Size="176,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Lookup Country NDS"
+          TopLeft="631.333333333334,122.666666666667" />
         <NodeLayout
           Size="220,41.6"
           Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Postcodes + LSOA_PCD Stage"
           TopLeft="28,34" />
         <NodeLayout
-          Size="180.8,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Add SourceID column"
-          TopLeft="344.666666666667,34" />
-        <NodeLayout
-          Size="176,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Lookup Country NDS"
-          TopLeft="631.333333333334,122.666666666667" />
+          Size="154.4,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Add timestamps"
+          TopLeft="785.333333333333,324.666666666667" />
         <NodeLayout
           Size="185.6,41.6"
           Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Update date command"
           TopLeft="432.666666666666,421.333333333333" />
         <NodeLayout
-          Size="136,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Update date"
-          TopLeft="457.333333333333,318" />
+          Size="172,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Lookup Region NDS"
+          TopLeft="629.000000000001,218.333333333333" />
         <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Add timestamps"
-          TopLeft="785.333333333333,324.666666666667" />
+          Size="176,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Convert Region code"
+          TopLeft="631.333333333333,32" />
         <NodeLayout
           Size="134.4,41.6"
           Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Region NDS"
           TopLeft="801.333333333334,423.333333333333" />
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Add SourceID column"
+          TopLeft="344.666666666667,34" />
+        <NodeLayout
+          Size="136,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Update date"
+          TopLeft="457.333333333333,318" />
         <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to Region NDS.Paths[Lookup Match Output]"
-          TopLeft="717.166666666667,164.266666666667">
+          Id="Package\Postcodes LSOA_PCD Stage to Region NDS.Paths[OLE DB Source Output]"
+          TopLeft="248,54.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,54.0666666666666"
+              EndConnector="96.6666666666673,0"
               Start="0,0"
-              End="0,46.5666666666666">
+              End="89.1666666666673,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46.5666666666666" />
+                    End="89.1666666666673,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,17.4786458333333,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5253,6 +5559,30 @@ and SourceID=?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-143.024720052084,34.0333333333333,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postcodes LSOA_PCD Stage to Region NDS.Paths[Lookup Match Output]"
+          TopLeft="717.166666666667,164.266666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.0666666666666"
+              Start="0,0"
+              End="0,46.5666666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5666666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,17.4786458333333,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5293,19 +5623,19 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to Region NDS.Paths[Derived Column Output]"
-          TopLeft="525.4,359.6">
+          Id="Package\Postcodes LSOA_PCD Stage to Region NDS.Paths[Derived Column Output2]"
+          TopLeft="525.466666666667,53.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61.7333333333333"
+              EndConnector="105.866666666666,0"
               Start="0,0"
-              End="0,54.2333333333333">
+              End="98.3666666666655,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.2333333333333" />
+                    End="98.3666666666655,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5336,46 +5666,20 @@ and SourceID=?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="176,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to Region NDS\Convert Region code"
-          TopLeft="631.333333333333,32" />
         <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to Region NDS.Paths[OLE DB Source Output]"
-          TopLeft="248,54.8">
+          Id="Package\Postcodes LSOA_PCD Stage to Region NDS.Paths[Derived Column Output]"
+          TopLeft="525.4,359.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="96.6666666666673,0"
+              EndConnector="0,61.7333333333333"
               Start="0,0"
-              End="89.1666666666673,0">
+              End="0,54.2333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="89.1666666666673,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to Region NDS.Paths[Derived Column Output2]"
-          TopLeft="525.466666666667,53.8">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="105.866666666666,0"
-              Start="0,0"
-              End="98.3666666666655,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="98.3666666666655,0" />
+                    End="0,54.2333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5410,22 +5714,22 @@ and SourceID=?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Postcodes LSOA_PCD Stage to Region NDS\Lookup Region NDS">
+    design-time-name="Package\Postcodes LSOA_PCD Stage to Region NDS\Lookup Country NDS">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Region]</Value>
+          type="q3:string">[dbo].[Country]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5441,22 +5745,22 @@ and SourceID=?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Postcodes LSOA_PCD Stage to Region NDS\Lookup Country NDS">
+    design-time-name="Package\Postcodes LSOA_PCD Stage to Region NDS\Lookup Region NDS">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Country]</Value>
+          type="q3:string">[dbo].[Region]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5477,393 +5781,60 @@ and SourceID=?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Postcodes LSOA_PCD Stage to County NDS">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="180.8,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Add SourceID column"
-          TopLeft="624.666666666667,37" />
-        <NodeLayout
-          Size="136,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Update date"
-          TopLeft="457.333333333333,318" />
-        <NodeLayout
-          Size="135.2,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS\County NDS"
-          TopLeft="801.333333333334,423.333333333333" />
-        <NodeLayout
-          Size="185.6,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Update date command"
-          TopLeft="432.666666666666,421.333333333333" />
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Add timestamps"
-          TopLeft="785.333333333333,324.666666666667" />
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Lookup Region NDS"
-          TopLeft="631.333333333334,122.666666666667" />
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Lookup County NDS"
-          TopLeft="629.000000000001,218.333333333333" />
-        <NodeLayout
-          Size="220,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS\Postcodes + LSOA_PCD Stage"
-          TopLeft="298,38" />
-        <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[OLE DB Source Output]"
-          TopLeft="518,58.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="106.666666666667,0"
-              Start="0,0"
-              End="99.1666666666671,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="99.1666666666671,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[Lookup Match Output]"
-          TopLeft="716.166666666668,164.266666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,54.066666666666"
-              Start="0,0"
-              End="0,46.566666666666">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.566666666666" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,17.478645833333,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[Derived Column Output]"
-          TopLeft="525.4,359.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,61.7333333333333"
-              Start="0,0"
-              End="0,54.2333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.2333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[Derived Column Output1]"
-          TopLeft="865.733333333334,366.266666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57.0666666666659"
-              Start="0,0"
-              End="0,49.5666666666659">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5666666666659" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[Lookup Error Output]"
-          TopLeft="742.333333333334,259.933333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="120.199999999999,64.733333333334"
-              Start="0,0"
-              End="120.199999999999,57.233333333334">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.251305683564" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.251305683564"
-                    Point2="0,26.251305683564"
-                    Point3="4,26.251305683564" />
-                  <mssgle:LineSegment
-                    End="116.199999999999,26.251305683564" />
-                  <mssgle:CubicBezierSegment
-                    Point1="116.199999999999,26.251305683564"
-                    Point2="120.199999999999,26.251305683564"
-                    Point3="120.199999999999,30.251305683564" />
-                  <mssgle:LineSegment
-                    End="120.199999999999,57.233333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="14.2336132812493,31.251305683564,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[Lookup Match Output1]"
-          TopLeft="687.666666666668,259.933333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-162.333333333335,58.066666666667"
-              Start="0,0"
-              End="-162.333333333335,50.566666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5477726574502" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.5477726574502"
-                    Point2="0,23.5477726574502"
-                    Point3="-4,23.5477726574502" />
-                  <mssgle:LineSegment
-                    End="-158.333333333335,23.5477726574502" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-158.333333333335,23.5477726574502"
-                    Point2="-162.333333333335,23.5477726574502"
-                    Point3="-162.333333333335,27.5477726574502" />
-                  <mssgle:LineSegment
-                    End="-162.333333333335,50.566666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-129.358053385417,28.5477726574502,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to County NDS.Paths[Derived Column Output2]"
-          TopLeft="716.200000000001,78.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44.066666666667"
-              Start="0,0"
-              End="0,36.566666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.566666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Postcodes LSOA_PCD Stage to County NDS\County NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Postcodes LSOA_PCD Stage to County NDS\Lookup Region NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Region]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Postcodes LSOA_PCD Stage to County NDS\Lookup County NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[County]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Postcodes LSOA_PCD Stage to County NDS\Postcodes + LSOA_PCD Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\Postcodes LSOA_PCD Stage to TownCity NDS">
     <LayoutInfo>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="180.8,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Add SourceID column"
-          TopLeft="628.666666666667,41" />
-        <NodeLayout
-          Size="136,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date"
-          TopLeft="458.333333333333,438" />
+          Size="220,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage"
+          TopLeft="278,42" />
         <NodeLayout
           Size="145.6,41.6"
           Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\TownCity NDS"
           TopLeft="793.333333333334,543.333333333333" />
         <NodeLayout
-          Size="185.6,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command"
-          TopLeft="433.666666666666,541.333333333333" />
+          Size="183.2,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup TownCity NDS"
+          TopLeft="630.000000000001,338.333333333333" />
         <NodeLayout
           Size="154.4,41.6"
           Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Add timestamps"
           TopLeft="786.333333333333,444.666666666667" />
         <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7"
+          TopLeft="637,147" />
+        <NodeLayout
+          Size="136,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date"
+          TopLeft="458.333333333333,438" />
+        <NodeLayout
           Size="172,41.6"
           Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup County NDS"
           TopLeft="632.333333333334,242.666666666667" />
         <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup TownCity NDS"
-          TopLeft="630.000000000001,338.333333333333" />
+          Size="180.8,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Add SourceID column"
+          TopLeft="628.666666666667,41" />
         <NodeLayout
-          Size="220,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage"
-          TopLeft="278,42" />
+          Size="185.6,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command"
+          TopLeft="433.666666666666,541.333333333333" />
         <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[OLE DB Source Output]"
-          TopLeft="498,62.3">
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Derived Column Output2]"
+          TopLeft="719.433333333334,82.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="130.666666666667,0"
+              EndConnector="0,64.4"
               Start="0,0"
-              End="123.166666666667,0">
+              End="0,56.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="123.166666666667,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Lookup Match Output]"
-          TopLeft="719.966666666668,284.266666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,54.066666666666"
-              Start="0,0"
-              End="0,46.566666666666">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.566666666666" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,17.478645833333,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Derived Column Output]"
-          TopLeft="526.4,479.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,61.7333333333332"
-              Start="0,0"
-              End="0,54.2333333333332">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.2333333333332" />
+                    End="0,56.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5895,39 +5866,69 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Lookup Error Output]"
-          TopLeft="750.800000000001,379.933333333333">
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Derived Column Output]"
+          TopLeft="526.4,479.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="112.733333333332,64.733333333334"
+              EndConnector="0,61.7333333333332"
               Start="0,0"
-              End="112.733333333332,57.233333333334">
+              End="0,54.2333333333332">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.2296103896107" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.2296103896107"
-                    Point2="0,26.2296103896107"
-                    Point3="4,26.2296103896107" />
-                  <mssgle:LineSegment
-                    End="108.733333333332,26.2296103896107" />
-                  <mssgle:CubicBezierSegment
-                    Point1="108.733333333332,26.2296103896107"
-                    Point2="112.733333333332,26.2296103896107"
-                    Point3="112.733333333332,30.2296103896107" />
-                  <mssgle:LineSegment
-                    End="112.733333333332,57.233333333334" />
+                    End="0,54.2333333333332" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="10.500279947916,31.2296103896107,91.7327734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Data Conversion Output]"
+          TopLeft="719.066666666667,188.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.066666666667"
+              Start="0,0"
+              End="0,46.566666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.566666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[OLE DB Source Output]"
+          TopLeft="498,62.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="130.666666666667,0"
+              Start="0,0"
+              End="123.166666666667,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="123.166666666667,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5966,57 +5967,77 @@ and SourceID=?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="165.6,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7"
-          TopLeft="637,147" />
         <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Derived Column Output2]"
-          TopLeft="719.433333333334,82.6">
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Lookup Match Output]"
+          TopLeft="719.966666666668,284.266666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,64.4"
+              EndConnector="0,54.066666666666"
               Start="0,0"
-              End="0,56.9">
+              End="0,46.566666666666">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.9" />
+                    End="0,46.566666666666" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,17.478645833333,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Data Conversion Output]"
-          TopLeft="719.066666666667,188.6">
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Lookup Error Output]"
+          TopLeft="750.800000000001,379.933333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,54.066666666667"
+              EndConnector="112.733333333332,64.733333333334"
               Start="0,0"
-              End="0,46.566666666667">
+              End="112.733333333332,57.233333333334">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46.566666666667" />
+                    End="0,22.2296103896107" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.2296103896107"
+                    Point2="0,26.2296103896107"
+                    Point3="4,26.2296103896107" />
+                  <mssgle:LineSegment
+                    End="108.733333333332,26.2296103896107" />
+                  <mssgle:CubicBezierSegment
+                    Point1="108.733333333332,26.2296103896107"
+                    Point2="112.733333333332,26.2296103896107"
+                    Point3="112.733333333332,30.2296103896107" />
+                  <mssgle:LineSegment
+                    End="112.733333333332,57.233333333334" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="10.500279947916,31.2296103896107,91.7327734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Postcodes LSOA_PCD Stage to TownCity NDS\TownCity NDS">
     <Properties>
@@ -6031,35 +6052,12 @@ and SourceID=?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup County NDS">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[County]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup TownCity NDS">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6069,7 +6067,7 @@ and SourceID=?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6077,8 +6075,23 @@ and SourceID=?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage">
+    design-time-name="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup County NDS">
     <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[County]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
