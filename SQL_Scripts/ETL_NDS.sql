@@ -13,12 +13,20 @@ CREATE TABLE Source
 	CONSTRAINT PK_S PRIMARY KEY(SourceID)
 )
 
+SET IDENTITY_INSERT [dbo].[Source] ON
+GO
+INSERT INTO Source (SourceId, Name) VALUES (1, 'csv');
+SET IDENTITY_INSERT [dbo].[Source] OFF
+GO
+
 CREATE TABLE Gender 
 (
 	GenderIndex int identity(1,1),
 	Code int,
 	Label varchar(10),
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_G PRIMARY KEY(GenderIndex)
 )
 
@@ -28,6 +36,8 @@ CREATE TABLE AgeBand
 	Code int,
 	Label varchar(100),
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_AB PRIMARY KEY(AgeBandIndex)
 )
 
@@ -37,6 +47,8 @@ CREATE TABLE CasualtySeverity
 	Code int,
 	Label varchar(20),
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_CS PRIMARY KEY(CasualtySeverityIndex)
 )
 
@@ -46,6 +58,8 @@ CREATE TABLE CasualtyType
 	Code int,
 	Label varchar(100),
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_CT PRIMARY KEY(CasualtyTypeIndex)
 )
 
@@ -55,6 +69,8 @@ CREATE TABLE AccidentSeverity
 	Code int,
 	Label varchar(20),
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_AS PRIMARY KEY(AccidentSeverityIndex)
 )
 
@@ -65,6 +81,8 @@ CREATE TABLE TownCity
 	CityName varchar(20),
 	County int,
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_TC PRIMARY KEY(TownCityIndex)
 )
 
@@ -74,6 +92,8 @@ CREATE TABLE County
 	CountyName varchar(20),
 	Region int,
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_C PRIMARY KEY(CountyIndex)
 )
 
@@ -84,6 +104,8 @@ CREATE TABLE Region
 	RegionName varchar(20),
 	Country int,
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_R PRIMARY KEY(RegionIndex)
 )
 
@@ -93,6 +115,8 @@ CREATE TABLE Country
 	CountryCode varchar(10),
 	CountryName varchar(20),
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_CY PRIMARY KEY(CountryIndex)
 )
 
@@ -102,6 +126,8 @@ CREATE TABLE LocalAuthorityDistrict
 	Code int,
 	Label varchar(50),
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_LAD PRIMARY KEY(LADIndex)
 )
 
@@ -111,6 +137,8 @@ CREATE TABLE UrbanOrRuralArea
 	Code int,
 	Label varchar(10),
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_UORA PRIMARY KEY(UrbanOrRuralIndex)
 )
 
@@ -120,6 +148,8 @@ CREATE TABLE BuiltUpRoad
 	Code int,
 	Label varchar(100),
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_BUR PRIMARY KEY(BuiltUpRoadIndex)
 )
 
@@ -129,6 +159,8 @@ CREATE TABLE RoadType
 	Code int,
 	Label varchar(50),
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_RT PRIMARY KEY(RoadTypeIndex)
 )
 
@@ -138,6 +170,8 @@ CREATE TABLE VehicleType
 	Code int,
 	Label varchar(100),
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_VT PRIMARY KEY(VehicleTypeIndex)
 )
 
@@ -147,6 +181,8 @@ CREATE TABLE JourneyPurpose
 	Code int,
 	Label varchar(100),
 	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_JP PRIMARY KEY(JourneyPurposeIndex)
 )
 
@@ -157,9 +193,8 @@ CREATE TABLE Vehicles
 	VehicleType int,
 	JourneyPurpose int,
 	SourceID int,
-	CreatedAT datetime,
-	UpdatedAt datetime,
-	Label varchar(50),
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_V PRIMARY KEY(VehicleIndex)
 )
 
@@ -177,7 +212,7 @@ CREATE TABLE Accidents
 	UrbanOrRuralArea int,
 	LAD int,
 	SourceID int,
-	CreatedAT datetime,
+	CreatedAt datetime,
 	UpdatedAt datetime,
 	CONSTRAINT PK_A PRIMARY KEY(AccidentID)
 )
@@ -194,7 +229,7 @@ CREATE TABLE Casualties
 	CasualtySeverity int,
 	CasualtyType int,
 	SourceID int,
-	CreatedAT datetime,
+	CreatedAt datetime,
 	UpdatedAt datetime,
 	CONSTRAINT PK_CST PRIMARY KEY(CasualtyIndex)
 )
