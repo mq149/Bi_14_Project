@@ -77,7 +77,8 @@ CREATE TABLE AccidentSeverity
 CREATE TABLE TownCity 
 (
 	TownCityIndex int identity(1,1),
-	PostCode varchar(10),
+	Postcode varchar(10),
+	lsoa varchar(10),
 	CityName varchar(20),
 	County int,
 	SourceID int,
