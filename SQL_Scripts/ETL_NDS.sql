@@ -102,7 +102,7 @@ CREATE TABLE Region
 (
 	RegionIndex int identity(1,1),
 	RegionCode varchar(10),
-	RegionName varchar(20),
+	RegionName varchar(50),
 	Country int,
 	SourceID int,
 	CreatedAt datetime,
