@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="StageNDSGeographicalPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{5B485AD5-5574-499F-BD29-557C9503B903}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{D72945CD-F8AE-449E-A06B-9B48305851AF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -6080,7 +6080,7 @@ and SourceID=?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6090,7 +6090,7 @@ and SourceID=?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
