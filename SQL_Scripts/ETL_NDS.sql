@@ -8,7 +8,7 @@ GO
 CREATE TABLE Source
 (
 	SourceID int identity(1,1),
-	Name varchar(10),
+	Name varchar(100),
 
 	CONSTRAINT PK_S PRIMARY KEY(SourceID)
 )
@@ -40,6 +40,14 @@ CREATE TABLE AgeBand
 	CreatedAt datetime,
 	UpdatedAt datetime
 	CONSTRAINT PK_AB PRIMARY KEY(AgeBandIndex)
+)
+
+CREATE TABLE AgeGroup
+(
+	AgeGroupIndex int identity(1,1),
+	Code int,
+	Label varchar(100),
+	CONSTRAINT PK_AG PRIMARY KEY(AgeGroupIndex)
 )
 
 CREATE TABLE CasualtySeverity 
@@ -149,7 +157,6 @@ CREATE TABLE BuiltUpRoad
 	BuiltUpRoadIndex int identity(1,1),
 	Code int,
 	Label varchar(100),
-	SourceID int,
 	CreatedAt datetime,
 	UpdatedAt datetime
 	CONSTRAINT PK_BUR PRIMARY KEY(BuiltUpRoadIndex)
@@ -227,6 +234,7 @@ CREATE TABLE Casualties
 	SexOfCasualty int,
 	AgeOfCasualty int,
 	AccdentSeverity int,
+	AgeGroupOfCasualty int,
 	AgeBandOfCasualty int,
 	CasualtySeverity int,
 	CasualtyType int,
@@ -319,12 +327,6 @@ ADD CONSTRAINT FK_UORA_S
 FOREIGN KEY(SourceID)
 REFERENCES Source(SourceID)
 
---Khoa ngoai bang BuiltUpRoad
-ALTER TABLE BuiltUpRoad
-ADD CONSTRAINT FK_BUR_S
-FOREIGN KEY(SourceID)
-REFERENCES Source(SourceID)
-
 --Khoa ngoai bang RoadType
 ALTER TABLE RoadType
 ADD CONSTRAINT FK_RT_S
@@ -394,6 +396,11 @@ ALTER TABLE Casualties
 ADD CONSTRAINT FK_CST_G
 FOREIGN KEY(SexOfCasualty)
 REFERENCES Gender(GenderIndex)
+
+ALTER TABLE Casualties
+ADD CONSTRAINT FK_CST_AG
+FOREIGN KEY(AgeGroupOfCasualty)
+REFERENCES AgeGroup(AgeGroupIndex)
 
 ALTER TABLE Casualties
 ADD CONSTRAINT FK_CST_AB
