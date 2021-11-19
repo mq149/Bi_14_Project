@@ -79,7 +79,7 @@ CREATE TABLE TownCity
 	TownCityIndex int identity(1,1),
 	Postcode varchar(10),
 	lsoa varchar(10),
-	CityName varchar(20),
+	CityName varchar(50),
 	County int,
 	SourceID int,
 	CreatedAt datetime,
@@ -90,7 +90,7 @@ CREATE TABLE TownCity
 CREATE TABLE County 
 (
 	CountyIndex int identity(1,1),
-	CountyName varchar(20),
+	CountyName varchar(50),
 	Region int,
 	SourceID int,
 	CreatedAt datetime,
