@@ -24,7 +24,7 @@ CREATE TABLE Gender
 (
 	GenderIndex int identity(1,1),
 	Code int,
-	Label varchar(10),
+	Label varchar(100),
 	SourceID int,
 	CreatedAt datetime,
 	UpdatedAt datetime
