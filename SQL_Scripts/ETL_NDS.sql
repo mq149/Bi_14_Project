@@ -211,6 +211,7 @@ CREATE TABLE Vehicles
 	VehicleType int,
 	JourneyPurpose int,
 	SourceID int,
+	VehicleReference int,
 	CreatedAt datetime,
 	UpdatedAt datetime
 	CONSTRAINT PK_V PRIMARY KEY(VehicleIndex)
@@ -219,11 +220,12 @@ CREATE TABLE Vehicles
 CREATE TABLE Accidents
 (
 	AccidentID int identity(1,1),
-	AccidentIndex varchar(20),
+	AccidentIndex varchar(50),
 	NumberOfVehicles int,
 	NumberOfCasualties int,
 	Time time,
 	TimeOfDay int,
+	Date Date,
 	AccidentSeverity int,
 	CityCode int,
 	RoadType int,
