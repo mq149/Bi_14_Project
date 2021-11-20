@@ -210,7 +210,7 @@ CREATE TABLE Vehicles
 CREATE TABLE Accidents
 (
 	AccidentID int identity(1,1),
-	AccidentIndex int,
+	AccidentIndex varchar(20),
 	NumberOfVehicles int,
 	NumberOfCasualties int,
 	Time time,
