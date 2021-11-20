@@ -9,7 +9,6 @@ CREATE TABLE Source
 (
 	SourceID int identity(1,1),
 	Name varchar(100),
-
 	CONSTRAINT PK_S PRIMARY KEY(SourceID)
 )
 
@@ -19,6 +18,16 @@ INSERT INTO Source (SourceId, Name) VALUES (1, 'Accidents-Casualties-Vehicles-Co
 INSERT INTO Source (SourceId, Name) VALUES (2, 'Postcodes-PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU');
 SET IDENTITY_INSERT [dbo].[Source] OFF
 GO
+
+CREATE TABLE TimeOfDay 
+(
+	TimeOfDayIndex int identity(1,1),
+	Code int,
+	Label varchar(100),
+	CreatedAt datetime,
+	UpdatedAt datetime
+	CONSTRAINT PK_TOD PRIMARY KEY(TimeOfDayIndex)
+)
 
 CREATE TABLE Gender 
 (
@@ -214,6 +223,7 @@ CREATE TABLE Accidents
 	NumberOfVehicles int,
 	NumberOfCasualties int,
 	Time time,
+	TimeOfDay int,
 	AccidentSeverity int,
 	CityCode int,
 	RoadType int,
@@ -380,6 +390,11 @@ ALTER TABLE Accidents
 ADD CONSTRAINT FK_A_LAD
 FOREIGN KEY(LAD)
 REFERENCES LocalAuthorityDistrict(LADIndex)
+
+ALTER TABLE Accidents
+ADD CONSTRAINT FK_A_TOD
+FOREIGN KEY(TimeOfDay)
+REFERENCES TimeOfDay(TimeOfDayIndex)
 
 --Khoa ngoai bang Casualties
 ALTER TABLE Casualties
