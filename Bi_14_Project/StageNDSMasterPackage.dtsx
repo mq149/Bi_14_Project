@@ -5,21 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-LCVMLLJ"
   DTS:CreatorName="DESKTOP-LCVMLLJ\lemin"
-  DTS:DTSID="{D307A65D-6AD5-4604-8E4E-25581A9D3DCA}"
+  DTS:DTSID="{37BEC484-CB7F-44DA-986C-0164FA2A3535}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="StageNDSMasterPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{115351DB-F3CB-444B-AD1B-419F6E06596F}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{43534E18-1577-45F4-AA05-3F4E2669FDDF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_NDS]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{1A66114F-D9E1-459C-ADD9-B4F81C880BD6}"
+      DTS:DTSID="{D5141D2E-5691-4A5C-9F21-D647128535AE}"
       DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_NDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -31,7 +31,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{CE0F20EA-A19D-45E6-9D1C-A05A75A87E55}"
+      DTS:DTSID="{38D9450D-5EA3-43DD-BD73-15B5FD294BC6}"
       DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_Stage">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -43,7 +43,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.NDS]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{67FD2368-002A-4014-B6DB-99F29AD8896A}"
+      DTS:DTSID="{802EE47E-58F2-414F-B23E-DEC6E9439EF6}"
       DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.NDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -59,7 +59,7 @@
       DTS:refId="Package\Contants Stage to NDS"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{C2C93FD3-1954-4E0D-85BF-A6EBE7B916D2}"
+      DTS:DTSID="{517332F8-CFC8-4B8C-8968-A814654CD16E}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Contants Stage to NDS"
@@ -9352,55 +9352,55 @@ WHERE
               name="Derived Column Output"
               startId="Package\Contants Stage to NDS\Add SourceID.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output24]"
-              endId="Package\Contants Stage to NDS\Lookup Code TimeOfDate.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID TimeOfDate.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output23]"
-              endId="Package\Contants Stage to NDS\Lookup Code Age_Group.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID Age_Group.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output22]"
-              endId="Package\Contants Stage to NDS\Urban_or_Rural_Area NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Urban_or_Rural_Area.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output21]"
-              endId="Package\Contants Stage to NDS\Lookup Code Casualty_Severity.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID Casualty_Severity.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output20]"
-              endId="Package\Contants Stage to NDS\Accident_Severity NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Accident_Severity.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output19]"
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output25]"
               endId="Package\Contants Stage to NDS\Lookup Code Age_Band.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Contants Stage to NDS\Add SourceID Age_Band.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output18]"
-              endId="Package\Contants Stage to NDS\Gender_NDS.Inputs[OLE DB Destination Input]"
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output24]"
+              endId="Package\Contants Stage to NDS\Age_Band NDS.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Gender.Outputs[Derived Column Output]" />
+              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Age_Band.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output17]"
-              endId="Package\Contants Stage to NDS\Age_Group NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Age_Group.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output16]"
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output23]"
               endId="Package\Contants Stage to NDS\Road_Type NDS.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Road_Type.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output15]"
-              endId="Package\Contants Stage to NDS\Age_Band NDS.Inputs[OLE DB Destination Input]"
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output22]"
+              endId="Package\Contants Stage to NDS\Age_Group NDS.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Age_Band.Outputs[Derived Column Output]" />
+              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Age_Group.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output21]"
+              endId="Package\Contants Stage to NDS\Gender_NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Gender.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output20]"
+              endId="Package\Contants Stage to NDS\Lookup Code Casualty_Severity.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID Casualty_Severity.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output19]"
+              endId="Package\Contants Stage to NDS\Accident_Severity NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Accident_Severity.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output18]"
+              endId="Package\Contants Stage to NDS\Lookup Code Journey_Purpose.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID  Journey_Purpose.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output17]"
+              endId="Package\Contants Stage to NDS\Urban_or_Rural_Area NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Urban_or_Rural_Area.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output16]"
+              endId="Package\Contants Stage to NDS\Lookup Code Age_Group.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID Age_Group.Outputs[Derived Column Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Derived Column Output14]"
               endId="Package\Contants Stage to NDS\Vehicle_Type NDS.Inputs[OLE DB Destination Input]"
@@ -9408,74 +9408,79 @@ WHERE
               startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Vehicle_Type.Outputs[Derived Column Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Derived Column Output13]"
-              endId="Package\Contants Stage to NDS\Lookup Code Journey_Purpose.Inputs[Lookup Input]"
+              endId="Package\Contants Stage to NDS\Lookup Code Casualty_Type.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID  Journey_Purpose.Outputs[Derived Column Output]" />
+              startId="Package\Contants Stage to NDS\Add SourceID Casualty_Type.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output25]"
-              endId="Package\Contants Stage to NDS\TimeOfDay NDS.Inputs[OLE DB Destination Input]"
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output15]"
+              endId="Package\Contants Stage to NDS\Lookup Code TimeOfDate.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt TimeOfDay.Outputs[Derived Column Output]" />
+              startId="Package\Contants Stage to NDS\Add SourceID TimeOfDate.Outputs[Derived Column Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Derived Column Output11]"
               endId="Package\Contants Stage to NDS\Journey_Purpose NDS.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Journey_Purpose.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output12]"
-              endId="Package\Contants Stage to NDS\Lookup Code Casualty_Type.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID Casualty_Type.Outputs[Derived Column Output]" />
-            <path
               refId="Package\Contants Stage to NDS.Paths[Derived Column Output1]"
-              endId="Package\Contants Stage to NDS\Local_Authority_District NDS.Inputs[OLE DB Destination Input]"
+              endId="Package\Contants Stage to NDS\Lookup Code Local_Authority_District.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Local_Authority_District.Outputs[Derived Column Output]" />
+              startId="Package\Contants Stage to NDS\Add SourceID Local_Authority_District.Outputs[Derived Column Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Derived Column Output2]"
-              endId="Package\Contants Stage to NDS\Lookup Code Built up Road.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID Built up Road.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output4]"
-              endId="Package\Contants Stage to NDS\Casualty_Severity NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Casualty_Severity.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output5]"
-              endId="Package\Contants Stage to NDS\Lookup Code Accident_Severity.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID Accident_Severity.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output3]"
-              endId="Package\Contants Stage to NDS\Lookup Code Urban_or_Rural_Area.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID Urban_or_Rural_Area.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output7]"
-              endId="Package\Contants Stage to NDS\Lookup Code Vehicle_Type.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID  Vehicle_Type.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output8]"
-              endId="Package\Contants Stage to NDS\Lookup Code Road_Type.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID  Road_Type.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output9]"
-              endId="Package\Contants Stage to NDS\Casualty_Type NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Casualty_Type.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output10]"
               endId="Package\Contants Stage to NDS\Built Up Road NDS.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Built Up Road.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output6]"
-              endId="Package\Contants Stage to NDS\Lookup Code Local_Authority_District.Inputs[Lookup Input]"
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output3]"
+              endId="Package\Contants Stage to NDS\Casualty_Type NDS.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID Local_Authority_District.Outputs[Derived Column Output]" />
+              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Casualty_Type.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output12]"
+              endId="Package\Contants Stage to NDS\TimeOfDay NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt TimeOfDay.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output5]"
+              endId="Package\Contants Stage to NDS\Lookup Code Vehicle_Type.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID  Vehicle_Type.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output4]"
+              endId="Package\Contants Stage to NDS\Lookup Code Road_Type.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID  Road_Type.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output7]"
+              endId="Package\Contants Stage to NDS\Lookup Code Accident_Severity.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID Accident_Severity.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output8]"
+              endId="Package\Contants Stage to NDS\Casualty_Severity NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Casualty_Severity.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output9]"
+              endId="Package\Contants Stage to NDS\Lookup Code Built up Road.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID Built up Road.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output10]"
+              endId="Package\Contants Stage to NDS\Local_Authority_District NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Local_Authority_District.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output6]"
+              endId="Package\Contants Stage to NDS\Lookup Code Urban_or_Rural_Area.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID Urban_or_Rural_Area.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output8]"
+              endId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Gender.Inputs[Derived Column Input]"
+              name="Lookup Error Output"
+              startId="Package\Contants Stage to NDS\Lookup Code Gender.Outputs[Lookup Error Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Lookup Error Output12]"
               endId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt TimeOfDay.Inputs[Derived Column Input]"
@@ -9498,41 +9503,31 @@ WHERE
               startId="Package\Contants Stage to NDS\Lookup Code Accident_Severity.Outputs[Lookup Error Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Lookup Error Output7]"
-              endId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Gender.Inputs[Derived Column Input]"
-              name="Lookup Error Output"
-              startId="Package\Contants Stage to NDS\Lookup Code Gender.Outputs[Lookup Error Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output8]"
               endId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Age_Band.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code Age_Band.Outputs[Lookup Error Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output5]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output6]"
               endId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Built Up Road.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code Built up Road.Outputs[Lookup Error Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output4]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output5]"
               endId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Urban_or_Rural_Area.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code Urban_or_Rural_Area.Outputs[Lookup Error Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output3]"
-              endId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Casualty_Severity.Inputs[Derived Column Input]"
-              name="Lookup Error Output"
-              startId="Package\Contants Stage to NDS\Lookup Code Casualty_Severity.Outputs[Lookup Error Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output2]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output4]"
               endId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Age_Group.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code Age_Group.Outputs[Lookup Error Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output3]"
               endId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Road_Type.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code Road_Type.Outputs[Lookup Error Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output6]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output2]"
               endId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Journey_Purpose.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code Journey_Purpose.Outputs[Lookup Error Output]" />
@@ -9542,57 +9537,57 @@ WHERE
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code Local_Authority_District.Outputs[Lookup Error Output]" />
             <path
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output]"
+              endId="Package\Contants Stage to NDS\add CreatedAt, UpdatedAt Casualty_Severity.Inputs[Derived Column Input]"
+              name="Lookup Error Output"
+              startId="Package\Contants Stage to NDS\Lookup Code Casualty_Severity.Outputs[Lookup Error Output]" />
+            <path
               refId="Package\Contants Stage to NDS.Paths[Lookup Match Output12]"
-              endId="Package\Contants Stage to NDS\Updade TimeOfDate NDS.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\Contants Stage to NDS\Lookup Code TimeOfDate.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output11]"
-              endId="Package\Contants Stage to NDS\Updade Age_Band NDS.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\Contants Stage to NDS\Lookup Code Age_Band.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output10]"
-              endId="Package\Contants Stage to NDS\Updade Casualty_Severity NDS.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\Contants Stage to NDS\Lookup Code Casualty_Severity.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output9]"
-              endId="Package\Contants Stage to NDS\Updade Local_Authority_District NDS.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\Contants Stage to NDS\Lookup Code Local_Authority_District.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output8]"
-              endId="Package\Contants Stage to NDS\Updade Accident_Severity NDS.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\Contants Stage to NDS\Lookup Code Accident_Severity.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output3]"
               endId="Package\Contants Stage to NDS\Updade Vehicle_Type NDS.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Contants Stage to NDS\Lookup Code Vehicle_Type.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output6]"
-              endId="Package\Contants Stage to NDS\Updade Built Up Road NDS.Inputs[OLE DB Command Input]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output11]"
+              endId="Package\Contants Stage to NDS\Updade TimeOfDate NDS.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
-              startId="Package\Contants Stage to NDS\Lookup Code Built up Road.Outputs[Lookup Match Output]" />
+              startId="Package\Contants Stage to NDS\Lookup Code TimeOfDate.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output5]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output10]"
+              endId="Package\Contants Stage to NDS\Updade Age_Band NDS.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Contants Stage to NDS\Lookup Code Age_Band.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output8]"
+              endId="Package\Contants Stage to NDS\Updade Local_Authority_District NDS.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Contants Stage to NDS\Lookup Code Local_Authority_District.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output7]"
+              endId="Package\Contants Stage to NDS\Updade Accident_Severity NDS.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Contants Stage to NDS\Lookup Code Accident_Severity.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output6]"
+              endId="Package\Contants Stage to NDS\Updade Age_Group NDS.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Contants Stage to NDS\Lookup Code Age_Group.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output9]"
+              endId="Package\Contants Stage to NDS\Updade Casualty_Severity NDS.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Contants Stage to NDS\Lookup Code Casualty_Severity.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output4]"
               endId="Package\Contants Stage to NDS\Updade Road_Type NDS.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Contants Stage to NDS\Lookup Code Road_Type.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output4]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output3]"
               endId="Package\Contants Stage to NDS\Updade gender NDS.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Contants Stage to NDS\Lookup Code Gender.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Lookup Match Output2]"
-              endId="Package\Contants Stage to NDS\Updade Age_Group NDS.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\Contants Stage to NDS\Lookup Code Age_Group.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output]"
               endId="Package\Contants Stage to NDS\Updade Casualty_Type NDS.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Contants Stage to NDS\Lookup Code Casualty_Type.Outputs[Lookup Match Output]" />
@@ -9602,72 +9597,77 @@ WHERE
               name="Lookup Match Output"
               startId="Package\Contants Stage to NDS\Lookup Code Journey_Purpose.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output7]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output]"
               endId="Package\Contants Stage to NDS\Updade Urban_or_Rural_Area NDS.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Contants Stage to NDS\Lookup Code Urban_or_Rural_Area.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output12]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output5]"
+              endId="Package\Contants Stage to NDS\Updade Built Up Road NDS.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Contants Stage to NDS\Lookup Code Built up Road.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output10]"
+              endId="Package\Contants Stage to NDS\Add SourceID Accident_Severity.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Contants Stage to NDS\Accident_Severity Stage.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output9]"
               endId="Package\Contants Stage to NDS\Add SourceID TimeOfDate.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Contants Stage to NDS\Time Of Date Stage.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output11]"
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output8]"
               endId="Package\Contants Stage to NDS\Add SourceID Age_Band.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Contants Stage to NDS\Age_Band Stage.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output10]"
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output7]"
               endId="Package\Contants Stage to NDS\Add SourceID Local_Authority_District.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Contants Stage to NDS\Local_Authority_District Stage.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output9]"
-              endId="Package\Contants Stage to NDS\Add SourceID Urban_or_Rural_Area.Inputs[Derived Column Input]"
-              name="OLE DB Source Output"
-              startId="Package\Contants Stage to NDS\Urban_or_Rural_Area Stage.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output6]"
               endId="Package\Contants Stage to NDS\Add SourceID  Road_Type.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Contants Stage to NDS\Road_Type Stage.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output7]"
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output3]"
+              endId="Package\Contants Stage to NDS\Add SourceID  Journey_Purpose.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Contants Stage to NDS\Journey_Purpose Stage.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output4]"
+              endId="Package\Contants Stage to NDS\Add SourceID  Vehicle_Type.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Contants Stage to NDS\Vehicle_Type Stage.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output2]"
+              endId="Package\Contants Stage to NDS\Add SourceID Built up Road.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Contants Stage to NDS\Build up Road Stage.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output1]"
+              endId="Package\Contants Stage to NDS\Add SourceID.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Contants Stage to NDS\Gender Stage.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output]"
+              endId="Package\Contants Stage to NDS\Add SourceID Casualty_Severity.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Contants Stage to NDS\Casualty_Severity Stage.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output11]"
               endId="Package\Contants Stage to NDS\Add SourceID Age_Group.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Contants Stage to NDS\Age_Group Stage.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output5]"
-              endId="Package\Contants Stage to NDS\Add SourceID  Vehicle_Type.Inputs[Derived Column Input]"
+              endId="Package\Contants Stage to NDS\Add SourceID Urban_or_Rural_Area.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
-              startId="Package\Contants Stage to NDS\Vehicle_Type Stage.Outputs[OLE DB Source Output]" />
+              startId="Package\Contants Stage to NDS\Urban_or_Rural_Area Stage.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output4]"
-              endId="Package\Contants Stage to NDS\Add SourceID  Journey_Purpose.Inputs[Derived Column Input]"
-              name="OLE DB Source Output"
-              startId="Package\Contants Stage to NDS\Journey_Purpose Stage.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output3]"
-              endId="Package\Contants Stage to NDS\Add SourceID Built up Road.Inputs[Derived Column Input]"
-              name="OLE DB Source Output"
-              startId="Package\Contants Stage to NDS\Build up Road Stage.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output2]"
-              endId="Package\Contants Stage to NDS\Add SourceID.Inputs[Derived Column Input]"
-              name="OLE DB Source Output"
-              startId="Package\Contants Stage to NDS\Gender Stage.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output1]"
-              endId="Package\Contants Stage to NDS\Add SourceID Casualty_Severity.Inputs[Derived Column Input]"
-              name="OLE DB Source Output"
-              startId="Package\Contants Stage to NDS\Casualty_Severity Stage.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output8]"
-              endId="Package\Contants Stage to NDS\Add SourceID Accident_Severity.Inputs[Derived Column Input]"
-              name="OLE DB Source Output"
-              startId="Package\Contants Stage to NDS\Accident_Severity Stage.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output]"
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output12]"
               endId="Package\Contants Stage to NDS\Add SourceID Casualty_Type.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Contants Stage to NDS\Casualty_Type Stage.Outputs[OLE DB Source Output]" />
@@ -9689,7 +9689,7 @@ WHERE
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="186.4,41.6"
+          Size="186,42"
           Id="Package\Contants Stage to NDS"
           TopLeft="183.571431697632,70.352942163144" />
       </GraphLayout>
@@ -9989,7 +9989,7 @@ WHERE
           Id="Package\Contants Stage to NDS\Build up Road Stage"
           TopLeft="1489.48572406574,888.364713550519" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output8]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output7]"
           TopLeft="920.44156641907,212.518721016595">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10025,7 +10025,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output7]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output8]"
           TopLeft="297.190478708468,218.14117752161">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10061,7 +10061,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output6]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output2]"
           TopLeft="923.193948040483,1521.01285091127">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10097,7 +10097,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output5]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output6]"
           TopLeft="1597.9463296619,1086.65990291388">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10133,7 +10133,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output4]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output5]"
           TopLeft="1602.20346839537,642.930484017245">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10169,7 +10169,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output3]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output]"
           TopLeft="941.022521645342,646.228888217546">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10205,7 +10205,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output2]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output4]"
           TopLeft="309.457145375134,646.270593865767">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10277,7 +10277,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output3]"
           TopLeft="293.117749608897,1520.14226050958">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10313,7 +10313,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output23]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output16]"
           TopLeft="293.828574177684,572.094122237236">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10347,7 +10347,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output22]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output17]"
           TopLeft="1783.04286599232,745.352944897941">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10369,7 +10369,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output21]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output20]"
           TopLeft="908.320790087292,571.357229413489">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10391,7 +10391,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output20]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output19]"
           TopLeft="496.75714720585,1188.22354076923">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10413,7 +10413,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output19]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output25]"
           TopLeft="893.406501527686,137.647062212539">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10435,7 +10435,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output18]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output21]"
           TopLeft="500.257148781115,321.258825577831">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10469,7 +10469,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output17]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output22]"
           TopLeft="506.871434890737,749.388241921989">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10491,7 +10491,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output16]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output23]"
           TopLeft="476.400004257476,1622.56472139028">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10513,7 +10513,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output15]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output24]"
           TopLeft="1110.21429734936,314.941181897292">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10557,7 +10557,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output13]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output18]"
           TopLeft="896.057151591048,1446.14119210721">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10591,7 +10591,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output12]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output13]"
           TopLeft="1527.43507451328,136.600007839765">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10635,7 +10635,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output10]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output2]"
           TopLeft="1780.42858431047,1189.08236379458">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10657,7 +10657,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output9]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output3]"
           TopLeft="1744.04287033495,313.894127524518">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10679,7 +10679,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output8]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output4]"
           TopLeft="270.114286492795,1445.27060170553">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10713,7 +10713,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output7]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output5]"
           TopLeft="1540.97144881268,1443.74119064865">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10747,7 +10747,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output6]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output1]"
           TopLeft="937.06364375229,1006.17648183846">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10769,7 +10769,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output5]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output7]"
           TopLeft="280.149351384179,1010.92942108448">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10791,7 +10791,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output4]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output8]"
           TopLeft="1124.92858590896,748.651349098243">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10813,7 +10813,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output3]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output6]"
           TopLeft="1566.43507017065,568.058825213189">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10835,7 +10835,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output2]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output9]"
           TopLeft="1568.57793143718,1011.78824410983">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10857,7 +10857,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output1]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output10]"
           TopLeft="1153.67143957396,1183.47060152321">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10901,7 +10901,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output11]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output8]"
           TopLeft="900.585722575625,55.0588257601523">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10923,7 +10923,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output10]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output7]"
           TopLeft="942.100007620879,924.352951279147">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10945,7 +10945,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output9]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output5]"
           TopLeft="1571.47143403924,486.235294653881">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10967,7 +10967,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output8]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output10]"
           TopLeft="285.185715252769,929.105890525172">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -10989,7 +10989,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output7]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output11]"
           TopLeft="297.442860117007,489.505885784849">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11033,7 +11033,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output5]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output4]"
           TopLeft="1541.64287757265,1361.91766008934">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11055,7 +11055,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output4]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output3]"
           TopLeft="896.728580351022,1364.3176615479">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11077,7 +11077,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output3]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output2]"
           TopLeft="1574.21429530577,929.964713550519">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11099,7 +11099,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output2]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output1]"
           TopLeft="268.128574220258,62.9058812268464">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11121,7 +11121,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output1]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output]"
           TopLeft="915.500011135231,488.768992961103">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11143,7 +11143,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output12]"
           TopLeft="1534.61429556122,54.0117713873783">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11165,7 +11165,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output11]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output10]"
           TopLeft="859.64156641907,212.518721016595">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11201,7 +11201,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output10]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output9]"
           TopLeft="868.489188312009,646.228888217546">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11237,7 +11237,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output9]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output8]"
           TopLeft="892.632041977007,1081.04814064251">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11273,7 +11273,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output8]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output7]"
           TopLeft="240.317749608897,1085.80107988854">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11309,7 +11309,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output7]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output]"
           TopLeft="1523.5368017287,642.930484017245">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11345,7 +11345,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output6]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output5]"
           TopLeft="1532.07966299523,1086.65990291388">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11381,7 +11381,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output5]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output4]"
           TopLeft="230.45108294223,1520.14226050958">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11417,7 +11417,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output4]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output3]"
           TopLeft="269.057145375135,218.14117752161">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11453,7 +11453,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output3]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output12]"
           TopLeft="1499.44157859545,1518.6128494527">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11489,7 +11489,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output2]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output6]"
           TopLeft="247.057145375134,646.270593865767">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11561,7 +11561,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output2]"
           TopLeft="1490.00347273799,211.471666643821">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11713,7 +11713,7 @@ WHERE
           Id="Package\Contants Stage to NDS\Add SourceID TimeOfDate"
           TopLeft="183.200001021794,1864.32158643762" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output12]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output9]"
           TopLeft="280.885715380493,1805.85099822377">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11739,7 +11739,7 @@ WHERE
           Id="Package\Contants Stage to NDS\Lookup Code TimeOfDate"
           TopLeft="178.914286663094,1967.45099822377" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output24]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output15]"
           TopLeft="281.457143842444,1905.92158643761">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11773,7 +11773,7 @@ WHERE
           Id="Package\Contants Stage to NDS\TimeOfDay NDS"
           TopLeft="401.771433315473,2141.81570557541" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output12]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output11]"
           TopLeft="278.514286663094,2009.05099822377">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11845,7 +11845,7 @@ WHERE
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output25]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output12]"
           TopLeft="476.200004257476,2110.65099822377">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11870,20 +11870,7 @@ WHERE
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Urban_or_Rural_Area NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Lookup Code Casualty_Severity">
+    design-time-name="Package\Contants Stage to NDS\Lookup Code Vehicle_Type">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -11893,7 +11880,7 @@ WHERE
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[AccidentSeverity]</Value>
+          type="q3:string">[dbo].[VehicleType]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -11902,32 +11889,6 @@ WHERE
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Age_Group Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Road_Type NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -11968,6 +11929,19 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Contants Stage to NDS\Vehicle_Type NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Contants Stage to NDS\Age_Group NDS">
     <Properties>
       <Property>
@@ -11981,7 +11955,7 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Lookup Code Vehicle_Type">
+    design-time-name="Package\Contants Stage to NDS\Lookup Code Urban_or_Rural_Area">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -11991,7 +11965,7 @@ WHERE
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[VehicleType]</Value>
+          type="q3:string">[dbo].[UrbanOrRuralArea]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -12040,7 +12014,7 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Age_Band NDS">
+    design-time-name="Package\Contants Stage to NDS\Urban_or_Rural_Area Stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12053,43 +12027,33 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Lookup Code Urban_or_Rural_Area">
+    design-time-name="Package\Contants Stage to NDS\Age_Band Stage">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[UrbanOrRuralArea]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q2:string">Table</Value>
       </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contants Stage to NDS\Journey_Purpose NDS">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Contants Stage to NDS\Casualty_Type Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Vehicle_Type Stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12125,6 +12089,19 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Contants Stage to NDS\Urban_or_Rural_Area NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Contants Stage to NDS\Lookup Code Road_Type">
     <Properties>
       <Property>
@@ -12148,20 +12125,7 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Journey_Purpose NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Casualty_Type NDS">
+    design-time-name="Package\Contants Stage to NDS\Age_Band NDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12246,7 +12210,33 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Vehicle_Type NDS">
+    design-time-name="Package\Contants Stage to NDS\Build up Road Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contants Stage to NDS\TimeOfDay NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contants Stage to NDS\Casualty_Type NDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12282,20 +12272,7 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Urban_or_Rural_Area Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Age_Band Stage">
+    design-time-name="Package\Contants Stage to NDS\Time Of Date Stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12357,7 +12334,7 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Accident_Severity Stage">
+    design-time-name="Package\Contants Stage to NDS\Road_Type Stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12419,7 +12396,79 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Road_Type Stage">
+    design-time-name="Package\Contants Stage to NDS\Accident_Severity Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contants Stage to NDS\Lookup Code TimeOfDate">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[TimeOfDay]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contants Stage to NDS\Road_Type NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contants Stage to NDS\Lookup Code Casualty_Severity">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[AccidentSeverity]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contants Stage to NDS\Vehicle_Type Stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12445,56 +12494,7 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Build up Road Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Time Of Date Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\Lookup Code TimeOfDate">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[TimeOfDay]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Contants Stage to NDS\TimeOfDay NDS">
+    design-time-name="Package\Contants Stage to NDS\Age_Group Stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

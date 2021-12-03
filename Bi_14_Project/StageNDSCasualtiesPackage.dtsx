@@ -5,21 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-LCVMLLJ"
   DTS:CreatorName="DESKTOP-LCVMLLJ\lemin"
-  DTS:DTSID="{739CAE1B-801C-436D-9757-E18B59F6448C}"
+  DTS:DTSID="{BB88BA9C-C007-468F-AA35-B084D9DBF536}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="StageNDSCasualtiesPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{2E222740-394D-4C64-B735-216815795C07}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{392B6765-2D66-440D-8D5F-EDC3C1A4AB9B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_NDS]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{FC2332F7-C140-4F55-B3B1-AC5DA7F9CB11}"
+      DTS:DTSID="{C4496636-FC5C-43AD-8F4E-D757C58685AF}"
       DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_NDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -31,7 +31,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{AAE0226F-F09D-420A-A341-BC21061CFFCE}"
+      DTS:DTSID="{259CEC7D-FD7A-41C6-9E60-0D44B278265F}"
       DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_Stage">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -47,7 +47,7 @@
       DTS:refId="Package\Casualties Stage to NDS"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{B6B24F8A-DC47-4BB9-B578-DBC801022192}"
+      DTS:DTSID="{8AEEF2B4-3808-4B27-AED4-C3D5DE7124D5}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Casualties Stage to NDS"
@@ -1361,7 +1361,7 @@ where [refTable].[Code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Casualties Stage to NDS\292:invalid};</property>
+                  name="ParameterMap">#{Package\Casualties Stage to NDS\737:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1519,7 +1519,7 @@ where [refTable].[Code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Casualties Stage to NDS\293:invalid};</property>
+                  name="ParameterMap">#{Package\Casualties Stage to NDS\738:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1835,7 +1835,7 @@ where [refTable].[Code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Casualties Stage to NDS\295:invalid};</property>
+                  name="ParameterMap">#{Package\Casualties Stage to NDS\739:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2001,7 +2001,7 @@ where [refTable].[Code] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="192,41.6"
+          Size="192,42"
           Id="Package\Casualties Stage to NDS"
           TopLeft="222.857146652377,58.8823537669792" />
       </GraphLayout>
@@ -2293,7 +2293,7 @@ where [refTable].[Code] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2303,7 +2303,7 @@ where [refTable].[Code] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2329,7 +2329,7 @@ where [refTable].[Code] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>

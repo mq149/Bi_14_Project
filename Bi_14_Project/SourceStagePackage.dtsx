@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="SourceStagePackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{65F51933-E1B5-4E7F-B998-615F087D7CF9}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{5019838A-B762-40FD-9D91-BC3EBB792EB3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -24,20 +24,5 @@
 <Objects
   Version="8">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
-  <Package
-    design-time-name="Package">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <AnnotationLayout
-          Text="x"
-          ParentId="Package"
-          FontInfo="{assembly:Null}"
-          Size="34.4,40"
-          Id="f44b60f3-b1ae-471c-b532-aa7ae8840f19"
-          TopLeft="968.571445066102,292.764708810199" />
-      </GraphLayout>
-    </LayoutInfo>
-  </Package>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

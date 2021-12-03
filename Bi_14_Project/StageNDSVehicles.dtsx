@@ -5,21 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-LCVMLLJ"
   DTS:CreatorName="DESKTOP-LCVMLLJ\lemin"
-  DTS:DTSID="{D9B4C4D5-4231-4340-A52F-0923FBE3F825}"
+  DTS:DTSID="{1BC7D2B3-2EAC-40DD-982D-794836CF96B9}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="StageNDSVehicles"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{E1C38CF7-D0D0-4381-850B-118F398BBA0A}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{C3278152-7921-41C0-8EC9-1A2C4FAA810F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_NDS]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{5433D332-B58F-4CAE-8496-8078B1281B24}"
+      DTS:DTSID="{19C1B675-F754-40B4-B55E-D338334FA136}"
       DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_NDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -31,7 +31,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{A6BC6734-2094-4392-A55C-5C533467075F}"
+      DTS:DTSID="{6E525695-B04F-4E82-96A2-CE082820C177}"
       DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_Stage">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -47,7 +47,7 @@
       DTS:refId="Package\Vehicles Stage to NDS"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{6C7BD09B-30D2-473E-BB7B-0431C6619CD9}"
+      DTS:DTSID="{8DB380F8-188D-4A68-83DC-555D544C0570}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Vehicles Stage to NDS"
@@ -442,7 +442,7 @@ where [refTable].[Code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles Stage to NDS\297:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles Stage to NDS\1476:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -600,7 +600,7 @@ where [refTable].[Code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles Stage to NDS\298:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles Stage to NDS\1477:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1680,7 +1680,7 @@ where [refTable].[Code] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="182.4,41.6"
+          Size="182,42"
           Id="Package\Vehicles Stage to NDS"
           TopLeft="231.428575369777,48.1764712638921" />
       </GraphLayout>
@@ -1918,7 +1918,7 @@ where [refTable].[Code] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>

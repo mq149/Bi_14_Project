@@ -5,21 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-LCVMLLJ"
   DTS:CreatorName="DESKTOP-LCVMLLJ\lemin"
-  DTS:DTSID="{C91C64CC-DEA2-49BB-A820-FA41E4AC781A}"
+  DTS:DTSID="{D78E65E1-C65D-4FAE-8700-B4C36BB13F12}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="StageNDSAccidents"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{A52E4071-71D8-4AF8-A594-CE0B6297D7E3}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{6793CDE6-6049-410F-8982-695288361605}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_NDS]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{72DB2467-3CC3-41D6-880A-38113FA7D685}"
+      DTS:DTSID="{B84699F6-CEE7-499C-A6E3-26E937FA189B}"
       DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_NDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -31,7 +31,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{0233C329-0F74-4739-B717-819A4EDC0E29}"
+      DTS:DTSID="{61E44181-6929-4CA0-9FCD-91CC8C6A7225}"
       DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_Stage">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -47,7 +47,7 @@
       DTS:refId="Package\Accident Stage to NDS"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{4069CDAE-B603-4BFF-BE7B-977D1328D1D5}"
+      DTS:DTSID="{A3D72B98-9A31-488C-B4DB-8E6065D65C03}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Accident Stage to NDS"
@@ -1806,7 +1806,7 @@ where [refTable].[AccidentIndex] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Accident Stage to NDS\1362:invalid};</property>
+                  name="ParameterMap">#{Package\Accident Stage to NDS\732:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2268,7 +2268,7 @@ where [refTable].[Code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Accident Stage to NDS\1363:invalid};</property>
+                  name="ParameterMap">#{Package\Accident Stage to NDS\733:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3096,7 +3096,7 @@ where [refTable].[Code] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="184,41.6"
+          Size="184,42"
           Id="Package\Accident Stage to NDS"
           TopLeft="203.571432038229,60.4117655531346" />
       </GraphLayout>
@@ -3505,12 +3505,25 @@ where [refTable].[Code] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Accident Stage to NDS\Lookup Road_type">
+    design-time-name="Package\Accident Stage to NDS\Lookup time of day">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
           type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[TimeOfDay]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -3551,17 +3564,27 @@ where [refTable].[Code] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Accident Stage to NDS\Lookup Accidents_Severity">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Accident Stage to NDS\Lookup Urban or Rural Area">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Accident Stage to NDS\Lookup Accidents_Severity">
+    design-time-name="Package\Accident Stage to NDS\Lookup Road_type">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -3580,29 +3603,6 @@ where [refTable].[Code] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Accident Stage to NDS\Lookup time of day">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[TimeOfDay]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
