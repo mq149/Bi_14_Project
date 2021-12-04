@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="SourceStageAccidentsPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="67"
-  DTS:VersionGUID="{240001D1-ABEE-48CA-8F77-567566FBFB07}">
+  DTS:VersionBuild="73"
+  DTS:VersionGUID="{60D83DEA-5BB1-464D-A6A9-380AE3F6501F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -669,26 +669,7 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{9C501EAB-F18B-468C-8F70-9CC9C02CE926}"
-      DTS:IncludeInDebugDump="6789"
-      DTS:Namespace="User"
-      DTS:ObjectName="CET">
-      <DTS:VariableValue
-        DTS:DataType="7">1/1/1999</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{6C1E1942-8146-4E4C-965A-6B52F627095B}"
-      DTS:IncludeInDebugDump="6789"
-      DTS:Namespace="User"
-      DTS:ObjectName="LSET">
-      <DTS:VariableValue
-        DTS:DataType="7">1/1/1999</DTS:VariableValue>
-    </DTS:Variable>
-  </DTS:Variables>
+  <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Accidents Flow Task"
@@ -1986,19 +1967,11 @@
                       externalMetadataColumnId="Package\Accidents Flow Task\Accidents Stage.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
                       lineageId="Package\Accidents Flow Task\Accidents Flat File Source.Outputs[Flat File Source Output].Columns[Day_of_Week]" />
                     <inputColumn
-                      refId="Package\Accidents Flow Task\Accidents Stage.Inputs[OLE DB Destination Input].Columns[Date]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Date"
-                      externalMetadataColumnId="Package\Accidents Flow Task\Accidents Stage.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      lineageId="Package\Accidents Flow Task\Accidents Flat File Source.Outputs[Flat File Source Output].Columns[Date]" />
-                    <inputColumn
-                      refId="Package\Accidents Flow Task\Accidents Stage.Inputs[OLE DB Destination Input].Columns[newDate]"
+                      refId="Package\Accidents Flow Task\Accidents Stage.Inputs[OLE DB Destination Input].Columns[DT_TIMESTAMP_Date]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="newDate"
-                      externalMetadataColumnId="Package\Accidents Flow Task\Accidents Stage.Inputs[OLE DB Destination Input].ExternalColumns[newDate]"
-                      lineageId="Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Output].Columns[newDate]" />
+                      cachedName="DT_TIMESTAMP_Date"
+                      externalMetadataColumnId="Package\Accidents Flow Task\Accidents Stage.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Output].Columns[DT_TIMESTAMP_Date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2058,9 +2031,7 @@
                       name="Number_of_Casualties" />
                     <externalMetadataColumn
                       refId="Package\Accidents Flow Task\Accidents Stage.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="dbTimeStamp"
                       name="Date" />
                     <externalMetadataColumn
                       refId="Package\Accidents Flow Task\Accidents Stage.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
@@ -2194,10 +2165,6 @@
                       dataType="str"
                       length="50"
                       name="LSOA_of_Accident_Location" />
-                    <externalMetadataColumn
-                      refId="Package\Accidents Flow Task\Accidents Stage.Inputs[OLE DB Destination Input].ExternalColumns[newDate]"
-                      dataType="dbTimeStamp"
-                      name="newDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2227,49 +2194,49 @@
               </outputs>
             </component>
             <component
-              refId="Package\Accidents Flow Task\Conditional Split"
+              refId="Package\Accidents Flow Task\Date is between StartDate and EndDate"
               componentClassID="Microsoft.ConditionalSplit"
               contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split"
+              name="Date is between StartDate and EndDate"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Accidents Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  refId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Inputs[Conditional Split Input]"
                   description="Input to the Conditional Split Transformation"
                   name="Conditional Split Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Accidents Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[newDate]"
+                      refId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Inputs[Conditional Split Input].Columns[DT_TIMESTAMP_Date]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="newDate"
-                      lineageId="Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Output].Columns[newDate]" />
+                      cachedName="DT_TIMESTAMP_Date"
+                      lineageId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Output].Columns[DT_TIMESTAMP_Date]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Accidents Flow Task\Conditional Split.Outputs[Condition]"
+                  refId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Outputs[TRUE]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="Condition"
-                  synchronousInputId="Package\Accidents Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  name="TRUE"
+                  synchronousInputId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Output].Columns[newDate]} &gt;= (DT_DBTIMESTAMP)"01/01/2011" &amp;&amp; #{Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Output].Columns[newDate]} &lt; (DT_DBTIMESTAMP)"01/01/2014"</property>
+                      name="Expression">#{Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Output].Columns[DT_TIMESTAMP_Date]} &gt;= (DT_DBTIMESTAMP)"1/1/2011" &amp;&amp; #{Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Output].Columns[DT_TIMESTAMP_Date]} &lt;= (DT_DBTIMESTAMP)"31/12/2014"</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">newDate &gt;= (DT_DBTIMESTAMP)"01/01/2011" &amp;&amp; newDate &lt; (DT_DBTIMESTAMP)"01/01/2014"</property>
+                      name="FriendlyExpression">DT_TIMESTAMP_Date &gt;= (DT_DBTIMESTAMP)"1/1/2011" &amp;&amp; DT_TIMESTAMP_Date &lt;= (DT_DBTIMESTAMP)"31/12/2014"</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -2278,11 +2245,11 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Accidents Flow Task\Conditional Split.Outputs[Conditional Split Default Output]"
+                  refId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Outputs[Conditional Split Default Output]"
                   description="Default Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   name="Conditional Split Default Output"
-                  synchronousInputId="Package\Accidents Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Inputs[Conditional Split Input]">
                   <properties>
                     <property
                       dataType="System.Boolean"
@@ -2291,23 +2258,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Accidents Flow Task\Conditional Split.Outputs[Conditional Split Error Output]"
+                  refId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Outputs[Conditional Split Error Output]"
                   description="Error Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Conditional Split Error Output"
-                  synchronousInputId="Package\Accidents Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Inputs[Conditional Split Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Accidents Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      refId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Accidents Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Accidents Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      refId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Accidents Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2316,20 +2283,19 @@
               </outputs>
             </component>
             <component
-              refId="Package\Accidents Flow Task\Derived Column"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
+              refId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="DT_STR Date to DT_TIMESTAMP Date Conversion"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Accidents Flow Task\Derived Column.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
+                  refId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Accidents Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Date]"
+                      refId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Inputs[Data Conversion Input].Columns[Date]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2341,55 +2307,195 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
+                  refId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\Accidents Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Output].Columns[newDate]"
+                      refId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Output].Columns[DT_TIMESTAMP_Date]"
                       dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Computation"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Output].Columns[newDate]"
-                      name="newDate"
+                      lineageId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Output].Columns[DT_TIMESTAMP_Date]"
+                      name="DT_TIMESTAMP_Date"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_DBTIMESTAMP)#{Package\Accidents Flow Task\Accidents Flat File Source.Outputs[Flat File Source Output].Columns[Date]}</property>
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Accidents Flow Task\Accidents Flat File Source.Outputs[Flat File Source Output].Columns[Date]}</property>
                         <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIMESTAMP)Date</property>
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
+                  refId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\Accidents Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Accidents Flow Task\Lookup Accidents Stage"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup Accidents Stage"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accidents]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accidents]) [refTable]
+where [refTable].[Accident_Index] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Accident_Index" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Location_Easting_OSGR" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Location_Northing_OSGR" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Longitude" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Latitude" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Police_Force" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Accident_Severity" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Number_of_Vehicles" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Number_of_Casualties" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Day_of_Week" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Time" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Local_Authority_(District)" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Local_Authority_(Highway)" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="1st_Road_Class" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="1st_Road_Number" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Road_Type" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Speed_limit" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Junction_Detail" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Junction_Control" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="2nd_Road_Class" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="2nd_Road_Number" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Pedestrian_Crossing-Human_Control" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Pedestrian_Crossing-Physical_Facilities" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Light_Conditions" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Weather_Conditions" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Road_Surface_Conditions" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Special_Conditions_at_Site" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Carriageway_Hazards" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Urban_or_Rural_Area" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Did_Police_Officer_Attend_Scene_of_Accident" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="LSOA_of_Accident_Location" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Accidents Flow Task\Accidents Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Accidents Flow Task\Lookup Accidents Stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Accidents Flow Task\Lookup Accidents Stage.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Accidents Flow Task\Lookup Accidents Stage.Inputs[Lookup Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      lineageId="Package\Accidents Flow Task\Accidents Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Accident_Index</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="RedirectRow"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Accidents Flow Task\Lookup Accidents Stage.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Accidents Flow Task\Lookup Accidents Stage.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Accidents Flow Task\Lookup Accidents Stage.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2400,20 +2506,25 @@
           </components>
           <paths>
             <path
-              refId="Package\Accidents Flow Task.Paths[Condition]"
-              endId="Package\Accidents Flow Task\Accidents Stage.Inputs[OLE DB Destination Input]"
-              name="Condition"
-              startId="Package\Accidents Flow Task\Conditional Split.Outputs[Condition]" />
-            <path
-              refId="Package\Accidents Flow Task.Paths[Derived Column Output]"
-              endId="Package\Accidents Flow Task\Conditional Split.Inputs[Conditional Split Input]"
-              name="Derived Column Output"
-              startId="Package\Accidents Flow Task\Derived Column.Outputs[Derived Column Output]" />
+              refId="Package\Accidents Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Inputs[Conditional Split Input]"
+              name="Data Conversion Output"
+              startId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Accidents Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Accidents Flow Task\Derived Column.Inputs[Derived Column Input]"
+              endId="Package\Accidents Flow Task\Lookup Accidents Stage.Inputs[Lookup Input]"
               name="Flat File Source Output"
               startId="Package\Accidents Flow Task\Accidents Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Accidents Flow Task.Paths[Lookup Error Output]"
+              endId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Inputs[Data Conversion Input]"
+              name="Lookup Error Output"
+              startId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Error Output]" />
+            <path
+              refId="Package\Accidents Flow Task.Paths[TRUE]"
+              endId="Package\Accidents Flow Task\Accidents Stage.Inputs[OLE DB Destination Input]"
+              name="TRUE"
+              startId="Package\Accidents Flow Task\Date is between StartDate and EndDate.Outputs[TRUE]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2442,37 +2553,37 @@
     design-time-name="Package\Accidents Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="154.666666666667,41.3333333333334"
-          Id="Package\Accidents Flow Task\Conditional Split"
-          TopLeft="261.866073423977,220.930718632472" />
+          Size="268,42.6666666666667"
+          Id="Package\Accidents Flow Task\Date is between StartDate and EndDate"
+          TopLeft="206.694642946112,293.51317373955" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\Accidents Flow Task\Derived Column"
-          TopLeft="261.866073423977,139.563398178007" />
-        <NodeLayout
-          Size="198.666666666667,41.3333333333334"
-          Id="Package\Accidents Flow Task\Accidents Flat File Source"
-          TopLeft="239.866073423977,59.5294110568745" />
+          Size="316,42.6666666666667"
+          Id="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion"
+          TopLeft="182.694642946112,212.474141780705" />
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\Accidents Flow Task\Accidents Stage"
-          TopLeft="261.866073423977,300.964705753604" />
+          TopLeft="262.736309622092,377.80220564028" />
+        <NodeLayout
+          Size="198.666666666667,41.3333333333334"
+          Id="Package\Accidents Flow Task\Accidents Flat File Source"
+          TopLeft="241.361309612779,40.6794113939387" />
         <EdgeLayout
-          Id="Package\Accidents Flow Task.Paths[Flat File Source Output]"
-          TopLeft="339.199406757311,100.862744390208">
+          Id="Package\Accidents Flow Task.Paths[Data Conversion Output]"
+          TopLeft="340.694642946112,255.140808447372">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38.7006537877987"
+              EndConnector="0,38.372365292178"
               Start="0,0"
-              End="0,31.2006537877987">
+              End="0,30.872365292178">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.2006537877987" />
+                    End="0,30.872365292178" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2482,48 +2593,76 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Accidents Flow Task.Paths[Derived Column Output]"
-          TopLeft="339.199406757311,182.230064844673">
+          Id="Package\Accidents Flow Task.Paths[TRUE]"
+          TopLeft="340.382142950769,336.179840406217">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38.7006537877987"
+              EndConnector="0,41.6223652340634"
               Start="0,0"
-              End="0,31.2006537877987">
+              End="0,34.1223652340634">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.2006537877987" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Accidents Flow Task.Paths[Condition]"
-          TopLeft="339.199406757311,262.264051965805">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.7006537877987"
-              Start="0,0"
-              End="0,31.2006537877987">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.2006537877987" />
+                    End="0,34.1223652340634" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-21.264453125,10.7258151751494,42.52890625,9.7490234375"
+              BoundingBox="-12.94904296875,12.3502451170317,25.8980859375,9.421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="192,42.6666666666667"
+          Id="Package\Accidents Flow Task\Lookup Accidents Stage"
+          TopLeft="243.124996377155,122.849997803271" />
+        <EdgeLayout
+          Id="Package\Accidents Flow Task.Paths[Flat File Source Output]"
+          TopLeft="339.909819661634,82.0127447272721">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.8372530759988"
+              Start="0,0"
+              End="0,33.3372530759988">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.3372530759988" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Flow Task.Paths[Lookup Error Output]"
+          TopLeft="339.909819661634,165.516664469938">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.9574773107678"
+              Start="0,0"
+              End="0,39.4574773107678">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.4574773107678" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-45.86638671875,13.9240511553839,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2540,6 +2679,29 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Accidents Flow Task\Lookup Accidents Stage">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accidents]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

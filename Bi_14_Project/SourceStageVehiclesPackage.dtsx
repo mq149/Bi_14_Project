@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="SourceStageVehiclesPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{8C06D4AA-F51E-4240-9A73-21160AE3CCB7}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{E8DC9D41-EA0B-4A05-86B5-B920B4D48484}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -506,6 +506,150 @@
           version="1">
           <components>
             <component
+              refId="Package\Vehicles Data Flow\Lookup Accidents Stage"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup Accidents Stage"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accidents]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accidents]) [refTable]
+where [refTable].[Accident_Index] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Accident_Index" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Location_Easting_OSGR" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Location_Northing_OSGR" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Longitude" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Latitude" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Police_Force" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Accident_Severity" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Number_of_Vehicles" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Number_of_Casualties" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Day_of_Week" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Time" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Local_Authority_(District)" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Local_Authority_(Highway)" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="1st_Road_Class" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="1st_Road_Number" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Road_Type" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Speed_limit" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Junction_Detail" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Junction_Control" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="2nd_Road_Class" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="2nd_Road_Number" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Pedestrian_Crossing-Human_Control" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Pedestrian_Crossing-Physical_Facilities" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Light_Conditions" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Weather_Conditions" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Road_Surface_Conditions" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Special_Conditions_at_Site" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Carriageway_Hazards" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Urban_or_Rural_Area" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Did_Police_Officer_Attend_Scene_of_Accident" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="LSOA_of_Accident_Location" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Vehicles Data Flow\Vehicles Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Vehicles Data Flow\Lookup Accidents Stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Quan\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[Quan\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Vehicles Data Flow\Lookup Accidents Stage.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Vehicles Data Flow\Lookup Accidents Stage.Inputs[Lookup Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      lineageId="Package\Vehicles Data Flow\Vehicles Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Accident_Index</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Vehicles Data Flow\Lookup Accidents Stage.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Vehicles Data Flow\Lookup Accidents Stage.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Vehicles Data Flow\Lookup Accidents Stage.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Vehicles Data Flow\Lookup Accidents Stage.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Vehicles Data Flow\Lookup Accidents Stage.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Vehicles Data Flow\Lookup Accidents Stage.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Vehicles Data Flow\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Vehicles Data Flow\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Vehicles Data Flow\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Vehicles Data Flow\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Vehicles Data Flow\Lookup Vehicles Stage"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -526,7 +670,7 @@
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Vehicles]) [refTable]
-where [refTable].[Accident_Index] = ?</property>
+where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -562,7 +706,7 @@ where [refTable].[Accident_Index] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles Data Flow\Vehicles Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]};</property>
+                  name="ParameterMap">#{Package\Vehicles Data Flow\Vehicles Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]};#{Package\Vehicles Data Flow\Vehicles Flat File Source.Outputs[Flat File Source Output].Columns[Vehicle_Reference]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -603,6 +747,24 @@ where [refTable].[Accident_Index] = ?</property>
                           name="CopyFromReferenceColumn" />
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Inputs[Lookup Input].Columns[Vehicle_Reference]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Vehicle_Reference"
+                      lineageId="Package\Vehicles Data Flow\Vehicles Flat File Source.Outputs[Flat File Source Output].Columns[Vehicle_Reference]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Vehicle_Reference</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -611,7 +773,7 @@ where [refTable].[Accident_Index] = ?</property>
                 <output
                   refId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Inputs[Lookup Input]">
@@ -1745,14 +1907,19 @@ where [refTable].[Accident_Index] = ?</property>
           <paths>
             <path
               refId="Package\Vehicles Data Flow.Paths[Flat File Source Output]"
-              endId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Inputs[Lookup Input]"
+              endId="Package\Vehicles Data Flow\Lookup Accidents Stage.Inputs[Lookup Input]"
               name="Flat File Source Output"
               startId="Package\Vehicles Data Flow\Vehicles Flat File Source.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Vehicles Data Flow.Paths[Lookup Match Output]"
+              refId="Package\Vehicles Data Flow.Paths[Lookup Error Output]"
               endId="Package\Vehicles Data Flow\Vehicles Stage.Inputs[OLE DB Destination Input]"
+              name="Lookup Error Output"
+              startId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Outputs[Lookup Error Output]" />
+            <path
+              refId="Package\Vehicles Data Flow.Paths[Lookup Match Output]"
+              endId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles Data Flow\Lookup Accidents Stage.Outputs[Lookup Match Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1783,61 +1950,89 @@ where [refTable].[Accident_Index] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="192,41.3333333333334"
+          Id="Package\Vehicles Data Flow\Vehicles Flat File Source"
+          TopLeft="212.952382810845,19.9970591247195" />
+        <NodeLayout
           Size="148,42.6666666666667"
           Id="Package\Vehicles Data Flow\Vehicles Stage"
-          TopLeft="232.142860617261,253.997062406482" />
+          TopLeft="234.952382810845,261.797062267007" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\Vehicles Data Flow\Lookup Vehicles Stage"
-          TopLeft="215.714289387878,133.823531288589" />
-        <NodeLayout
-          Size="192,41.3333333333334"
-          Id="Package\Vehicles Data Flow\Vehicles Flat File Source"
-          TopLeft="209.285717849829,20.6470591130966" />
+          TopLeft="216.285716144178,180.752616775133" />
         <EdgeLayout
-          Id="Package\Vehicles Data Flow.Paths[Lookup Match Output]"
-          TopLeft="307.261908335903,176.490197955256">
+          Id="Package\Vehicles Data Flow.Paths[Lookup Error Output]"
+          TopLeft="308.952382810845,223.4192834418">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,77.5068644512263"
+              EndConnector="0,38.3777788252069"
               Start="0,0"
-              End="0,70.0068644512263">
+              End="0,30.8777788252069">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,70.0068644512263" />
+                    End="0,30.8777788252069" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,29.1987447256132,96.3827734375,11.609375"
+              BoundingBox="-45.86638671875,9.63420191260347,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="192,42.6666666666667"
+          Id="Package\Vehicles Data Flow\Lookup Accidents Stage"
+          TopLeft="212.952382810845,99.7081712832598" />
         <EdgeLayout
           Id="Package\Vehicles Data Flow.Paths[Flat File Source Output]"
-          TopLeft="306.833336952187,61.9803924464299">
+          TopLeft="308.952382810845,61.3303924580528">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,71.8431388421591"
+              EndConnector="0,38.377778825207"
               Start="0,0"
-              End="0,64.3431388421591">
+              End="0,30.877778825207">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,64.3431388421591" />
+                    End="0,30.877778825207" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Vehicles Data Flow.Paths[Lookup Match Output]"
+          TopLeft="308.952382810845,142.374837949926">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.377778825207"
+              Start="0,0"
+              End="0,30.877778825207">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.877778825207" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,9.63420191260349,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1868,6 +2063,29 @@ where [refTable].[Accident_Index] = ?</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[Vehicles]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Vehicles Data Flow\Lookup Accidents Stage">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accidents]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
