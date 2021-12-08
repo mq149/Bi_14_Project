@@ -11,43 +11,33 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="StageNDSGeographicalPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{D72945CD-F8AE-449E-A06B-9B48305851AF}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{1E56CFE7-60AF-469A-96D2-E348F3EB547A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{E328BBF1-5250-41F4-B32B-64FF9B8182CF}"
-      DTS:ObjectName="DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-TOL1F2F\MSSQLSERVERBI;Initial Catalog=BI14LabProjectStageDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB 1]"
-      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{0585709F-42DA-4670-BF99-4F1545434606}"
-      DTS:ObjectName="DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-TOL1F2F\MSSQLSERVERBI;Initial Catalog=BI14LabProjectStageDB;Integrated Security=True;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+      DTS:refId="Package.ConnectionManagers[ETL_NDS]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{A5A8E086-4D0B-4917-AE35-C3B892F218D4}"
-      DTS:ObjectName="DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS">
+      DTS:ObjectName="ETL_NDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=DESKTOP-TOL1F2F\MSSQLSERVERBI;Initial Catalog=ETL_NDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_Stage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E328BBF1-5250-41F4-B32B-64FF9B8182CF}"
+      DTS:ObjectName="ETL_Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-TOL1F2F\MSSQLSERVERBI;Initial Catalog=BI14LabProjectStageDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -481,8 +471,8 @@
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to Country NDS\Country NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -657,8 +647,8 @@ where [refTable].[CountryCode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to Country NDS\Lookup Country NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -784,8 +774,8 @@ group by pc.country_code, pc.country_name;</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to Country NDS\Postcodes + LSOA_PCD Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -973,8 +963,8 @@ and SourceId=?</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to Country NDS\Update date command.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1382,8 +1372,8 @@ and SourceId=?</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to County NDS\County NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1554,8 +1544,8 @@ where [refTable].[CountyName] = ?</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to County NDS\Lookup County NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1714,8 +1704,8 @@ where [refTable].[RegionCode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to County NDS\Lookup Region NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1858,8 +1848,8 @@ group by pc.county, pc.region_code;</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to County NDS\Postcodes + LSOA_PCD Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2048,8 +2038,8 @@ and SourceID=?</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to County NDS\Update date command.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2560,8 +2550,8 @@ where [refTable].[CountryCode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to Region NDS\Lookup Country NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2720,8 +2710,8 @@ where [refTable].[RegionCode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to Region NDS\Lookup Region NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2864,8 +2854,8 @@ group by pc.region_code, pc.region_name, pc.country_code;</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to Region NDS\Postcodes + LSOA_PCD Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3032,8 +3022,8 @@ group by pc.region_code, pc.region_name, pc.country_code;</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to Region NDS\Region NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3253,8 +3243,8 @@ and SourceId=?</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to Region NDS\Update date command.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3803,8 +3793,8 @@ where [refTable].[CountyName] = ?</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup County NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -3963,8 +3953,8 @@ where [refTable].[Postcode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup TownCity NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -4107,8 +4097,8 @@ group by lp.pcd7, lp.lsoa11cd, pc.city, pc.county;</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4299,8 +4289,8 @@ group by lp.pcd7, lp.lsoa11cd, pc.city, pc.county;</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\TownCity NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4535,8 +4525,8 @@ and SourceID=?</property>
               <connections>
                 <connection
                   refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4875,7 +4865,7 @@ and SourceID=?</property>
           PanelSize="313.6,457.6"
           Size="313.6,500.8"
           Id="093a110f-601d-445d-8283-78da700d3c81"
-          TopLeft="180.214288876981,39.911766647055">
+          TopLeft="235.928575540075,88.0882379109471">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Postcodes LSOA_PCD Stage to Country NDS</s:String>
             <s:String>Package\Postcodes LSOA_PCD Stage to Region NDS</s:String>
@@ -6080,7 +6070,7 @@ and SourceID=?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6090,7 +6080,7 @@ and SourceID=?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

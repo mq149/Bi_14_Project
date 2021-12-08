@@ -11,258 +11,16 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="SourceStageVehiclesPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{E8DC9D41-EA0B-4A05-86B5-B920B4D48484}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{5EA99D51-04A2-4C48-997A-4B139E389916}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-G8316ET\MSSQLSERVER01.BI14LabProjectStageDB]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{EDCDF899-0174-449B-9506-1BACD2CED3E3}"
-      DTS:ObjectName="DESKTOP-G8316ET\MSSQLSERVER01.BI14LabProjectStageDB">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-G8316ET\MSSQLSERVER01;Initial Catalog=BI14LabProjectStageDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{18B245CC-35E1-4694-AFB9-F5FD799DB7CD}"
-      DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_Stage">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LCVMLLJ\LEMINH;Initial Catalog=ETL_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{B7E41AAC-C433-4BA9-A425-4EB63076CC4A}"
-      DTS:ObjectName="Flat File Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="D:\BI\TH\DataV2\Vehicles1114.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{03B46992-D964-408A-8B7C-2A86D26D088B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{0FA1AB75-57F4-422F-984F-F238DC8A03B0}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Type"
-              DTS:DTSID="{9694274B-CA50-4C2B-83BB-A2E4D6E5B62D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Towing_and_Articulation"
-              DTS:DTSID="{315E86FB-FD3D-4E04-BE85-B88120B951A3}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Manoeuvre"
-              DTS:DTSID="{EE98F100-73E8-4421-8697-80EE43DA0B1A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Location-Restricted_Lane"
-              DTS:DTSID="{0EDCF563-3572-4FB6-A3FC-4784DD3F2822}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Junction_Location"
-              DTS:DTSID="{E7D39E15-78B1-4D5D-A507-030552A6C1F8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Skidding_and_Overturning"
-              DTS:DTSID="{FD08AFA7-F679-4BBA-A11D-749D89DCAB2C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Hit_Object_in_Carriageway"
-              DTS:DTSID="{9C9ED62B-13A3-4E5B-B9CD-98340B1770DC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Leaving_Carriageway"
-              DTS:DTSID="{31BB246F-5866-4B14-8CC8-F857BE1EE075}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Hit_Object_off_Carriageway"
-              DTS:DTSID="{6BF4780B-90F9-4A6D-917F-9D35728BF20B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="1st_Point_of_Impact"
-              DTS:DTSID="{F1D3AE74-C3A7-4626-95D2-101E7BB10D8D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Was_Vehicle_Left_Hand_Drive?"
-              DTS:DTSID="{0BD0EE14-347C-4159-A5F3-34220830614A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Journey_Purpose_of_Driver"
-              DTS:DTSID="{2D68EA32-96F8-44AD-ACF9-0AF84D2E5E9B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Sex_of_Driver"
-              DTS:DTSID="{3453D17E-0B10-4A62-8712-EBAFB7028761}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_of_Driver"
-              DTS:DTSID="{C01EEC55-FCB9-4AB8-8574-99B36FD4DD94}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_Band_of_Driver"
-              DTS:DTSID="{AB8F938D-7042-4E5A-8359-2865F7459DEE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Engine_Capacity_(CC)"
-              DTS:DTSID="{BD75C586-CA38-428A-B845-B924FE7D9EC5}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Propulsion_Code"
-              DTS:DTSID="{E416ABAC-D688-4A64-8E2D-9CD73B2A1AE5}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_of_Vehicle"
-              DTS:DTSID="{06E846BE-0F32-4371-AA70-66D39898CB07}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Driver_IMD_Decile"
-              DTS:DTSID="{01A757CF-6803-42AE-8C4D-C6B3FDF0277B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Driver_Home_Area_Type"
-              DTS:DTSID="{5F733F96-059C-4317-B436-1BEC03A45A9B}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Quan\MSSQLSERVERBI.BI14LabProjectStageDB]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{94C808DA-C292-4A0D-A68A-8E39FB2A3539}"
-      DTS:ObjectName="Quan\MSSQLSERVERBI.BI14LabProjectStageDB">
+      DTS:DTSID="{A90CB14F-7C5F-4477-882D-ADB31EE139A6}"
+      DTS:ObjectName="DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -271,10 +29,10 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Quan\Vehicles]"
+      DTS:refId="Package.ConnectionManagers[Vehicles.csv]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{11BE31F3-29E8-405C-9E66-7D5134229BC6}"
-      DTS:ObjectName="Quan\Vehicles">
+      DTS:ObjectName="Vehicles.csv">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -575,8 +333,8 @@ where [refTable].[Accident_Index] = ?</property>
               <connections>
                 <connection
                   refId="Package\Vehicles Data Flow\Lookup Accidents Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\MSSQLSERVERBI.BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -719,8 +477,8 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
               <connections>
                 <connection
                   refId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\MSSQLSERVERBI.BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -833,8 +591,8 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
               <connections>
                 <connection
                   refId="Package\Vehicles Data Flow\Vehicles Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Vehicles]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Vehicles]"
+                  connectionManagerID="Package.ConnectionManagers[Vehicles.csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[Vehicles.csv]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -1530,7 +1288,7 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -1542,7 +1300,7 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -1551,8 +1309,8 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
               <connections>
                 <connection
                   refId="Package\Vehicles Data Flow\Vehicles Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\MSSQLSERVERBI.BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1938,7 +1696,7 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="167.333333333334,41.3333333333334"
+          Size="167.2,41.6"
           Id="Package\Vehicles Data Flow"
           TopLeft="196.428573751936,80.6470591130966" />
       </GraphLayout>
@@ -1950,45 +1708,21 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="192,41.3333333333334"
+          Size="192,41.6"
           Id="Package\Vehicles Data Flow\Vehicles Flat File Source"
           TopLeft="212.952382810845,19.9970591247195" />
         <NodeLayout
-          Size="148,42.6666666666667"
-          Id="Package\Vehicles Data Flow\Vehicles Stage"
-          TopLeft="234.952382810845,261.797062267007" />
-        <NodeLayout
-          Size="185.333333333334,42.6666666666667"
+          Size="185.6,42.4"
           Id="Package\Vehicles Data Flow\Lookup Vehicles Stage"
           TopLeft="216.285716144178,180.752616775133" />
-        <EdgeLayout
-          Id="Package\Vehicles Data Flow.Paths[Lookup Error Output]"
-          TopLeft="308.952382810845,223.4192834418">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.3777788252069"
-              Start="0,0"
-              End="0,30.8777788252069">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.8777788252069" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-45.86638671875,9.63420191260347,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="192,42.6666666666667"
+          Size="192,42.4"
           Id="Package\Vehicles Data Flow\Lookup Accidents Stage"
           TopLeft="212.952382810845,99.7081712832598" />
+        <NodeLayout
+          Size="148,42.4"
+          Id="Package\Vehicles Data Flow\Vehicles Stage"
+          TopLeft="234.952382810845,261.797062267007" />
         <EdgeLayout
           Id="Package\Vehicles Data Flow.Paths[Flat File Source Output]"
           TopLeft="308.952382810845,61.3303924580528">
@@ -2035,22 +1769,33 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Vehicles Data Flow.Paths[Lookup Error Output]"
+          TopLeft="308.952382810845,223.4192834418">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.3777788252069"
+              Start="0,0"
+              End="0,30.8777788252069">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.8777788252069" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-45.86638671875,9.63420191260347,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Vehicles Data Flow\Vehicles Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Vehicles Data Flow\Lookup Vehicles Stage">
     <Properties>
@@ -2094,6 +1839,19 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Vehicles Data Flow\Vehicles Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

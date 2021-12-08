@@ -11,174 +11,16 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="SourceStageLSOAPCDPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{36A3C951-8C5C-413B-92B6-18F338B0DB45}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{D02FE82C-495F-4943-903C-216923787C4A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{5805031E-2346-41A1-8347-E9FFD1BFAC82}"
-      DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_Stage">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LCVMLLJ\LEMINH;Initial Catalog=ETL_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{367F9B30-9D91-45ED-A4F9-1E3622F45825}"
-      DTS:ObjectName="Flat File Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="2057"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="D:\BI\TH\Data\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="pcd7"
-              DTS:DTSID="{19644A3F-53C4-4DAE-8617-175C3FC2D286}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="pcd8"
-              DTS:DTSID="{B3060FC1-3764-4CFD-B163-0AF123002786}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="pcds"
-              DTS:DTSID="{9456222C-6D62-42B0-B5E1-8C4D841FF226}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="dointr"
-              DTS:DTSID="{651DEF71-CDCE-4723-BFD3-567C2A2A662C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="doterm"
-              DTS:DTSID="{FFFD8EC7-4089-4926-B5C8-E707A27E4731}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="usertype"
-              DTS:DTSID="{F73AA5CA-EDFA-4621-896A-419D4EBB0ABC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="oa11cd"
-              DTS:DTSID="{AF517115-E05D-41B2-A97C-D35E1330950A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="lsoa11cd"
-              DTS:DTSID="{5517ED9A-DE99-4F74-B384-3EF703C4689A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="msoa11cd"
-              DTS:DTSID="{2801810A-9F28-4A42-BAFA-B3FA00E2EAD4}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ladcd"
-              DTS:DTSID="{798425E0-BF5C-4F44-8ABB-24E28B4DD197}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="lsoa11nm"
-              DTS:DTSID="{CE7D6963-9C0E-41A7-879D-5E84D97AD525}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="msoa11nm"
-              DTS:DTSID="{27FDE678-7A8E-4E54-8C8E-5CFABFC1A8CA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ladnm"
-              DTS:DTSID="{8888B85B-75C0-4D65-9056-CEF53D759A9A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ladnmw"
-              DTS:DTSID="{5F318CD9-2B7F-4617-96B0-21C397A57957}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+      DTS:refId="Package.ConnectionManagers[ETL_Stage]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{2ABE248D-2CA9-4BB3-A80A-D849DCFA9074}"
-      DTS:ObjectName="Quan\BI14LabProjectStageDB">
+      DTS:ObjectName="ETL_Stage">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -187,10 +29,10 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Quan\PCD_]"
+      DTS:refId="Package.ConnectionManagers[PCD_OA_LSOA_MSOA_LAD.csv]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{FECA6DC2-ABF5-4AFE-94F7-83F534C39E69}"
-      DTS:ObjectName="Quan\PCD_">
+      DTS:ObjectName="PCD_OA_LSOA_MSOA_LAD.csv">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -408,8 +250,8 @@
               <connections>
                 <connection
                   refId="Package\PCD_OA_LSOA_MSOA_LAD Data Flow\LSOA_PCD Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -502,8 +344,8 @@
               <connections>
                 <connection
                   refId="Package\PCD_OA_LSOA_MSOA_LAD Data Flow\PCD_OA_LSOA_MSOA_LAD Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\PCD_]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\PCD_]"
+                  connectionManagerID="Package.ConnectionManagers[PCD_OA_LSOA_MSOA_LAD.csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[PCD_OA_LSOA_MSOA_LAD.csv]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>

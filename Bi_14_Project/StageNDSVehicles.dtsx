@@ -11,33 +11,33 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="StageNDSVehicles"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{C3278152-7921-41C0-8EC9-1A2C4FAA810F}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{5856BC7B-07C9-44DD-AC3C-C638B6DE5B6E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_NDS]"
+      DTS:refId="Package.ConnectionManagers[ETL_NDS]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{19C1B675-F754-40B4-B55E-D338334FA136}"
-      DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_NDS">
+      DTS:ObjectName="ETL_NDS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LCVMLLJ\LEMINH;Initial Catalog=ETL_NDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-TOL1F2F\MSSQLSERVERBI;Initial Catalog=ETL_NDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+      DTS:refId="Package.ConnectionManagers[ETL_Stage]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{6E525695-B04F-4E82-96A2-CE082820C177}"
-      DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_Stage">
+      DTS:ObjectName="ETL_Stage">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LCVMLLJ\LEMINH;Initial Catalog=ETL_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-TOL1F2F\MSSQLSERVERBI;Initial Catalog=BI14LabProjectStageDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -295,8 +295,8 @@ where [refTable].[AccidentIndex] = ?</property>
               <connections>
                 <connection
                   refId="Package\Vehicles Stage to NDS\Lookup Accident Index.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -442,7 +442,7 @@ where [refTable].[Code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles Stage to NDS\1476:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles Stage to NDS\1612:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -455,8 +455,8 @@ where [refTable].[Code] = ?</property>
               <connections>
                 <connection
                   refId="Package\Vehicles Stage to NDS\Lookup Journey Purpose.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -600,7 +600,7 @@ where [refTable].[Code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles Stage to NDS\1477:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles Stage to NDS\1613:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -613,8 +613,8 @@ where [refTable].[Code] = ?</property>
               <connections>
                 <connection
                   refId="Package\Vehicles Stage to NDS\Lookup Vehicle Type.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -891,8 +891,8 @@ where [refTable].[Code] = ?</property>
               <connections>
                 <connection
                   refId="Package\Vehicles Stage to NDS\Vehicles NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1060,8 +1060,8 @@ where [refTable].[Code] = ?</property>
               <connections>
                 <connection
                   refId="Package\Vehicles Stage to NDS\Vehicles Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1680,7 +1680,7 @@ where [refTable].[Code] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="182,42"
+          Size="182.4,41.6"
           Id="Package\Vehicles Stage to NDS"
           TopLeft="231.428575369777,48.1764712638921" />
       </GraphLayout>

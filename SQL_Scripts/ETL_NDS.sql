@@ -24,6 +24,7 @@ CREATE TABLE TimeOfDay
 	TimeOfDayIndex int identity(1,1),
 	Code int,
 	Label varchar(100),
+	SourceID int,
 	CreatedAt datetime,
 	UpdatedAt datetime
 	CONSTRAINT PK_TOD PRIMARY KEY(TimeOfDayIndex)
@@ -56,6 +57,9 @@ CREATE TABLE AgeGroup
 	AgeGroupIndex int identity(1,1),
 	Code int,
 	Label varchar(100),
+	SourceID int,
+	CreatedAt datetime,
+	UpdatedAt datetime
 	CONSTRAINT PK_AG PRIMARY KEY(AgeGroupIndex)
 )
 
@@ -63,7 +67,7 @@ CREATE TABLE CasualtySeverity
 (
 	CasualtySeverityIndex int identity(1,1),
 	Code int,
-	Label varchar(20),
+	Label varchar(100),
 	SourceID int,
 	CreatedAt datetime,
 	UpdatedAt datetime
@@ -85,7 +89,7 @@ CREATE TABLE AccidentSeverity
 (
 	AccidentSeverityIndex int identity(1,1),
 	Code int,
-	Label varchar(20),
+	Label varchar(100),
 	SourceID int,
 	CreatedAt datetime,
 	UpdatedAt datetime
@@ -143,7 +147,7 @@ CREATE TABLE LocalAuthorityDistrict
 (
 	LADIndex int identity(1,1),
 	Code int,
-	Label varchar(50),
+	Label varchar(100),
 	SourceID int,
 	CreatedAt datetime,
 	UpdatedAt datetime
@@ -154,7 +158,7 @@ CREATE TABLE UrbanOrRuralArea
 (
 	UrbanOrRuralIndex int identity(1,1),
 	Code int,
-	Label varchar(10),
+	Label varchar(100),
 	SourceID int,
 	CreatedAt datetime,
 	UpdatedAt datetime
@@ -166,6 +170,7 @@ CREATE TABLE BuiltUpRoad
 	BuiltUpRoadIndex int identity(1,1),
 	Code int,
 	Label varchar(100),
+	SourceID int,
 	CreatedAt datetime,
 	UpdatedAt datetime
 	CONSTRAINT PK_BUR PRIMARY KEY(BuiltUpRoadIndex)
@@ -175,7 +180,7 @@ CREATE TABLE RoadType
 (
 	RoadTypeIndex int identity(1,1),
 	Code int,
-	Label varchar(50),
+	Label varchar(100),
 	SourceID int,
 	CreatedAt datetime,
 	UpdatedAt datetime
@@ -232,6 +237,8 @@ CREATE TABLE Accidents
 	BuiltUpRoad int,
 	UrbanOrRuralArea int,
 	LAD int,
+	Longitude float,
+	Latitude float,
 	SourceID int,
 	CreatedAt datetime,
 	UpdatedAt datetime,
@@ -243,9 +250,9 @@ CREATE TABLE Casualties
 	CasualtyIndex int identity(1,1),
 	AccidentID int,
 	VehicleReference int,
+	CasualtyReference int,
 	SexOfCasualty int,
 	AgeOfCasualty int,
-	AccdentSeverity int,
 	AgeGroupOfCasualty int,
 	AgeBandOfCasualty int,
 	CasualtySeverity int,

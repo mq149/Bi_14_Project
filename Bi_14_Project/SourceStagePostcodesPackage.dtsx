@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="SourceStagePostcodesPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{E25508D7-2AB4-4929-9FA5-B5C293E28304}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{0EB7784C-70A3-4C49-BC36-ECAB6668E9A7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

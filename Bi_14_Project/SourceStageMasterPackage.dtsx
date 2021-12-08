@@ -11,57 +11,33 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SourceStageMasterPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{C4E34EDB-8646-40F6-9039-91C5011DAFFB}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{7876C816-33BC-49BC-A681-822A414AEA71}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LCVMLLJ\LEMINH.ETL_Stage]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{36B29E54-8AFF-482F-A3D5-7753E8CAAA65}"
-      DTS:ObjectName="DESKTOP-LCVMLLJ\LEMINH.ETL_Stage">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LCVMLLJ\LEMINH;Initial Catalog=ETL_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{51241B89-8711-4563-92FB-1ADF281B9140}"
-      DTS:ObjectName="Excel Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\BI\TH\Data\UK Accidents Data 2011-2014\UK Accidents - Codebook.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{14B51E78-045D-4376-B396-3BD5A1515170}"
-      DTS:ObjectName="Quan\BI14LabProjectStageDB">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-TOL1F2F\MSSQLSERVERBI;Initial Catalog=BI14LabProjectStageDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Quan\Codebook]"
+      DTS:refId="Package.ConnectionManagers[Codebook.xlsx]"
       DTS:CreationName="EXCEL"
       DTS:DTSID="{C1F779BE-B3BC-4455-8F9B-B2CD4FBEE92F}"
-      DTS:ObjectName="Quan\Codebook">
+      DTS:ObjectName="Codebook.xlsx">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
           DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\quany\Documents\HCMUS I-21-22\BI\BI_Lab_Project\UK Accidents - Codebook.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETL_Stage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{14B51E78-045D-4376-B396-3BD5A1515170}"
+      DTS:ObjectName="ETL_Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-TOL1F2F\MSSQLSERVERBI;Initial Catalog=BI14LabProjectStageDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -243,8 +219,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Accident_Severity Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -354,8 +330,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Accident_Severity Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Codebook]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Codebook]"
+                  connectionManagerID="Package.ConnectionManagers[Codebook.xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Codebook.xlsx]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -592,8 +568,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Age_Band Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -703,8 +679,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Age_Band Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Codebook]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Codebook]"
+                  connectionManagerID="Package.ConnectionManagers[Codebook.xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Codebook.xlsx]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -838,8 +814,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Age_Group Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -949,8 +925,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Age_Group Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Codebook]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Codebook]"
+                  connectionManagerID="Package.ConnectionManagers[Codebook.xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Codebook.xlsx]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1290,8 +1266,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Built_up_Road Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1401,8 +1377,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Built_up_Road Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Codebook]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Codebook]"
+                  connectionManagerID="Package.ConnectionManagers[Codebook.xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Codebook.xlsx]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1639,8 +1615,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Casualty_Severity Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1750,8 +1726,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Casualty_Severity Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Codebook]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Codebook]"
+                  connectionManagerID="Package.ConnectionManagers[Codebook.xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Codebook.xlsx]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1988,8 +1964,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Casualty_Type Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2099,8 +2075,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Casualty_Type Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Codebook]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Codebook]"
+                  connectionManagerID="Package.ConnectionManagers[Codebook.xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Codebook.xlsx]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2337,8 +2313,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Gender Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2448,8 +2424,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Gender Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Codebook]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Codebook]"
+                  connectionManagerID="Package.ConnectionManagers[Codebook.xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Codebook.xlsx]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2686,8 +2662,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Journey_Purpose Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2797,8 +2773,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Journey_Purpose Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Codebook]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Codebook]"
+                  connectionManagerID="Package.ConnectionManagers[Codebook.xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Codebook.xlsx]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3035,8 +3011,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Local_Authority_District Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3146,8 +3122,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Local_Authority_District Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Codebook]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Codebook]"
+                  connectionManagerID="Package.ConnectionManagers[Codebook.xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Codebook.xlsx]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3384,8 +3360,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Road_Type Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3495,8 +3471,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Road_Type Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Codebook]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Codebook]"
+                  connectionManagerID="Package.ConnectionManagers[Codebook.xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Codebook.xlsx]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3733,8 +3709,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Time_of_Day Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3844,8 +3820,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Time_of_Day Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Codebook]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Codebook]"
+                  connectionManagerID="Package.ConnectionManagers[Codebook.xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Codebook.xlsx]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4082,8 +4058,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4193,8 +4169,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Codebook]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Codebook]"
+                  connectionManagerID="Package.ConnectionManagers[Codebook.xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Codebook.xlsx]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4431,8 +4407,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Vehicle_Type Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\BI14LabProjectStageDB]"
+                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4542,8 +4518,8 @@
               <connections>
                 <connection
                   refId="Package\Constant Data Flow\Vehicle_Type Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Quan\Codebook]"
-                  connectionManagerRefId="Package.ConnectionManagers[Quan\Codebook]"
+                  connectionManagerID="Package.ConnectionManagers[Codebook.xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Codebook.xlsx]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4687,24 +4663,24 @@
               startId="Package\Constant Data Flow\Accident_Severity Conversion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Constant Data Flow.Paths[Excel Source Output10]"
+              endId="Package\Constant Data Flow\Journey Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output9]"
               endId="Package\Constant Data Flow\Casualty_Severity Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
               startId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output9]"
+              refId="Package\Constant Data Flow.Paths[Excel Source Output8]"
               endId="Package\Constant Data Flow\Age_Group Road Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
               startId="Package\Constant Data Flow\Age_Group Excel Source.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output8]"
+              refId="Package\Constant Data Flow.Paths[Excel Source Output7]"
               endId="Package\Constant Data Flow\LAD Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
               startId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output7]"
-              endId="Package\Constant Data Flow\Accident_Severity Conversion.Inputs[Data Conversion Input]"
-              name="Excel Source Output"
-              startId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output]" />
             <path
               refId="Package\Constant Data Flow.Paths[Excel Source Output6]"
               endId="Package\Constant Data Flow\Vehicle_Type Conversion.Inputs[Data Conversion Input]"
@@ -4712,9 +4688,9 @@
               startId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output]" />
             <path
               refId="Package\Constant Data Flow.Paths[Excel Source Output3]"
-              endId="Package\Constant Data Flow\Age_Band Conversion.Inputs[Data Conversion Input]"
+              endId="Package\Constant Data Flow\Built_up_Road Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
-              startId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output]" />
+              startId="Package\Constant Data Flow\Built_up_Road Excel Source.Outputs[Excel Source Output]" />
             <path
               refId="Package\Constant Data Flow.Paths[Excel Source Output4]"
               endId="Package\Constant Data Flow\Casualty_Type Conversion.Inputs[Data Conversion Input]"
@@ -4722,29 +4698,29 @@
               startId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output]" />
             <path
               refId="Package\Constant Data Flow.Paths[Excel Source Output2]"
-              endId="Package\Constant Data Flow\Built_up_Road Conversion.Inputs[Data Conversion Input]"
-              name="Excel Source Output"
-              startId="Package\Constant Data Flow\Built_up_Road Excel Source.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output1]"
               endId="Package\Constant Data Flow\Gender Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
               startId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output]"
+              refId="Package\Constant Data Flow.Paths[Excel Source Output1]"
               endId="Package\Constant Data Flow\Road_Type Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
               startId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output11]"
+              refId="Package\Constant Data Flow.Paths[Excel Source Output]"
               endId="Package\Constant Data Flow\Urban or Rural Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
               startId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output5]"
-              endId="Package\Constant Data Flow\Journey Conversion.Inputs[Data Conversion Input]"
+              refId="Package\Constant Data Flow.Paths[Excel Source Output11]"
+              endId="Package\Constant Data Flow\Age_Band Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
-              startId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output]" />
+              startId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output5]"
+              endId="Package\Constant Data Flow\Accident_Severity Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output]" />
             <path
               refId="Package\Constant Data Flow.Paths[Excel Source Output12]"
               endId="Package\Constant Data Flow\Time_of_Day Conversion.Inputs[Data Conversion Input]"
@@ -4768,7 +4744,7 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,42.4"
           Id="Package\Constant Data Flow"
           TopLeft="147.767859639372,67.9441185792105" />
       </GraphLayout>
@@ -4792,7 +4768,7 @@
           Id="Package\Constant Data Flow\Gender Conversion"
           TopLeft="56.3321422924574,122.208825260367" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output1]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output2]"
           TopLeft="140.153570796983,75.049999500215">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4848,7 +4824,7 @@
             <s:String>Package\Constant Data Flow\Gender Destination</s:String>
             <s:String>Package\Constant Data Flow\Gender Excel Source</s:String>
             <s:String>Package\Constant Data Flow\Gender Conversion</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output1]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output2]</s:String>
             <s:String>Package\Constant Data Flow.Paths[Data Conversion Output9]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
@@ -4865,7 +4841,7 @@
           Id="Package\Constant Data Flow\Age_Band Excel Source"
           TopLeft="42.6537030279283,28.8999995815753" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output3]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output11]"
           TopLeft="136.987036361262,70.2333329149087">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4921,7 +4897,7 @@
             <s:String>Package\Constant Data Flow\Age_Band Destination</s:String>
             <s:String>Package\Constant Data Flow\Age_Band Conversion</s:String>
             <s:String>Package\Constant Data Flow\Age_Band Excel Source</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output3]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output11]</s:String>
             <s:String>Package\Constant Data Flow.Paths[Data Conversion Output10]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
@@ -4960,7 +4936,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output10]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output9]"
           TopLeft="133.115873222158,83.8833326708277">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4995,7 +4971,7 @@
             <s:String>Package\Constant Data Flow\Casualty_Severity Conversion</s:String>
             <s:String>Package\Constant Data Flow\Casualty_Severity Excel Source</s:String>
             <s:String>Package\Constant Data Flow.Paths[Data Conversion Output]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output10]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output9]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -5179,7 +5155,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output7]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output5]"
           TopLeft="137.701322423579,91.6833325313528">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5214,7 +5190,7 @@
             <s:String>Package\Constant Data Flow\Accident_Severity Destination</s:String>
             <s:String>Package\Constant Data Flow\Accident_Severity Conversion</s:String>
             <s:String>Package\Constant Data Flow.Paths[Data Conversion Output6]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output7]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output5]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -5230,7 +5206,7 @@
           Id="Package\Constant Data Flow\Local_Authority_District Destination"
           TopLeft="12.4476188995367,203.741504575774" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output8]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output7]"
           TopLeft="135.114285566203,94.3166658414403">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5286,7 +5262,7 @@
             <s:String>Package\Constant Data Flow\LAD Conversion</s:String>
             <s:String>Package\Constant Data Flow\Local_Authority_District Excel Source</s:String>
             <s:String>Package\Constant Data Flow\Local_Authority_District Destination</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output8]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output7]</s:String>
             <s:String>Package\Constant Data Flow.Paths[Data Conversion Output12]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
@@ -5325,7 +5301,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output11]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output]"
           TopLeft="133.892460789267,82.5833326940735">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5360,7 +5336,7 @@
             <s:String>Package\Constant Data Flow\Urban or Rural Conversion</s:String>
             <s:String>Package\Constant Data Flow\Urban_or_Rural_Area Excel Source</s:String>
             <s:String>Package\Constant Data Flow.Paths[Data Conversion Output2]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output11]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -5398,7 +5374,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output1]"
           TopLeft="133.650396358152,83.2333326824506">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5433,7 +5409,7 @@
             <s:String>Package\Constant Data Flow\Road_Type Conversion</s:String>
             <s:String>Package\Constant Data Flow\Road_Type Excel Source</s:String>
             <s:String>Package\Constant Data Flow.Paths[Data Conversion Output5]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output1]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -5443,25 +5419,25 @@
         <NodeLayout
           Size="215.333333333334,41.3333333333334"
           Id="Package\Constant Data Flow\Journey_Purpose Destination"
-          TopLeft="25.6293652867908,215.526472517572" />
+          TopLeft="24.3793653054174,218.12647247108" />
         <NodeLayout
           Size="170.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Journey Conversion"
           TopLeft="47.962698620124,130.013235910099" />
         <EdgeLayout
           Id="Package\Constant Data Flow.Paths[Data Conversion Output4]"
-          TopLeft="133.296031953457,171.346569243432">
+          TopLeft="132.671031962771,171.346569243432">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.1799032741396"
+              EndConnector="0,46.779903227648"
               Start="0,0"
-              End="0,36.6799032741396">
+              End="0,39.279903227648">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.6799032741396" />
+                    End="0,39.279903227648" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5471,7 +5447,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output5]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output10]"
           TopLeft="133.296031953457,85.833332635959">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5506,7 +5482,7 @@
             <s:String>Package\Constant Data Flow\Journey_Purpose Destination</s:String>
             <s:String>Package\Constant Data Flow\Journey Conversion</s:String>
             <s:String>Package\Constant Data Flow.Paths[Data Conversion Output4]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output5]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output10]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -5595,7 +5571,7 @@
           Id="Package\Constant Data Flow\Built_up_Road Excel Source"
           TopLeft="31.2682538040376,17.0374997936935" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output2]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output3]"
           TopLeft="136.934920470704,59.7041664603602">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5651,7 +5627,7 @@
             <s:String>Package\Constant Data Flow\Built_up_Road Conversion</s:String>
             <s:String>Package\Constant Data Flow\Built_up_Road Destination</s:String>
             <s:String>Package\Constant Data Flow\Built_up_Road Excel Source</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output2]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output3]</s:String>
             <s:String>Package\Constant Data Flow.Paths[Data Conversion Output11]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
@@ -5690,7 +5666,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output9]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output8]"
           TopLeft="133.056745968454,66.9833329730233">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5725,7 +5701,7 @@
             <s:String>Package\Constant Data Flow\Age_Group Road Conversion</s:String>
             <s:String>Package\Constant Data Flow\Age_Group Destination</s:String>
             <s:String>Package\Constant Data Flow.Paths[Data Conversion Output7]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output9]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output8]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
       </GraphLayout>
