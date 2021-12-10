@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="SourceStagePackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{29A20CED-B59C-441B-8C64-63DD8C9BF518}">
+  DTS:VersionBuild="44"
+  DTS:VersionGUID="{EDBB388A-1161-4D9E-86C0-D797BA77ECE8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1003,6 +1003,7 @@
       DTS:refId="Package\Accidents Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{5a5dfa6e-29bd-4201-831d-f3ccba5bfa7d}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -2687,150 +2688,6 @@
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Accidents Flow Task\Lookup Accidents Stage"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup Accidents Stage"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accidents]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accidents]) [refTable]
-where [refTable].[Accident_Index] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Accident_Index" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Location_Easting_OSGR" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Location_Northing_OSGR" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Longitude" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Latitude" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Police_Force" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Accident_Severity" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Number_of_Vehicles" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Number_of_Casualties" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Day_of_Week" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Time" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Local_Authority_(District)" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Local_Authority_(Highway)" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="1st_Road_Class" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="1st_Road_Number" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Road_Type" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Speed_limit" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Junction_Detail" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Junction_Control" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="2nd_Road_Class" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="2nd_Road_Number" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Pedestrian_Crossing-Human_Control" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Pedestrian_Crossing-Physical_Facilities" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Light_Conditions" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Weather_Conditions" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Road_Surface_Conditions" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Special_Conditions_at_Site" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Carriageway_Hazards" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Urban_or_Rural_Area" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Did_Police_Officer_Attend_Scene_of_Accident" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="LSOA_of_Accident_Location" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Accidents Flow Task\Accidents Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Accidents Flow Task\Lookup Accidents Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Accidents Flow Task\Lookup Accidents Stage.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Accidents Flow Task\Lookup Accidents Stage.Inputs[Lookup Input].Columns[Accident_Index]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Accident_Index"
-                      lineageId="Package\Accidents Flow Task\Accidents Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Accident_Index</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="RedirectRow"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\Accidents Flow Task\Lookup Accidents Stage.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\Accidents Flow Task\Lookup Accidents Stage.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\Accidents Flow Task\Lookup Accidents Stage.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
@@ -2840,14 +2697,9 @@ where [refTable].[Accident_Index] = ?</property>
               startId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Accidents Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Accidents Flow Task\Lookup Accidents Stage.Inputs[Lookup Input]"
+              endId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
               startId="Package\Accidents Flow Task\Accidents Flat File Source.Outputs[Flat File Source Output]" />
-            <path
-              refId="Package\Accidents Flow Task.Paths[Lookup Error Output]"
-              endId="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion.Inputs[Data Conversion Input]"
-              name="Lookup Error Output"
-              startId="Package\Accidents Flow Task\Lookup Accidents Stage.Outputs[Lookup Error Output]" />
             <path
               refId="Package\Accidents Flow Task.Paths[TRUE]"
               endId="Package\Accidents Flow Task\Accidents Stage.Inputs[OLE DB Destination Input]"
@@ -2862,6 +2714,7 @@ where [refTable].[Accident_Index] = ?</property>
       DTS:CreationName="Microsoft.Pipeline"
       DTS:DelayValidation="True"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{0438b2bb-5fc1-41b8-9e59-157597f1ab39}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -3832,186 +3685,6 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Casualties Flow Task\Lookup Casualties Stage"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup Casualties Stage"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Casualties]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Casualties]) [refTable]
-where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ? and [refTable].[Casualty_Reference] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Accident_Index" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Vehicle_Reference" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Casualty_Reference" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Casualty_Class" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Sex_of_Casualty" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Age_of_Casualty" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Age_Band_of_Casualty" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Casualty_Severity" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Pedestrian_Location" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Pedestrian_Movement" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Car_Passenger" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Bus_or_Coach_Passenger" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Pedestrian_Road_Maintenance_Worker" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Casualty_Type" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Casualty_Home_Area_Type" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Casualties Flow Task\Casualties Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]};#{Package\Casualties Flow Task\Casualties Flat File Source.Outputs[Flat File Source Output].Columns[Vehicle_Reference]};#{Package\Casualties Flow Task\Casualties Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Reference]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Casualties Flow Task\Lookup Casualties Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Casualties Flow Task\Lookup Casualties Stage.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Casualties Flow Task\Lookup Casualties Stage.Inputs[Lookup Input].Columns[Accident_Index]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Accident_Index"
-                      lineageId="Package\Casualties Flow Task\Casualties Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Accident_Index</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Casualties Flow Task\Lookup Casualties Stage.Inputs[Lookup Input].Columns[Vehicle_Reference]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Vehicle_Reference"
-                      lineageId="Package\Casualties Flow Task\Casualties Flat File Source.Outputs[Flat File Source Output].Columns[Vehicle_Reference]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Vehicle_Reference</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Casualties Flow Task\Lookup Casualties Stage.Inputs[Lookup Input].Columns[Casualty_Reference]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Casualty_Reference"
-                      lineageId="Package\Casualties Flow Task\Casualties Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Reference]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Casualty_Reference</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Casualties Flow Task\Lookup Casualties Stage.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="RedirectRow"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\Casualties Flow Task\Lookup Casualties Stage.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Casualties Flow Task\Lookup Casualties Stage.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\Casualties Flow Task\Lookup Casualties Stage.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Casualties Flow Task\Lookup Casualties Stage.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\Casualties Flow Task\Lookup Casualties Stage.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Casualties Flow Task\Lookup Casualties Stage.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Casualties Flow Task\Lookup Casualties Stage.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Casualties Flow Task\Lookup Casualties Stage.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Casualties Flow Task\Lookup Casualties Stage.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
@@ -4020,13 +3693,8 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ? and
               name="Flat File Source Output"
               startId="Package\Casualties Flow Task\Casualties Flat File Source.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Casualties Flow Task.Paths[Lookup Error Output]"
-              endId="Package\Casualties Flow Task\Casualties Stage.Inputs[OLE DB Destination Input]"
-              name="Lookup Error Output"
-              startId="Package\Casualties Flow Task\Lookup Casualties Stage.Outputs[Lookup Error Output]" />
-            <path
               refId="Package\Casualties Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Casualties Flow Task\Lookup Casualties Stage.Inputs[Lookup Input]"
+              endId="Package\Casualties Flow Task\Casualties Stage.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
               startId="Package\Casualties Flow Task\Lookup Accidents and Vehicles Stage.Outputs[Lookup Match Output]" />
           </paths>
@@ -4037,6 +3705,7 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ? and
       DTS:refId="Package\Constant Data Flow"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{f686fc2d-3b25-43b3-883a-1267e5c8fed6}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -8593,124 +8262,124 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ? and
               startId="Package\Constant Data Flow\Casualty_Severity Conversion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Constant Data Flow.Paths[Data Conversion Output11]"
-              endId="Package\Constant Data Flow\Time_of_Day Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Constant Data Flow\Time_of_Day Conversion.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Data Conversion Output10]"
-              endId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Constant Data Flow\Urban or Rural Conversion.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Data Conversion Output9]"
-              endId="Package\Constant Data Flow\Casualty_Type Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Constant Data Flow\Casualty_Type Conversion.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Data Conversion Output8]"
-              endId="Package\Constant Data Flow\Journey_Purpose Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Constant Data Flow\Journey Conversion.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Data Conversion Output7]"
-              endId="Package\Constant Data Flow\Road_Type Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Constant Data Flow\Road_Type Conversion.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Data Conversion Output12]"
-              endId="Package\Constant Data Flow\Accident_Severity Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Constant Data Flow\Accident_Severity Conversion.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Data Conversion Output5]"
-              endId="Package\Constant Data Flow\Age_Group Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Constant Data Flow\Age_Group Road Conversion.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Data Conversion Output4]"
-              endId="Package\Constant Data Flow\Vehicle_Type Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Constant Data Flow\Vehicle_Type Conversion.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Data Conversion Output3]"
-              endId="Package\Constant Data Flow\Gender Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Constant Data Flow\Gender Conversion.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Data Conversion Output2]"
-              endId="Package\Constant Data Flow\Age_Band Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Constant Data Flow\Age_Band Conversion.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Data Conversion Output1]"
               endId="Package\Constant Data Flow\Built_up_Road Destination.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Constant Data Flow\Built_up_Road Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Constant Data Flow.Paths[Data Conversion Output6]"
+              refId="Package\Constant Data Flow.Paths[Data Conversion Output10]"
+              endId="Package\Constant Data Flow\Age_Band Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Constant Data Flow\Age_Band Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Data Conversion Output9]"
+              endId="Package\Constant Data Flow\Gender Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Constant Data Flow\Gender Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Data Conversion Output8]"
+              endId="Package\Constant Data Flow\Vehicle_Type Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Constant Data Flow\Vehicle_Type Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Data Conversion Output7]"
+              endId="Package\Constant Data Flow\Age_Group Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Constant Data Flow\Age_Group Road Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Data Conversion Output12]"
               endId="Package\Constant Data Flow\Local_Authority_District Destination.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Constant Data Flow\LAD Conversion.Outputs[Data Conversion Output]" />
             <path
+              refId="Package\Constant Data Flow.Paths[Data Conversion Output5]"
+              endId="Package\Constant Data Flow\Road_Type Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Constant Data Flow\Road_Type Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Data Conversion Output4]"
+              endId="Package\Constant Data Flow\Journey_Purpose Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Constant Data Flow\Journey Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Data Conversion Output3]"
+              endId="Package\Constant Data Flow\Casualty_Type Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Constant Data Flow\Casualty_Type Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Data Conversion Output2]"
+              endId="Package\Constant Data Flow\Urban_or_Rural_Area Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Constant Data Flow\Urban or Rural Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Data Conversion Output1]"
+              endId="Package\Constant Data Flow\Time_of_Day Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Constant Data Flow\Time_of_Day Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Data Conversion Output6]"
+              endId="Package\Constant Data Flow\Accident_Severity Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Constant Data Flow\Accident_Severity Conversion.Outputs[Data Conversion Output]" />
+            <path
               refId="Package\Constant Data Flow.Paths[Excel Source Output10]"
-              endId="Package\Constant Data Flow\Built_up_Road Conversion.Inputs[Data Conversion Input]"
-              name="Excel Source Output"
-              startId="Package\Constant Data Flow\Built_up_Road Excel Source.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output9]"
-              endId="Package\Constant Data Flow\Age_Band Conversion.Inputs[Data Conversion Input]"
-              name="Excel Source Output"
-              startId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output8]"
-              endId="Package\Constant Data Flow\Urban or Rural Conversion.Inputs[Data Conversion Input]"
-              name="Excel Source Output"
-              startId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output7]"
-              endId="Package\Constant Data Flow\Road_Type Conversion.Inputs[Data Conversion Input]"
-              name="Excel Source Output"
-              startId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output6]"
-              endId="Package\Constant Data Flow\Casualty_Type Conversion.Inputs[Data Conversion Input]"
-              name="Excel Source Output"
-              startId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output3]"
               endId="Package\Constant Data Flow\Age_Group Road Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
               startId="Package\Constant Data Flow\Age_Group Excel Source.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output4]"
-              endId="Package\Constant Data Flow\Vehicle_Type Conversion.Inputs[Data Conversion Input]"
-              name="Excel Source Output"
-              startId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output2]"
-              endId="Package\Constant Data Flow\Casualty_Severity Conversion.Inputs[Data Conversion Input]"
-              name="Excel Source Output"
-              startId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output1]"
-              endId="Package\Constant Data Flow\Journey Conversion.Inputs[Data Conversion Input]"
-              name="Excel Source Output"
-              startId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output]"
-              endId="Package\Constant Data Flow\Accident_Severity Conversion.Inputs[Data Conversion Input]"
-              name="Excel Source Output"
-              startId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output11]"
+              refId="Package\Constant Data Flow.Paths[Excel Source Output9]"
               endId="Package\Constant Data Flow\LAD Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
               startId="Package\Constant Data Flow\Local_Authority_District Excel Source.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Constant Data Flow.Paths[Excel Source Output5]"
+              refId="Package\Constant Data Flow.Paths[Excel Source Output8]"
+              endId="Package\Constant Data Flow\Accident_Severity Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Accident_Severity Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output7]"
+              endId="Package\Constant Data Flow\Journey Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Journey_Purpose Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output6]"
+              endId="Package\Constant Data Flow\Vehicle_Type Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Vehicle_Type Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output3]"
+              endId="Package\Constant Data Flow\Urban or Rural Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output4]"
+              endId="Package\Constant Data Flow\Casualty_Type Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Casualty_Type Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output2]"
+              endId="Package\Constant Data Flow\Age_Band Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Age_Band Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output1]"
+              endId="Package\Constant Data Flow\Built_up_Road Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Built_up_Road Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output]"
               endId="Package\Constant Data Flow\Gender Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
               startId="Package\Constant Data Flow\Gender Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output11]"
+              endId="Package\Constant Data Flow\Road_Type Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Road_Type Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Constant Data Flow.Paths[Excel Source Output5]"
+              endId="Package\Constant Data Flow\Casualty_Severity Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Constant Data Flow\Casualty_Severity Excel Source.Outputs[Excel Source Output]" />
             <path
               refId="Package\Constant Data Flow.Paths[Excel Source Output12]"
               endId="Package\Constant Data Flow\Time_of_Day Conversion.Inputs[Data Conversion Input]"
@@ -8724,6 +8393,7 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ? and
       DTS:refId="Package\PCD_OA_LSOA_MSOA_LAD Data Flow"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{73816b96-454f-47b5-b4c0-f193a6e02a65}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -9179,6 +8849,7 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ? and
       DTS:refId="Package\Postcodes Data Flow"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{be4898ae-462e-43c6-ac54-69ee6e62ac99}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -9693,9 +9364,118 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ? and
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Truncate Accidents Stage"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{7D0564FA-17A4-428D-9DA4-A5E12C5BDC67}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Accidents Stage"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{934EEB42-3C49-4E9B-973C-6E19DF2AFD31}"
+          SQLTask:SqlStatementSource="truncate table Accidents" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Casualties Stage"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{83ef114c-4891-44d3-9cc1-dd164c9616ae}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Casualties Stage"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="4">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{934EEB42-3C49-4E9B-973C-6E19DF2AFD31}"
+          SQLTask:SqlStatementSource="truncate table Casualties" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Constant Tables Stage"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{48b2ba3a-d8a4-42ae-bc29-09624be9837b}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Constant Tables Stage"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{934EEB42-3C49-4E9B-973C-6E19DF2AFD31}"
+          SQLTask:SqlStatementSource="truncate table Accident_Severity;&#xA;truncate table Age_Band;&#xA;truncate table Age_Group;&#xA;truncate table Built_up_Road;&#xA;truncate table Casualty_Severity;&#xA;truncate table Casualty_Type;&#xA;truncate table Gender;&#xA;truncate table Journey_Purpose;&#xA;truncate table Local_Authority_District;&#xA;truncate table Road_Type;&#xA;truncate table Time_of_Day;&#xA;truncate table Urban_or_Rural_Area;&#xA;truncate table Vehicle_Type;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate LSOA_PCD Stage"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{d3794ed9-e916-4cde-b8ac-9780e2ecf083}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate LSOA_PCD Stage"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{934EEB42-3C49-4E9B-973C-6E19DF2AFD31}"
+          SQLTask:SqlStatementSource="truncate table LSOA_PCD" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Postcodes Stage"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{32d01e21-982b-4b07-8535-4756cbbeacb7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Postcodes Stage"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{934EEB42-3C49-4E9B-973C-6E19DF2AFD31}"
+          SQLTask:SqlStatementSource="truncate table Postcodes" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Vehicles Stage"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{e63eb943-10a2-40cd-8a06-61ba783b3e75}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Vehicles Stage"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{934EEB42-3C49-4E9B-973C-6E19DF2AFD31}"
+          SQLTask:SqlStatementSource="truncate table Vehicles" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Vehicles Data Flow"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{64814077-e5c0-438a-9060-5bbda7767552}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -9843,168 +9623,6 @@ where [refTable].[Accident_Index] = ?</property>
                       refId="Package\Vehicles Data Flow\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Vehicles Data Flow\Lookup Accidents Stage.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Vehicles Data Flow\Lookup Vehicles Stage"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup Vehicles Stage"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Vehicles]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Vehicles]) [refTable]
-where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Accident_Index" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Vehicle_Reference" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Vehicle_Type" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Towing_and_Articulation" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Vehicle_Manoeuvre" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Vehicle_Location-Restricted_Lane" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Junction_Location" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Skidding_and_Overturning" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Hit_Object_in_Carriageway" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Vehicle_Leaving_Carriageway" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Hit_Object_off_Carriageway" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="1st_Point_of_Impact" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Was_Vehicle_Left_Hand_Drive?" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Journey_Purpose_of_Driver" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Sex_of_Driver" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Age_of_Driver" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Age_Band_of_Driver" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Engine_Capacity_(CC)" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Propulsion_Code" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Age_of_Vehicle" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Driver_IMD_Decile" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Driver_Home_Area_Type" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles Data Flow\Vehicles Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]};#{Package\Vehicles Data Flow\Vehicles Flat File Source.Outputs[Flat File Source Output].Columns[Vehicle_Reference]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ETL_Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[ETL_Stage]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Inputs[Lookup Input].Columns[Accident_Index]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Accident_Index"
-                      lineageId="Package\Vehicles Data Flow\Vehicles Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Accident_Index</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Inputs[Lookup Input].Columns[Vehicle_Reference]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Vehicle_Reference"
-                      lineageId="Package\Vehicles Data Flow\Vehicles Flat File Source.Outputs[Flat File Source Output].Columns[Vehicle_Reference]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Vehicle_Reference</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="RedirectRow"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -11112,13 +10730,8 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
               name="Flat File Source Output"
               startId="Package\Vehicles Data Flow\Vehicles Flat File Source.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Vehicles Data Flow.Paths[Lookup Error Output]"
-              endId="Package\Vehicles Data Flow\Vehicles Stage.Inputs[OLE DB Destination Input]"
-              name="Lookup Error Output"
-              startId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Outputs[Lookup Error Output]" />
-            <path
               refId="Package\Vehicles Data Flow.Paths[Lookup Match Output]"
-              endId="Package\Vehicles Data Flow\Lookup Vehicles Stage.Inputs[Lookup Input]"
+              endId="Package\Vehicles Data Flow\Vehicles Stage.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
               startId="Package\Vehicles Data Flow\Lookup Accidents Stage.Outputs[Lookup Match Output]" />
           </paths>
@@ -11130,18 +10743,66 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{F798CC00-EA1D-478A-BF96-EECD295C167D}"
+      DTS:DTSID="{F97FA95F-6031-412F-B150-FE6A6BF9F366}"
       DTS:From="Package\Accidents Flow Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Vehicles Data Flow" />
+      DTS:To="Package\Truncate Vehicles Stage" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{F363B866-5E71-4220-8434-D5575F8986D1}"
-      DTS:From="Package\Accidents Flow Task"
+      DTS:DTSID="{4DAD2AB9-E57A-423D-A347-B4527DFF113F}"
+      DTS:From="Package\Truncate Vehicles Stage"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Vehicles Data Flow" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{71BEE9DB-1B0E-447D-9C10-4F5355BA8F5D}"
+      DTS:From="Package\Truncate Accidents Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Accidents Flow Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{D08C15CE-4FE9-49C1-8E16-AC1D310E74B3}"
+      DTS:From="Package\Truncate Constant Tables Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Constant Data Flow" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{BDAF4072-8C00-4D93-8CAD-4BAE640796EF}"
+      DTS:From="Package\Truncate Postcodes Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Postcodes Data Flow" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{05AEB02B-38E2-4A60-970E-EBDFFDBECC02}"
+      DTS:From="Package\Truncate LSOA_PCD Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\PCD_OA_LSOA_MSOA_LAD Data Flow" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{BA7BB429-5727-47DA-836F-58AB0B837F7F}"
+      DTS:From="Package\Accidents Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Truncate Casualties Stage" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{A235983A-1210-48D2-AB85-7886F8EB4D8E}"
+      DTS:From="Package\Truncate Casualties Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
       DTS:To="Package\Casualties Flow Task" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
@@ -11155,57 +10816,81 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="174.4,41.6"
+          Size="258.4,42.4"
           Id="Package\Accidents Flow Task"
-          TopLeft="180.000002043588,215.235296294763" />
+          TopLeft="194.687499461829,129.435297828986" />
         <NodeLayout
-          Size="176,41.6"
+          Size="258.4,42.4"
           Id="Package\Casualties Flow Task"
-          TopLeft="308.571432804576,358.894120414034" />
+          TopLeft="367.544642356985,324.444121030048" />
         <NodeLayout
-          Size="172,42.4"
+          Size="258.4,42.4"
           Id="Package\Constant Data Flow"
-          TopLeft="579.933341933433,204.105878674366" />
+          TopLeft="348.041678579169,405.407843735212" />
         <NodeLayout
-          Size="257.6,41.6"
+          Size="258.4,42.4"
           Id="Package\PCD_OA_LSOA_MSOA_LAD Data Flow"
-          TopLeft="537.133341933433,356.494118955474" />
+          TopLeft="348.041678579169,557.001962527509" />
         <NodeLayout
-          Size="176,41.6"
+          Size="258.4,42.4"
           Id="Package\Postcodes Data Flow"
-          TopLeft="577.933341933433,279.152939975303" />
+          TopLeft="348.041678579169,481.204903131361" />
         <NodeLayout
-          Size="167.2,41.6"
+          Size="258.4,42.4"
+          Id="Package\Truncate Accidents Stage"
+          TopLeft="194.687499461829,35.7499993607401" />
+        <NodeLayout
+          Size="258.4,42.4"
+          Id="Package\Truncate Casualties Stage"
+          TopLeft="367.544642356985,236.693144907265" />
+        <NodeLayout
+          Size="258.4,42.4"
+          Id="Package\Truncate Constant Tables Stage"
+          TopLeft="48.7261909517356,405.407843735212" />
+        <NodeLayout
+          Size="258.4,42.4"
+          Id="Package\Truncate LSOA_PCD Stage"
+          TopLeft="48.7261909517356,561.551962446149" />
+        <NodeLayout
+          Size="258.4,42.4"
+          Id="Package\Truncate Postcodes Stage"
+          TopLeft="48.7261909517356,483.47990309068" />
+        <NodeLayout
+          Size="258.4,42.4"
+          Id="Package\Truncate Vehicles Stage"
+          TopLeft="29.3303578279499,236.109807912717" />
+        <NodeLayout
+          Size="258.4,42.4"
           Id="Package\Vehicles Data Flow"
-          TopLeft="67.1428572644996,360.976470534612" />
+          TopLeft="29.3303578279499,325.876471162249" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="239.466668710255,256.835296294763">
+          TopLeft="282.243055017384,172.101964495653">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-88.7238114457551,104.141174239849"
+              EndConnector="-123.579363856101,64.0078434170637"
               Start="0,0"
-              End="-88.7238114457551,96.6411742398491">
+              End="-123.579363856101,56.5078434170637">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.2245124645207" />
+                    End="0,21.8392318712326" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38.2245124645207"
-                    Point2="0,42.2245124645207"
-                    Point3="-4,42.2245124645207" />
+                    Point1="0,21.8392318712326"
+                    Point2="0,25.8392318712326"
+                    Point3="-4,25.8392318712326" />
                   <mssgle:LineSegment
-                    End="-84.7238114457551,42.2245124645207" />
+                    End="-119.579363856101,25.8392318712326" />
                   <mssgle:CubicBezierSegment
-                    Point1="-84.7238114457551,42.2245124645207"
-                    Point2="-88.7238114457551,42.2245124645207"
-                    Point3="-88.7238114457551,46.2245124645207" />
+                    Point1="-119.579363856101,25.8392318712326"
+                    Point2="-123.579363856101,25.8392318712326"
+                    Point3="-123.579363856101,29.8392318712326" />
                   <mssgle:LineSegment
-                    End="-88.7238114457551,96.6411742398491" />
+                    End="-123.579363856101,56.5078434170637" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11216,30 +10901,162 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="294.933335376921,256.835296294763">
+          TopLeft="158.663691161283,278.776474579384">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="101.638097427654,102.058824119271"
+              EndConnector="0,47.0999965828657"
               Start="0,0"
-              End="101.638097427654,94.5588241192713">
+              End="0,39.5999965828657">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.3802141429045" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.3802141429045"
-                    Point2="0,41.3802141429045"
-                    Point3="4,41.3802141429045" />
+                    End="0,39.5999965828657" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="324.020832795162,78.4166660274068">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.0186318015796"
+              Start="0,0"
+              End="0,43.5186318015796">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="97.6380974276544,41.3802141429045" />
-                  <mssgle:CubicBezierSegment
-                    Point1="97.6380974276544,41.3802141429045"
-                    Point2="101.638097427654,41.3802141429045"
-                    Point3="101.638097427654,45.3802141429045" />
+                    End="0,43.5186318015796" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="307.392857618401,426.741177068545">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.6488209607679,0"
+              Start="0,0"
+              End="33.1488209607679,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="101.638097427654,94.5588241192713" />
+                    End="33.1488209607679,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="307.392857618401,503.675736444354">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.6488209607679,0"
+              Start="0,0"
+              End="33.1488209607679,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="33.1488209607679,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="307.392857618401,580.610295820162">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.6488209607679,0"
+              Start="0,0"
+              End="33.1488209607679,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="33.1488209607679,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="365.79861057294,172.101964495653">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="131.079365117379,64.591180411612"
+              Start="0,0"
+              End="131.079365117379,57.091180411612">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.0747183219007" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.0747183219007"
+                    Point2="0,26.0747183219007"
+                    Point3="4,26.0747183219007" />
+                  <mssgle:LineSegment
+                    End="127.079365117379,26.0747183219007" />
+                  <mssgle:CubicBezierSegment
+                    Point1="127.079365117379,26.0747183219007"
+                    Point2="131.079365117379,26.0747183219007"
+                    Point3="131.079365117379,30.0747183219007" />
+                  <mssgle:LineSegment
+                    End="131.079365117379,57.091180411612" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="496.877975690319,279.359811573932">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.0843094561162"
+              Start="0,0"
+              End="0,37.5843094561162">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5843094561162" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11255,41 +11072,61 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
     design-time-name="Package\Accidents Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="316,42.6666666666667"
           Id="Package\Accidents Flow Task\Accidents Stage"
-          TopLeft="262.736309622092,377.80220564028" />
+          TopLeft="14.2645834246309,246.373634211707" />
         <NodeLayout
-          Size="192,42.6666666666667"
-          Id="Package\Accidents Flow Task\Lookup Accidents Stage"
-          TopLeft="243.124996377155,122.849997803271" />
-        <NodeLayout
-          Size="268,42.6666666666667"
+          Size="316,42.6666666666667"
           Id="Package\Accidents Flow Task\Date is between StartDate and EndDate"
-          TopLeft="206.694642946112,293.51317373955" />
+          TopLeft="14.2645834246309,164.269210732769" />
         <NodeLayout
-          Size="198.666666666667,41.3333333333334"
+          Size="316,42.6666666666667"
           Id="Package\Accidents Flow Task\Accidents Flat File Source"
-          TopLeft="241.361309612779,40.6794113939387" />
+          TopLeft="14.2645834246309,1.39369710822441" />
         <NodeLayout
           Size="316,42.6666666666667"
           Id="Package\Accidents Flow Task\DT_STR Date to DT_TIMESTAMP Date Conversion"
-          TopLeft="182.694642946112,212.474141780705" />
+          TopLeft="14.2645834246309,82.16478725383" />
         <EdgeLayout
-          Id="Package\Accidents Flow Task.Paths[Data Conversion Output]"
-          TopLeft="340.694642946112,255.140808447372">
+          Id="Package\Accidents Flow Task.Paths[TRUE]"
+          TopLeft="172.264583424631,206.935877399435">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38.372365292178"
+              EndConnector="0,39.4377568122721"
               Start="0,0"
-              End="0,30.872365292178">
+              End="0,31.9377568122721">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.872365292178" />
+                    End="0,31.9377568122721" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-12.94904296875,11.2579409061361,25.8980859375,9.421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Flow Task.Paths[Flat File Source Output]"
+          TopLeft="172.264583424631,44.060363774891">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.1044234789392"
+              Start="0,0"
+              End="0,30.6044234789392">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.6044234789392" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11301,67 +11138,19 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Accidents Flow Task.Paths[TRUE]"
-          TopLeft="340.382142950769,336.179840406217">
+          Id="Package\Accidents Flow Task.Paths[Data Conversion Output]"
+          TopLeft="172.264583424631,124.831453920496">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41.6223652340634"
+              EndConnector="0,39.4377568122725"
               Start="0,0"
-              End="0,34.1223652340634">
+              End="0,31.9377568122725">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.1223652340634" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-12.94904296875,12.3502451170317,25.8980859375,9.421875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Accidents Flow Task.Paths[Lookup Error Output]"
-          TopLeft="339.909819661634,165.516664469938">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46.9574773107678"
-              Start="0,0"
-              End="0,39.4574773107678">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.4574773107678" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-45.86638671875,13.9240511553839,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Accidents Flow Task.Paths[Flat File Source Output]"
-          TopLeft="339.909819661634,82.0127447272721">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.8372530759988"
-              Start="0,0"
-              End="0,33.3372530759988">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.3372530759988" />
+                    End="0,31.9377568122725" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11381,88 +11170,62 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="253.6,42.4"
+          Size="253.333333333334,42.6666666666667"
           Id="Package\Casualties Flow Task\Lookup Accidents and Vehicles Stage"
-          TopLeft="138.124997941777,139.749997501075" />
+          TopLeft="162.232143998235,152.913586517892" />
         <NodeLayout
-          Size="194.4,42.4"
-          Id="Package\Casualties Flow Task\Lookup Casualties Stage"
-          TopLeft="167.678574403862,250.823529611244" />
-        <NodeLayout
-          Size="200.8,41.6"
+          Size="253.333333333334,42.6666666666667"
           Id="Package\Casualties Flow Task\Casualties Flat File Source"
-          TopLeft="163.571431357034,34.0294128641229" />
+          TopLeft="162.232143998235,34.0294128641229" />
         <NodeLayout
-          Size="157.6,42.4"
+          Size="253.333333333334,42.6666666666667"
           Id="Package\Casualties Flow Task\Casualties Stage"
-          TopLeft="186.428574124465,365.988236362138" />
+          TopLeft="162.232143998235,273.131093504995" />
         <EdgeLayout
-          Id="Package\Casualties Flow Task.Paths[Lookup Error Output]"
-          TopLeft="265.053574264164,293.490196277911">
+          Id="Package\Casualties Flow Task.Paths[Lookup Match Output]"
+          TopLeft="288.898810664901,195.580253184559">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,72.4980400842275"
+              EndConnector="0,77.5508403204362"
               Start="0,0"
-              End="0,64.9980400842275">
+              End="0,70.0508403204362">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,64.9980400842275" />
+                    End="0,70.0508403204362" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-45.86638671875,26.6943325421137,91.7327734375,11.609375"
+              BoundingBox="-48.19138671875,29.2207326602181,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Casualties Flow Task.Paths[Flat File Source Output]"
-          TopLeft="264.348214649406,75.3627461974562">
+          TopLeft="288.898810664901,76.6960795307895">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,64.3872513036191"
+              EndConnector="0,76.2175069871029"
               Start="0,0"
-              End="0,56.8872513036191">
+              End="0,68.7175069871029">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.8872513036191" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Casualties Flow Task.Paths[Lookup Match Output]"
-          TopLeft="264.90178617282,182.416664167742">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,68.406865443502"
-              Start="0,0"
-              End="0,60.906865443502">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,60.906865443502" />
+                    End="0,68.7175069871029" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,24.648745221751,96.3827734375,11.609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -11493,29 +11256,6 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Casualties Flow Task\Lookup Casualties Stage">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Casualties]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Casualties Flow Task\Casualties Stage">
     <Properties>
       <Property>
@@ -11532,21 +11272,21 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
     design-time-name="Package\Constant Data Flow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
+        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
-          Size="168.8,41.6"
+          Size="168.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Gender Destination"
           TopLeft="58.0892851131078,202.450001870377" />
         <NodeLayout
-          Size="175.2,41.6"
+          Size="175.333333333334,41.3333333333334"
           Id="Package\Constant Data Flow\Gender Excel Source"
           TopLeft="52.3749993015081,33.449999500215" />
         <NodeLayout
-          Size="168,41.6"
+          Size="168,41.3333333333334"
           Id="Package\Constant Data Flow\Gender Conversion"
           TopLeft="56.3321422924574,122.208825260367" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output5]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output]"
           TopLeft="140.153570796983,75.049999500215">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11564,11 +11304,13 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Data Conversion Output3]"
+          Id="Package\Constant Data Flow.Paths[Data Conversion Output9]"
           TopLeft="141.410713702783,163.808825260367">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11586,7 +11328,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -11595,31 +11339,31 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="264,324"
-          Size="264,366.4"
+          Size="264,366.666666666667"
           Id="6be58610-f0a2-47f8-9c23-7cb18c41e8b8"
           TopLeft="30.4571359235412,11.450886658731">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Constant Data Flow\Gender Destination</s:String>
             <s:String>Package\Constant Data Flow\Gender Excel Source</s:String>
             <s:String>Package\Constant Data Flow\Gender Conversion</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output5]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output3]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output9]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
-          Size="182.4,41.6"
+          Size="182.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Age_Band Destination"
           TopLeft="45.6537030279283,199.429413737892" />
         <NodeLayout
-          Size="180.8,41.6"
+          Size="180.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Age_Band Conversion"
           TopLeft="46.6537030279283,112.564707297853" />
         <NodeLayout
-          Size="188.8,41.6"
+          Size="188.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Age_Band Excel Source"
           TopLeft="42.6537030279283,28.8999995815753" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output9]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output2]"
           TopLeft="136.987036361262,70.2333329149087">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11637,11 +11381,13 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Data Conversion Output2]"
+          Id="Package\Constant Data Flow.Paths[Data Conversion Output10]"
           TopLeft="136.987036361262,153.898040631186">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11659,7 +11405,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -11668,27 +11416,27 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="264,324"
-          Size="264,366.4"
+          Size="264,366.666666666667"
           Id="2259ad1f-81cf-479d-a9dd-52660e7291bc"
           TopLeft="294.457135923541,11.450886658731">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Constant Data Flow\Age_Band Destination</s:String>
             <s:String>Package\Constant Data Flow\Age_Band Conversion</s:String>
             <s:String>Package\Constant Data Flow\Age_Band Excel Source</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output9]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output2]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output2]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output10]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
-          Size="217.6,41.6"
+          Size="217.333333333334,41.3333333333334"
           Id="Package\Constant Data Flow\Casualty_Severity Destination"
           TopLeft="24.4492065554918,203.138236883802" />
         <NodeLayout
-          Size="216.8,41.6"
+          Size="216.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Casualty_Severity Conversion"
           TopLeft="24.782539888825,126.3205908331" />
         <NodeLayout
-          Size="224.8,41.6"
+          Size="224.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Casualty_Severity Excel Source"
           TopLeft="20.782539888825,42.5499993374944" />
         <EdgeLayout
@@ -11710,11 +11458,13 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output2]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output5]"
           TopLeft="133.115873222158,83.8833326708277">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11732,7 +11482,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -11741,7 +11493,7 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="264,324"
-          Size="264,366.4"
+          Size="264,366.666666666667"
           Id="9db29842-df7f-4b2b-b71d-5310ad3214ab"
           TopLeft="558.457135923541,11.450886658731">
           <GroupLayout.ChildrenIds>
@@ -11749,23 +11501,23 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             <s:String>Package\Constant Data Flow\Casualty_Severity Conversion</s:String>
             <s:String>Package\Constant Data Flow\Casualty_Severity Excel Source</s:String>
             <s:String>Package\Constant Data Flow.Paths[Data Conversion Output]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output2]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output5]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
-          Size="205.6,42.4"
+          Size="205.333333333334,42.6666666666667"
           Id="Package\Constant Data Flow\Time_of_Day Excel Source"
           TopLeft="42.9162692991393,28.2499995931983" />
         <NodeLayout
-          Size="198.4,42.4"
+          Size="198.666666666667,42.6666666666667"
           Id="Package\Constant Data Flow\Time_of_Day Destination"
           TopLeft="46.2496026324727,224.097060164858" />
         <NodeLayout
-          Size="196.8,42.4"
+          Size="196.666666666667,42.6666666666667"
           Id="Package\Constant Data Flow\Time_of_Day Conversion"
           TopLeft="46.9162692991393,126.173529879028" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Data Conversion Output11]"
+          Id="Package\Constant Data Flow.Paths[Data Conversion Output1]"
           TopLeft="145.416269299139,168.840196545695">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11783,7 +11535,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11805,7 +11559,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -11814,31 +11570,31 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="264,324"
-          Size="264,366.4"
+          Size="264,366.666666666667"
           Id="42e9ddfd-f32f-4f1c-96d7-21da24a47515"
           TopLeft="555.233045956031,765.346318118451">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Constant Data Flow\Time_of_Day Excel Source</s:String>
             <s:String>Package\Constant Data Flow\Time_of_Day Destination</s:String>
             <s:String>Package\Constant Data Flow\Time_of_Day Conversion</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output11]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output1]</s:String>
             <s:String>Package\Constant Data Flow.Paths[Excel Source Output12]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
-          Size="209.6,41.6"
+          Size="209.333333333334,41.3333333333334"
           Id="Package\Constant Data Flow\Casualty_Type Excel Source"
           TopLeft="26.95992018702,50.9999991863966" />
         <NodeLayout
-          Size="203.2,41.6"
+          Size="203.333333333334,41.3333333333334"
           Id="Package\Constant Data Flow\Casualty_Type Destination"
           TopLeft="29.95992018702,195.869282263885" />
         <NodeLayout
-          Size="202.4,41.6"
+          Size="202.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Casualty_Type Conversion"
           TopLeft="30.2932535203533,123.434640725141" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Data Conversion Output9]"
+          Id="Package\Constant Data Flow.Paths[Data Conversion Output3]"
           TopLeft="131.626586853687,164.767974058474">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11856,11 +11612,13 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output6]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output4]"
           TopLeft="131.626586853687,92.3333325197299">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11878,7 +11636,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -11887,31 +11647,31 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="264,324"
-          Size="264,366.4"
+          Size="264,366.666666666667"
           Id="55d64931-b53f-4773-b96a-0446836d56d5"
           TopLeft="30.3157669084393,387.404524623712">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Constant Data Flow\Casualty_Type Excel Source</s:String>
             <s:String>Package\Constant Data Flow\Casualty_Type Destination</s:String>
             <s:String>Package\Constant Data Flow\Casualty_Type Conversion</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output9]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output6]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output3]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output4]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
-          Size="224.8,41.6"
+          Size="224.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Accident_Severity Excel Source"
           TopLeft="25.3679890902455,50.3499991980195" />
         <NodeLayout
-          Size="217.6,41.6"
+          Size="217.333333333334,41.3333333333334"
           Id="Package\Constant Data Flow\Accident_Severity Destination"
           TopLeft="29.0346557569122,204.76111243321" />
         <NodeLayout
-          Size="216.8,41.6"
+          Size="216.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Accident_Severity Conversion"
           TopLeft="29.3679890902455,127.555555815615" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Data Conversion Output12]"
+          Id="Package\Constant Data Flow.Paths[Data Conversion Output6]"
           TopLeft="137.701322423579,168.888889148948">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11929,11 +11689,13 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output8]"
           TopLeft="137.701322423579,91.6833325313528">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11951,7 +11713,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -11960,31 +11724,31 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="264,324"
-          Size="264,366.4"
+          Size="264,366.666666666667"
           Id="583f9a76-74ad-4664-8aef-9eef8c659479"
           TopLeft="294.31576690844,387.404524623712">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Constant Data Flow\Accident_Severity Excel Source</s:String>
             <s:String>Package\Constant Data Flow\Accident_Severity Destination</s:String>
             <s:String>Package\Constant Data Flow\Accident_Severity Conversion</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output12]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output6]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output8]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
-          Size="152.8,41.6"
+          Size="152.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\LAD Conversion"
           TopLeft="58.78095223287,128.36241854194" />
         <NodeLayout
-          Size="253.6,42.4"
+          Size="253.333333333334,42.6666666666667"
           Id="Package\Constant Data Flow\Local_Authority_District Excel Source"
           TopLeft="8.44761889953669,51.6499991747737" />
         <NodeLayout
-          Size="245.6,41.6"
+          Size="245.333333333334,41.3333333333334"
           Id="Package\Constant Data Flow\Local_Authority_District Destination"
           TopLeft="12.4476188995367,203.741504575774" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output11]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output9]"
           TopLeft="135.114285566203,94.3166658414403">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12002,11 +11766,13 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Data Conversion Output6]"
+          Id="Package\Constant Data Flow.Paths[Data Conversion Output12]"
           TopLeft="135.114285566203,169.695751875274">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12024,7 +11790,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -12033,31 +11801,31 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="264,324"
-          Size="264,366.4"
+          Size="264,366.666666666667"
           Id="974e1c89-67ec-47d6-961f-c3b3593706b3"
           TopLeft="558.31576690844,387.404524623712">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Constant Data Flow\LAD Conversion</s:String>
             <s:String>Package\Constant Data Flow\Local_Authority_District Excel Source</s:String>
             <s:String>Package\Constant Data Flow\Local_Authority_District Destination</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output11]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output6]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output9]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output12]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
-          Size="236,41.6"
+          Size="236,41.3333333333334"
           Id="Package\Constant Data Flow\Urban_or_Rural_Area Destination"
           TopLeft="15.8924607892673,227.570589021523" />
         <NodeLayout
-          Size="202.4,41.6"
+          Size="202.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Urban or Rural Conversion"
           TopLeft="32.559127455934,134.410294191132" />
         <NodeLayout
-          Size="242.4,41.6"
+          Size="242.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Urban_or_Rural_Area Excel Source"
           TopLeft="12.559127455934,41.2499993607402" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Data Conversion Output10]"
+          Id="Package\Constant Data Flow.Paths[Data Conversion Output2]"
           TopLeft="133.892460789267,175.743627524465">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12075,11 +11843,13 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output8]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output3]"
           TopLeft="133.892460789267,82.5833326940735">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12097,7 +11867,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -12106,31 +11878,31 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="264,324"
-          Size="264,366.4"
+          Size="264,366.666666666667"
           Id="f194ddc0-17ac-4019-9c8a-7f0365d738be"
           TopLeft="1086.31576690844,387.404524623712">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Constant Data Flow\Urban_or_Rural_Area Destination</s:String>
             <s:String>Package\Constant Data Flow\Urban or Rural Conversion</s:String>
             <s:String>Package\Constant Data Flow\Urban_or_Rural_Area Excel Source</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output10]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output8]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output2]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output3]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
-          Size="187.2,41.6"
+          Size="187.333333333334,41.3333333333334"
           Id="Package\Constant Data Flow\Road_Type Destination"
           TopLeft="39.983729691485,219.311766543132" />
         <NodeLayout
-          Size="186.4,41.6"
+          Size="186.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Road_Type Conversion"
           TopLeft="40.3170630248184,130.605882946125" />
         <NodeLayout
-          Size="194.4,41.6"
+          Size="194.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Road_Type Excel Source"
           TopLeft="36.3170630248184,41.8999993491173" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Data Conversion Output7]"
+          Id="Package\Constant Data Flow.Paths[Data Conversion Output5]"
           TopLeft="133.650396358152,171.939216279458">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12148,11 +11920,13 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output7]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output11]"
           TopLeft="133.650396358152,83.2333326824506">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12170,7 +11944,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -12179,31 +11955,31 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="264,324"
-          Size="264,366.4"
+          Size="264,366.666666666667"
           Id="3b732bcf-a9de-4faa-8ef6-93f24fb2fe70"
           TopLeft="822.31576690844,387.404524623712">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Constant Data Flow\Road_Type Destination</s:String>
             <s:String>Package\Constant Data Flow\Road_Type Conversion</s:String>
             <s:String>Package\Constant Data Flow\Road_Type Excel Source</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output7]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output7]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output5]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output11]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
-          Size="221.6,41.6"
+          Size="221.333333333334,41.3333333333334"
           Id="Package\Constant Data Flow\Journey_Purpose Excel Source"
           TopLeft="22.6293652867908,44.4999993026257" />
         <NodeLayout
-          Size="215.2,41.6"
+          Size="215.333333333334,41.3333333333334"
           Id="Package\Constant Data Flow\Journey_Purpose Destination"
           TopLeft="24.3793653054174,218.12647247108" />
         <NodeLayout
-          Size="170.4,41.6"
+          Size="170.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Journey Conversion"
           TopLeft="47.962698620124,130.013235910099" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Data Conversion Output8]"
+          Id="Package\Constant Data Flow.Paths[Data Conversion Output4]"
           TopLeft="132.671031962771,171.346569243432">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12221,11 +11997,13 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output1]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output7]"
           TopLeft="133.296031953457,85.833332635959">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12243,7 +12021,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -12252,31 +12032,31 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="264,324"
-          Size="264,366.4"
+          Size="264,366.666666666667"
           Id="ea511c62-27db-4235-ad59-2fa7bdd506a0"
           TopLeft="1086.45713592354,11.450886658731">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Constant Data Flow\Journey_Purpose Excel Source</s:String>
             <s:String>Package\Constant Data Flow\Journey_Purpose Destination</s:String>
             <s:String>Package\Constant Data Flow\Journey Conversion</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output8]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output1]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output4]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output7]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
-          Size="205.6,42.4"
+          Size="205.333333333334,42.6666666666667"
           Id="Package\Constant Data Flow\Vehicle_Type Excel Source"
           TopLeft="34.7416664737498,42.5499993374944" />
         <NodeLayout
-          Size="196.8,41.6"
+          Size="196.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Vehicle_Type Destination"
           TopLeft="39.0749998070831,203.679413690719" />
         <NodeLayout
-          Size="196,41.6"
+          Size="196,41.3333333333334"
           Id="Package\Constant Data Flow\Vehicle_Type Conversion"
           TopLeft="39.4083331404164,123.781373180774" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output4]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output6]"
           TopLeft="137.408333140416,85.2166660041611">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12294,11 +12074,13 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Data Conversion Output4]"
+          Id="Package\Constant Data Flow.Paths[Data Conversion Output8]"
           TopLeft="137.408333140416,165.114706514107">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12316,7 +12098,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -12325,31 +12109,31 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="264,324"
-          Size="264,366.4"
+          Size="264,366.666666666667"
           Id="04a1c188-4f00-4eb5-ac54-991f56f5a086"
           TopLeft="822.457135923541,11.450886658731">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Constant Data Flow\Vehicle_Type Excel Source</s:String>
             <s:String>Package\Constant Data Flow\Vehicle_Type Destination</s:String>
             <s:String>Package\Constant Data Flow\Vehicle_Type Conversion</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output4]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output4]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output6]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output8]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
-          Size="202.4,42.4"
+          Size="202.666666666667,42.6666666666667"
           Id="Package\Constant Data Flow\Built_up_Road Conversion"
           TopLeft="35.9349204707042,117.673529609191" />
         <NodeLayout
-          Size="204,42.4"
+          Size="204,42.6666666666667"
           Id="Package\Constant Data Flow\Built_up_Road Destination"
           TopLeft="35.2682538040375,217.497059439217" />
         <NodeLayout
-          Size="210.4,42.4"
+          Size="210.666666666667,42.6666666666667"
           Id="Package\Constant Data Flow\Built_up_Road Excel Source"
           TopLeft="31.2682538040376,17.0374997936935" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output10]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output1]"
           TopLeft="136.934920470704,59.7041664603602">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12367,11 +12151,13 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Data Conversion Output1]"
+          Id="Package\Constant Data Flow.Paths[Data Conversion Output11]"
           TopLeft="137.268253804037,160.340196275858">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12389,7 +12175,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -12398,31 +12186,31 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="264,324"
-          Size="264,366.4"
+          Size="264,366.666666666667"
           Id="9850f6b8-24f2-4347-9945-3d26a9b3d9a9"
           TopLeft="27.2330459560301,765.346318118451">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Constant Data Flow\Built_up_Road Conversion</s:String>
             <s:String>Package\Constant Data Flow\Built_up_Road Destination</s:String>
             <s:String>Package\Constant Data Flow\Built_up_Road Excel Source</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output10]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output1]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output1]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output11]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
-          Size="193.6,41.6"
+          Size="193.333333333334,41.3333333333334"
           Id="Package\Constant Data Flow\Age_Group Excel Source"
           TopLeft="36.3900793017874,25.6499996396899" />
         <NodeLayout
-          Size="212.8,41.6"
+          Size="212.666666666667,41.3333333333334"
           Id="Package\Constant Data Flow\Age_Group Road Conversion"
           TopLeft="26.7234126351207,125.473529469716" />
         <NodeLayout
-          Size="187.2,41.6"
+          Size="187.333333333334,41.3333333333334"
           Id="Package\Constant Data Flow\Age_Group Destination"
           TopLeft="39.3900793017874,225.297059299742" />
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Data Conversion Output5]"
+          Id="Package\Constant Data Flow.Paths[Data Conversion Output7]"
           TopLeft="133.056745968454,166.806862803049">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12440,11 +12228,13 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Constant Data Flow.Paths[Excel Source Output3]"
+          Id="Package\Constant Data Flow.Paths[Excel Source Output10]"
           TopLeft="133.056745968454,66.9833329730233">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12462,7 +12252,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -12471,15 +12263,15 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="264,324"
-          Size="264,366.4"
+          Size="264,366.666666666667"
           Id="3acc230e-ddfd-41c3-ab84-dd76afd44443"
           TopLeft="291.23304595603,765.346318118451">
           <GroupLayout.ChildrenIds>
             <s:String>Package\Constant Data Flow\Age_Group Excel Source</s:String>
             <s:String>Package\Constant Data Flow\Age_Group Road Conversion</s:String>
             <s:String>Package\Constant Data Flow\Age_Group Destination</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output5]</s:String>
-            <s:String>Package\Constant Data Flow.Paths[Excel Source Output3]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Data Conversion Output7]</s:String>
+            <s:String>Package\Constant Data Flow.Paths[Excel Source Output10]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
       </GraphLayout>
@@ -12658,17 +12450,17 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
     design-time-name="Package\PCD_OA_LSOA_MSOA_LAD Data Flow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="198.4,41.6"
+          Size="198.666666666667,41.3333333333334"
           Id="Package\PCD_OA_LSOA_MSOA_LAD Data Flow\Remove quote characters"
           TopLeft="210.000003576279,133.058825395512" />
         <NodeLayout
-          Size="242.4,41.6"
+          Size="242.666666666667,41.3333333333334"
           Id="Package\PCD_OA_LSOA_MSOA_LAD Data Flow\PCD_OA_LSOA_MSOA_LAD Source"
           TopLeft="192.142860415031,42.0588241192714" />
         <NodeLayout
-          Size="159.2,41.6"
+          Size="159.333333333334,41.3333333333334"
           Id="Package\PCD_OA_LSOA_MSOA_LAD Data Flow\LSOA_PCD Stage"
           TopLeft="234.285718275576,234.000003281762" />
         <EdgeLayout
@@ -12690,7 +12482,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12712,7 +12506,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12735,15 +12531,15 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
     design-time-name="Package\Postcodes Data Flow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="160.8,41.6"
-          Id="Package\Postcodes Data Flow\Postcodes Source"
-          TopLeft="374.285720659762,160.588237546307" />
-        <NodeLayout
-          Size="155.2,41.6"
+          Size="155.333333333334,41.3333333333334"
           Id="Package\Postcodes Data Flow\Postcodes Stage"
           TopLeft="378.571435018462,289.823533476431" />
+        <NodeLayout
+          Size="160.666666666667,41.3333333333334"
+          Id="Package\Postcodes Data Flow\Postcodes Source"
+          TopLeft="374.285720659762,160.588237546307" />
         <EdgeLayout
           Id="Package\Postcodes Data Flow.Paths[Flat File Source Output]"
           TopLeft="455.428577839112,202.188237546307">
@@ -12763,7 +12559,9 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12788,88 +12586,62 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="192,41.6"
+          Size="192,42.6666666666667"
           Id="Package\Vehicles Data Flow\Vehicles Flat File Source"
-          TopLeft="212.952382810845,19.9970591247195" />
+          TopLeft="31.0811735090003,93.8606941675711" />
         <NodeLayout
-          Size="185.6,42.4"
-          Id="Package\Vehicles Data Flow\Lookup Vehicles Stage"
-          TopLeft="216.285716144178,180.752616775133" />
-        <NodeLayout
-          Size="192,42.4"
-          Id="Package\Vehicles Data Flow\Lookup Accidents Stage"
-          TopLeft="212.952382810845,99.7081712832598" />
-        <NodeLayout
-          Size="148,42.4"
+          Size="192,42.6666666666667"
           Id="Package\Vehicles Data Flow\Vehicles Stage"
-          TopLeft="234.952382810845,261.797062267007" />
-        <EdgeLayout
-          Id="Package\Vehicles Data Flow.Paths[Flat File Source Output]"
-          TopLeft="308.952382810845,61.3303924580528">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.377778825207"
-              Start="0,0"
-              End="0,30.877778825207">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.877778825207" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="31.0811735090003,335.660697309859" />
+        <NodeLayout
+          Size="192,42.6666666666667"
+          Id="Package\Vehicles Data Flow\Lookup Accidents Stage"
+          TopLeft="31.0811735090003,214.094029072048" />
         <EdgeLayout
           Id="Package\Vehicles Data Flow.Paths[Lookup Match Output]"
-          TopLeft="308.952382810845,142.374837949926">
+          TopLeft="127.081173509,256.760695738715">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38.377778825207"
+              EndConnector="0,78.9000015711437"
               Start="0,0"
-              End="0,30.877778825207">
+              End="0,71.4000015711437">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.877778825207" />
+                    End="0,71.4000015711437" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,9.63420191260349,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,29.8953132855719,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Vehicles Data Flow.Paths[Lookup Error Output]"
-          TopLeft="308.952382810845,223.4192834418">
+          Id="Package\Vehicles Data Flow.Paths[Flat File Source Output]"
+          TopLeft="127.081173509,136.527360834238">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38.3777788252069"
+              EndConnector="0,77.5666682378104"
               Start="0,0"
-              End="0,30.8777788252069">
+              End="0,70.0666682378104">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.8777788252069" />
+                    End="0,70.0666682378104" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-45.86638671875,9.63420191260347,91.7327734375,11.609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -12877,25 +12649,15 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Vehicles Data Flow\Lookup Vehicles Stage">
+    design-time-name="Package\Vehicles Data Flow\Vehicles Stage">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Vehicles]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -12919,19 +12681,6 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Vehicles Data Flow\Vehicles Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
