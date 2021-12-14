@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="StageNDSPackage"
   DTS:PackageType="5"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{890F422C-2F4F-4B4F-8E06-76D18DA0092A}">
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{98B506D3-8BE6-4F31-9288-C39570F15599}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-TOL1F2F\MSSQLSERVERBI;Initial Catalog=BI14LabProjectStageDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-TOL1F2F\MSSQLSERVERBI;Initial Catalog=ETL_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1464,7 +1464,7 @@ where [refTable].[AccidentIndex] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Accidents Stage to NDS\1484:invalid};</property>
+                  name="ParameterMap">#{Package\Accidents Stage to NDS\1549:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -14350,54 +14350,54 @@ where code = ?</property>
               startId="Package\Contants Stage to NDS\Add SourceID CasualtySeverity.Outputs[Derived Column Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Derived Column Output25]"
-              endId="Package\Contants Stage to NDS\RoadType NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt RoadType.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output24]"
-              endId="Package\Contants Stage to NDS\Lookup Code AgeBand.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID AgeBand.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output23]"
-              endId="Package\Contants Stage to NDS\AgeBand NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt AgeBand.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output22]"
-              endId="Package\Contants Stage to NDS\Local_Authority_District NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt LocalAuthorityDistrict.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output21]"
-              endId="Package\Contants Stage to NDS\Lookup Code CasualtyType.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID CasualtyType.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output20]"
               endId="Package\Contants Stage to NDS\Lookup Code LocalAuthorityDistrict.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Contants Stage to NDS\Add SourceID LocalAuthorityDistrict.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output19]"
-              endId="Package\Contants Stage to NDS\AgeGroup NDS.Inputs[OLE DB Destination Input]"
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output24]"
+              endId="Package\Contants Stage to NDS\UrbanOrRuralArea NDS.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt AgeGroup.Outputs[Derived Column Output]" />
+              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt UrbanOrRuralArea.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output18]"
-              endId="Package\Contants Stage to NDS\Lookup Code VehicleType.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID VehicleType.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output17]"
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output23]"
               endId="Package\Contants Stage to NDS\Lookup Code JourneyPurpose.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Contants Stage to NDS\Add SourceID JourneyPurpose.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output16]"
-              endId="Package\Contants Stage to NDS\UrbanOrRuralArea NDS.Inputs[OLE DB Destination Input]"
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output22]"
+              endId="Package\Contants Stage to NDS\Lookup Code VehicleType.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt UrbanOrRuralArea.Outputs[Derived Column Output]" />
+              startId="Package\Contants Stage to NDS\Add SourceID VehicleType.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output21]"
+              endId="Package\Contants Stage to NDS\AgeGroup NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt AgeGroup.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output20]"
+              endId="Package\Contants Stage to NDS\Local_Authority_District NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt LocalAuthorityDistrict.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output19]"
+              endId="Package\Contants Stage to NDS\Lookup Code CasualtyType.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID CasualtyType.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output18]"
+              endId="Package\Contants Stage to NDS\TimeOfDay NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt TimeOfDay.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output17]"
+              endId="Package\Contants Stage to NDS\AgeBand NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt AgeBand.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output16]"
+              endId="Package\Contants Stage to NDS\Lookup Code AgeBand.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID AgeBand.Outputs[Derived Column Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Derived Column Output14]"
               endId="Package\Contants Stage to NDS\Lookup Code Gender.Inputs[Lookup Input]"
@@ -14405,14 +14405,14 @@ where code = ?</property>
               startId="Package\Contants Stage to NDS\Add SourceID.Outputs[Derived Column Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Derived Column Output13]"
-              endId="Package\Contants Stage to NDS\TimeOfDay NDS.Inputs[OLE DB Destination Input]"
+              endId="Package\Contants Stage to NDS\BuiltUpRoad NDS.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt TimeOfDay.Outputs[Derived Column Output]" />
+              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt BuiltUpRoad.Outputs[Derived Column Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Derived Column Output15]"
-              endId="Package\Contants Stage to NDS\Accident_Severity NDS.Inputs[OLE DB Destination Input]"
+              endId="Package\Contants Stage to NDS\RoadType NDS.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt AccidentSeverity.Outputs[Derived Column Output]" />
+              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt RoadType.Outputs[Derived Column Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Derived Column Output11]"
               endId="Package\Contants Stage to NDS\Lookup Code BuiltUpRoad.Inputs[Lookup Input]"
@@ -14420,84 +14420,84 @@ where code = ?</property>
               startId="Package\Contants Stage to NDS\Add SourceID BuiltUpRoad.Outputs[Derived Column Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Derived Column Output1]"
-              endId="Package\Contants Stage to NDS\BuiltUpRoad NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt BuiltUpRoad.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output2]"
-              endId="Package\Contants Stage to NDS\Lookup Code TimeOfDay.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID TimeOfDay.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output3]"
-              endId="Package\Contants Stage to NDS\JourneyPurpose NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt JourneyPurpose.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output12]"
-              endId="Package\Contants Stage to NDS\Gender NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt Gender.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output5]"
-              endId="Package\Contants Stage to NDS\CasualtyType NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt CasualtyType.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output4]"
-              endId="Package\Contants Stage to NDS\VehicleType NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt VehicleType.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output7]"
-              endId="Package\Contants Stage to NDS\Lookup Code AccidentSeverity.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID AccidentSeverity.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output8]"
-              endId="Package\Contants Stage to NDS\Lookup Code AgeGroup.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID AgeGroup.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output9]"
-              endId="Package\Contants Stage to NDS\CasualtySeverity NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt CasualtySeverity.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output10]"
-              endId="Package\Contants Stage to NDS\Lookup Code UrbanOrRuralArea.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Contants Stage to NDS\Add SourceID UrbanOrRuralArea.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Derived Column Output6]"
               endId="Package\Contants Stage to NDS\Lookup Code RoadType.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Contants Stage to NDS\Add SourceID RoadType.Outputs[Derived Column Output]" />
             <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output2]"
+              endId="Package\Contants Stage to NDS\Lookup Code UrbanOrRuralArea.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID UrbanOrRuralArea.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output3]"
+              endId="Package\Contants Stage to NDS\CasualtySeverity NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt CasualtySeverity.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output12]"
+              endId="Package\Contants Stage to NDS\Accident_Severity NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt AccidentSeverity.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output5]"
+              endId="Package\Contants Stage to NDS\Lookup Code AccidentSeverity.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID AccidentSeverity.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output4]"
+              endId="Package\Contants Stage to NDS\Lookup Code AgeGroup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID AgeGroup.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output7]"
+              endId="Package\Contants Stage to NDS\CasualtyType NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt CasualtyType.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output8]"
+              endId="Package\Contants Stage to NDS\Gender NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt Gender.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output9]"
+              endId="Package\Contants Stage to NDS\JourneyPurpose NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt JourneyPurpose.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output10]"
+              endId="Package\Contants Stage to NDS\Lookup Code TimeOfDay.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add SourceID TimeOfDay.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Derived Column Output6]"
+              endId="Package\Contants Stage to NDS\VehicleType NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt VehicleType.Outputs[Derived Column Output]" />
+            <path
               refId="Package\Contants Stage to NDS.Paths[Lookup Error Output8]"
+              endId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt Gender.Inputs[Derived Column Input]"
+              name="Lookup Error Output"
+              startId="Package\Contants Stage to NDS\Lookup Code Gender.Outputs[Lookup Error Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output12]"
               endId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt TimeOfDay.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code TimeOfDay.Outputs[Lookup Error Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output12]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output11]"
               endId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt VehicleType.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code VehicleType.Outputs[Lookup Error Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output11]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output10]"
               endId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt AccidentSeverity.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code AccidentSeverity.Outputs[Lookup Error Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output10]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output9]"
               endId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt CasualtyType.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code CasualtyType.Outputs[Lookup Error Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output9]"
-              endId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt Gender.Inputs[Derived Column Input]"
-              name="Lookup Error Output"
-              startId="Package\Contants Stage to NDS\Lookup Code Gender.Outputs[Lookup Error Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Lookup Error Output7]"
               endId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt AgeBand.Inputs[Derived Column Input]"
@@ -14515,44 +14515,44 @@ where code = ?</property>
               startId="Package\Contants Stage to NDS\Lookup Code UrbanOrRuralArea.Outputs[Lookup Error Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Lookup Error Output4]"
-              endId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt LocalAuthorityDistrict.Inputs[Derived Column Input]"
-              name="Lookup Error Output"
-              startId="Package\Contants Stage to NDS\Lookup Code LocalAuthorityDistrict.Outputs[Lookup Error Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output3]"
               endId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt JourneyPurpose.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code JourneyPurpose.Outputs[Lookup Error Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output2]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output3]"
               endId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt RoadType.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code RoadType.Outputs[Lookup Error Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output1]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output2]"
               endId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt AgeGroup.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code AgeGroup.Outputs[Lookup Error Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output1]"
               endId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt CasualtySeverity.Inputs[Derived Column Input]"
               name="Lookup Error Output"
               startId="Package\Contants Stage to NDS\Lookup Code CasualtySeverity.Outputs[Lookup Error Output]" />
             <path
+              refId="Package\Contants Stage to NDS.Paths[Lookup Error Output]"
+              endId="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt LocalAuthorityDistrict.Inputs[Derived Column Input]"
+              name="Lookup Error Output"
+              startId="Package\Contants Stage to NDS\Lookup Code LocalAuthorityDistrict.Outputs[Lookup Error Output]" />
+            <path
               refId="Package\Contants Stage to NDS.Paths[Lookup Match Output12]"
+              endId="Package\Contants Stage to NDS\Update RoadTypeNDS.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Contants Stage to NDS\Lookup Code RoadType.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output11]"
               endId="Package\Contants Stage to NDS\Update Gender NDS.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Contants Stage to NDS\Lookup Code Gender.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output11]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output10]"
               endId="Package\Contants Stage to NDS\Update AccidentSeverity NDS.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Contants Stage to NDS\Lookup Code AccidentSeverity.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output10]"
-              endId="Package\Contants Stage to NDS\Update CasualtyType NDS.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\Contants Stage to NDS\Lookup Code CasualtyType.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Lookup Match Output8]"
               endId="Package\Contants Stage to NDS\Update LocalAuthorityDistrict NDS.Inputs[OLE DB Command Input]"
@@ -14565,14 +14565,14 @@ where code = ?</property>
               startId="Package\Contants Stage to NDS\Lookup Code AgeGroup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Lookup Match Output6]"
-              endId="Package\Contants Stage to NDS\Update RoadTypeNDS.Inputs[OLE DB Command Input]"
+              endId="Package\Contants Stage to NDS\Updade CasualtySeverity NDS.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
-              startId="Package\Contants Stage to NDS\Lookup Code RoadType.Outputs[Lookup Match Output]" />
+              startId="Package\Contants Stage to NDS\Lookup Code CasualtySeverity.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Lookup Match Output9]"
-              endId="Package\Contants Stage to NDS\Update VehicleType NDS.Inputs[OLE DB Command Input]"
+              endId="Package\Contants Stage to NDS\Update CasualtyType NDS.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
-              startId="Package\Contants Stage to NDS\Lookup Code VehicleType.Outputs[Lookup Match Output]" />
+              startId="Package\Contants Stage to NDS\Lookup Code CasualtyType.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Lookup Match Output4]"
               endId="Package\Contants Stage to NDS\Update UrbanOrRuralArea NDS.Inputs[OLE DB Command Input]"
@@ -14585,44 +14585,44 @@ where code = ?</property>
               startId="Package\Contants Stage to NDS\Lookup Code JourneyPurpose.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[Lookup Match Output2]"
-              endId="Package\Contants Stage to NDS\Updade CasualtySeverity NDS.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\Contants Stage to NDS\Lookup Code CasualtySeverity.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output1]"
               endId="Package\Contants Stage to NDS\Update BuiltUpRoad NDS.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Contants Stage to NDS\Lookup Code BuiltUpRoad.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output1]"
               endId="Package\Contants Stage to NDS\Update AgeBand NDS.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Contants Stage to NDS\Lookup Code AgeBand.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output5]"
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output]"
               endId="Package\Contants Stage to NDS\Update TimeOfDay NDS.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Contants Stage to NDS\Lookup Code TimeOfDay.Outputs[Lookup Match Output]" />
             <path
+              refId="Package\Contants Stage to NDS.Paths[Lookup Match Output5]"
+              endId="Package\Contants Stage to NDS\Update VehicleType NDS.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Contants Stage to NDS\Lookup Code VehicleType.Outputs[Lookup Match Output]" />
+            <path
               refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output10]"
+              endId="Package\Contants Stage to NDS\Add SourceID.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Contants Stage to NDS\Gender Stage.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output9]"
               endId="Package\Contants Stage to NDS\Add SourceID AgeBand.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Contants Stage to NDS\Age_Band Stage.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output9]"
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output8]"
               endId="Package\Contants Stage to NDS\Add SourceID CasualtyType.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Contants Stage to NDS\Casualty_Type Stage.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output8]"
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output7]"
               endId="Package\Contants Stage to NDS\Add SourceID JourneyPurpose.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Contants Stage to NDS\Journey_Purpose Stage.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output7]"
-              endId="Package\Contants Stage to NDS\Add SourceID TimeOfDay.Inputs[Derived Column Input]"
-              name="OLE DB Source Output"
-              startId="Package\Contants Stage to NDS\Time_of_Day Stage.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output6]"
               endId="Package\Contants Stage to NDS\Add SourceID AgeGroup.Inputs[Derived Column Input]"
@@ -14630,9 +14630,9 @@ where code = ?</property>
               startId="Package\Contants Stage to NDS\Age_Group Stage.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output3]"
-              endId="Package\Contants Stage to NDS\Add SourceID BuiltUpRoad.Inputs[Derived Column Input]"
+              endId="Package\Contants Stage to NDS\Add SourceID RoadType.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
-              startId="Package\Contants Stage to NDS\Built_up_Road Stage.Outputs[OLE DB Source Output]" />
+              startId="Package\Contants Stage to NDS\Road_Type Stage.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output4]"
               endId="Package\Contants Stage to NDS\Add SourceID UrbanOrRuralArea.Inputs[Derived Column Input]"
@@ -14640,29 +14640,29 @@ where code = ?</property>
               startId="Package\Contants Stage to NDS\Urban_or_Rural_Area Stage.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output2]"
-              endId="Package\Contants Stage to NDS\Add SourceID RoadType.Inputs[Derived Column Input]"
-              name="OLE DB Source Output"
-              startId="Package\Contants Stage to NDS\Road_Type Stage.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output1]"
               endId="Package\Contants Stage to NDS\Add SourceID CasualtySeverity.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Contants Stage to NDS\Casualty_Severity Stage.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output]"
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output1]"
               endId="Package\Contants Stage to NDS\Add SourceID AccidentSeverity.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Contants Stage to NDS\Accident_Severity Stage.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output11]"
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output]"
               endId="Package\Contants Stage to NDS\Add SourceID LocalAuthorityDistrict.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Contants Stage to NDS\Local_Authority_District Stage.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output5]"
-              endId="Package\Contants Stage to NDS\Add SourceID.Inputs[Derived Column Input]"
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output11]"
+              endId="Package\Contants Stage to NDS\Add SourceID BuiltUpRoad.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
-              startId="Package\Contants Stage to NDS\Gender Stage.Outputs[OLE DB Source Output]" />
+              startId="Package\Contants Stage to NDS\Built_up_Road Stage.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output5]"
+              endId="Package\Contants Stage to NDS\Add SourceID TimeOfDay.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Contants Stage to NDS\Time_of_Day Stage.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Contants Stage to NDS.Paths[OLE DB Source Output12]"
               endId="Package\Contants Stage to NDS\Add SourceID VehicleType.Inputs[Derived Column Input]"
@@ -15296,13 +15296,15 @@ where [refTable].[CountryCode] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select pc.country_code, pc.country_name 
-from Postcodes pc, (
-    select lsoa11cd, pcd7 = MIN(pcd7) from LSOA_PCD
-    group by lsoa11cd
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select p.country_code, p.country_name from Postcodes p,
+(
+	select lsoa11cd, left(pcds, charindex(' ', pcds)) as pcd 
+	from LSOA_PCD
+	where lsoa11cd IS NOT NULL and lsoa11cd &lt;&gt; ' '
+	group by lsoa11cd, left(pcds, charindex(' ', pcds))
 ) lp
-where TRIM(LEFT(lp.pcd7, 4))=pc.postcode
-group by pc.country_code, pc.country_name;</property>
+where lp.pcd = p.postcode
+group by p.country_code, p.country_name</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -16373,13 +16375,15 @@ where [refTable].[RegionCode] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select pc.county, pc.region_code 
-from Postcodes pc, (
-	select lsoa11cd, pcd7 = MIN(pcd7) from LSOA_PCD
-	group by lsoa11cd
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select p.county, p.region_code from Postcodes p,
+(
+	select lsoa11cd, left(pcds, charindex(' ', pcds)) as pcd 
+	from LSOA_PCD
+	where lsoa11cd IS NOT NULL and lsoa11cd &lt;&gt; ' '
+	group by lsoa11cd, left(pcds, charindex(' ', pcds))
 ) lp
-where TRIM(LEFT(lp.pcd7, 4))=pc.postcode
-group by pc.county, pc.region_code;</property>
+where lp.pcd = p.postcode
+group by p.county, p.region_code</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -17382,13 +17386,15 @@ where [refTable].[RegionCode] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select pc.region_code, pc.region_name, pc.country_code 
-from Postcodes pc, (
-	select lsoa11cd, pcd7 = MIN(pcd7) from LSOA_PCD
-	group by lsoa11cd
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select p.region_code, p.region_name, p.country_code from Postcodes p,
+(
+	select lsoa11cd, left(pcds, charindex(' ', pcds)) as pcd 
+	from LSOA_PCD
+	where lsoa11cd IS NOT NULL and lsoa11cd &lt;&gt; ' '
+	group by lsoa11cd, left(pcds, charindex(' ', pcds))
 ) lp
-where TRIM(LEFT(lp.pcd7, 4))=pc.postcode
-group by pc.region_code, pc.region_name, pc.country_code;</property>
+where lp.pcd = p.postcode
+group by p.region_code, p.region_name, p.country_code</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -18176,72 +18182,50 @@ and SourceId=?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7"
+              refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
-              name="Convert lsoa, pcd7"
+              name="Convert lsoa, postcode"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Inputs[Data Conversion Input]"
+                  refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Inputs[Data Conversion Input].Columns[pcd7]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="pcd7"
-                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[pcd7]" />
-                    <inputColumn
-                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Inputs[Data Conversion Input].Columns[lsoa11cd]"
+                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Inputs[Data Conversion Input].Columns[lsoa11cd]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="lsoa11cd"
                       lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[lsoa11cd]" />
+                    <inputColumn
+                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Inputs[Data Conversion Input].Columns[postcode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="postcode"
+                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[postcode]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Outputs[Data Conversion Output]"
+                  refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
                   name="Data Conversion Output"
-                  synchronousInputId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Outputs[Data Conversion Output].Columns[Copy of pcd7]"
+                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Output].Columns[Copy of lsoa11cd]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="10"
-                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Outputs[Data Conversion Output].Columns[Copy of pcd7]"
-                      name="Copy of pcd7"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[pcd7]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Outputs[Data Conversion Output].Columns[Copy of lsoa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="10"
-                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Outputs[Data Conversion Output].Columns[Copy of lsoa11cd]"
+                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Output].Columns[Copy of lsoa11cd]"
                       name="Copy of lsoa11cd"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -18256,26 +18240,48 @@ and SourceId=?</property>
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Output].Columns[Copy of postcode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Output].Columns[Copy of postcode]"
+                      name="Copy of postcode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[postcode]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Outputs[Data Conversion Error Output]"
+                  refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Data Conversion Error Output"
-                  synchronousInputId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -18464,7 +18470,7 @@ where [refTable].[CountyName] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[TownCity]) [refTable]
-where [refTable].[Postcode] = ?</property>
+where [refTable].[lsoa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -18500,7 +18506,7 @@ where [refTable].[Postcode] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[pcd7]};</property>
+                  name="ParameterMap">#{Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Output].Columns[Copy of lsoa11cd]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -18524,17 +18530,17 @@ where [refTable].[Postcode] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup TownCity NDS.Inputs[Lookup Input].Columns[pcd7]"
+                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup TownCity NDS.Inputs[Lookup Input].Columns[Copy of lsoa11cd]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="pcd7"
-                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[pcd7]">
+                      cachedLength="10"
+                      cachedName="Copy of lsoa11cd"
+                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Output].Columns[Copy of lsoa11cd]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Postcode</property>
+                          name="JoinToReferenceColumn">lsoa</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -18628,13 +18634,15 @@ where [refTable].[Postcode] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select lp.pcd7, lp.lsoa11cd, pc.city, pc.county
-from Postcodes pc, (
-	select lsoa11cd, pcd7 = MIN(pcd7) from LSOA_PCD
-	group by lsoa11cd
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select p.postcode, lp.lsoa11cd, p.city, p.county from Postcodes p,
+(
+	select lsoa11cd, left(pcds, charindex(' ', pcds)) as pcd
+	from LSOA_PCD
+	where lsoa11cd IS NOT NULL and lsoa11cd &lt;&gt; ' '
+	group by lsoa11cd, left(pcds, charindex(' ', pcds)), pcds
 ) lp
-where TRIM(LEFT(lp.pcd7, 4))=pc.postcode
-group by lp.pcd7, lp.lsoa11cd, pc.city, pc.county;</property>
+where lp.pcd = p.postcode
+group by p.postcode, lp.lsoa11cd, p.city, p.county</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -18682,17 +18690,6 @@ group by lp.pcd7, lp.lsoa11cd, pc.city, pc.county;</property>
                       name="county"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[pcd7]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].ExternalColumns[pcd7]"
-                      length="50"
-                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[pcd7]"
-                      name="pcd7"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[lsoa11cd]"
                       codePage="1252"
                       dataType="str"
@@ -18714,6 +18711,17 @@ group by lp.pcd7, lp.lsoa11cd, pc.city, pc.county;</property>
                       lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[city]"
                       name="city"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[postcode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].ExternalColumns[postcode]"
+                      length="50"
+                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[postcode]"
+                      name="postcode"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -18723,12 +18731,6 @@ group by lp.pcd7, lp.lsoa11cd, pc.city, pc.county;</property>
                       dataType="str"
                       length="50"
                       name="county" />
-                    <externalMetadataColumn
-                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].ExternalColumns[pcd7]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="pcd7" />
                     <externalMetadataColumn
                       refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].ExternalColumns[lsoa11cd]"
                       codePage="1252"
@@ -18741,6 +18743,12 @@ group by lp.pcd7, lp.lsoa11cd, pc.city, pc.county;</property>
                       dataType="str"
                       length="50"
                       name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].ExternalColumns[postcode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="postcode" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -18749,12 +18757,12 @@ group by lp.pcd7, lp.lsoa11cd, pc.city, pc.county;</property>
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Error Output].Columns[pcd7]"
+                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Error Output].Columns[postcode]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Error Output].Columns[pcd7]"
-                      name="pcd7" />
+                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Error Output].Columns[postcode]"
+                      name="postcode" />
                     <outputColumn
                       refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Error Output].Columns[lsoa11cd]"
                       codePage="1252"
@@ -18898,21 +18906,21 @@ group by lp.pcd7, lp.lsoa11cd, pc.city, pc.county;</property>
                       externalMetadataColumnId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\TownCity NDS.Inputs[OLE DB Destination Input].ExternalColumns[County]"
                       lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup County NDS.Outputs[Lookup Match Output].Columns[CountyIndex]" />
                     <inputColumn
-                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\TownCity NDS.Inputs[OLE DB Destination Input].Columns[Copy of pcd7]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="Copy of pcd7"
-                      externalMetadataColumnId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\TownCity NDS.Inputs[OLE DB Destination Input].ExternalColumns[Postcode]"
-                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Outputs[Data Conversion Output].Columns[Copy of pcd7]" />
-                    <inputColumn
                       refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\TownCity NDS.Inputs[OLE DB Destination Input].Columns[Copy of lsoa11cd]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="Copy of lsoa11cd"
                       externalMetadataColumnId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\TownCity NDS.Inputs[OLE DB Destination Input].ExternalColumns[lsoa]"
-                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Outputs[Data Conversion Output].Columns[Copy of lsoa11cd]" />
+                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Output].Columns[Copy of lsoa11cd]" />
+                    <inputColumn
+                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\TownCity NDS.Inputs[OLE DB Destination Input].Columns[Copy of postcode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Copy of postcode"
+                      externalMetadataColumnId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\TownCity NDS.Inputs[OLE DB Destination Input].ExternalColumns[Postcode]"
+                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Output].Columns[Copy of postcode]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -19074,10 +19082,10 @@ group by lp.pcd7, lp.lsoa11cd, pc.city, pc.county;</property>
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update TownCity
-set lsoa=?
+set  Postcode=?
 , CityName=?
 , UpdatedAt=?
-where Postcode=?
+where lsoa=?
 and County=?
 and SourceID=?</property>
                 <property
@@ -19102,14 +19110,6 @@ and SourceID=?</property>
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Inputs[OLE DB Command Input].Columns[lsoa11cd]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="lsoa11cd"
-                      externalMetadataColumnId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[lsoa11cd]" />
-                    <inputColumn
                       refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Inputs[OLE DB Command Input].Columns[city]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -19124,14 +19124,6 @@ and SourceID=?</property>
                       externalMetadataColumnId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date.Outputs[Derived Column Output].Columns[UpdatedAt]" />
                     <inputColumn
-                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Inputs[OLE DB Command Input].Columns[pcd7]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="pcd7"
-                      externalMetadataColumnId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage.Outputs[OLE DB Source Output].Columns[pcd7]" />
-                    <inputColumn
                       refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Inputs[OLE DB Command Input].Columns[CountyIndex]"
                       cachedDataType="i4"
                       cachedName="CountyIndex"
@@ -19143,6 +19135,22 @@ and SourceID=?</property>
                       cachedName="SourceID"
                       externalMetadataColumnId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
                       lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Add SourceID column.Outputs[Derived Column Output].Columns[SourceID]" />
+                    <inputColumn
+                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Inputs[OLE DB Command Input].Columns[Copy of lsoa11cd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Copy of lsoa11cd"
+                      externalMetadataColumnId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Output].Columns[Copy of lsoa11cd]" />
+                    <inputColumn
+                      refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Inputs[OLE DB Command Input].Columns[Copy of postcode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Copy of postcode"
+                      externalMetadataColumnId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Output].Columns[Copy of postcode]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -19259,7 +19267,7 @@ and SourceID=?</property>
               refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Data Conversion Output]"
               endId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup County NDS.Inputs[Lookup Input]"
               name="Data Conversion Output"
-              startId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Outputs[Data Conversion Output]" />
+              startId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Derived Column Output]"
               endId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command.Inputs[OLE DB Command Input]"
@@ -19272,7 +19280,7 @@ and SourceID=?</property>
               startId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Add timestamps.Outputs[Derived Column Output]" />
             <path
               refId="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Derived Column Output2]"
-              endId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7.Inputs[Data Conversion Input]"
+              endId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode.Inputs[Data Conversion Input]"
               name="Derived Column Output"
               startId="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Add SourceID column.Outputs[Derived Column Output]" />
             <path
@@ -21021,7 +21029,7 @@ and SourceID=?</property>
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="313.6,345.6"
-          Size="313.6,388"
+          Size="313.6,388.8"
           Id="ddb23e59-480e-4d11-9023-5171279e940d"
           TopLeft="250.200012176378,28.5058834146875">
           <GroupLayout.ChildrenIds>
@@ -21208,7 +21216,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21446,7 +21456,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21468,7 +21480,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21490,7 +21504,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21512,7 +21528,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -21813,7 +21831,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21835,7 +21855,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21857,7 +21879,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22260,7 +22284,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\Add SourceID"
           TopLeft="251.608731954895,91.9967330318389" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output12]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output11]"
           TopLeft="291.503969989312,224.894119933165">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22296,7 +22320,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output9]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output8]"
           TopLeft="347.770636655979,224.894119933165">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22332,7 +22356,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output12]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output8]"
           TopLeft="474.341273909777,332.972552821474">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22350,7 +22374,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22372,11 +22398,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output5]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output10]"
           TopLeft="321.869446217802,56.1490195273631">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22394,7 +22422,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -22413,11 +22443,11 @@ and SourceID=?</property>
             <s:String>Package\Contants Stage to NDS\Lookup Code Gender</s:String>
             <s:String>Package\Contants Stage to NDS\Update Gender NDS</s:String>
             <s:String>Package\Contants Stage to NDS\Add SourceID</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output12]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output9]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output12]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output11]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output8]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output8]</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output14]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output5]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output10]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -22445,7 +22475,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\Add SourceID AgeBand"
           TopLeft="188.222298782282,97.5479317260957" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output1]"
           TopLeft="248.708013027449,222.557518800595">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22517,7 +22547,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output23]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output17]"
           TopLeft="444.688894702708,309.578217188783">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22535,11 +22565,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output24]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output16]"
           TopLeft="280.198489238199,139.147931726096">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22557,11 +22589,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output10]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output9]"
           TopLeft="279.614362220282,62.394117861553">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22579,7 +22613,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -22598,11 +22634,11 @@ and SourceID=?</property>
             <s:String>Package\Contants Stage to NDS\AgeBand NDS</s:String>
             <s:String>Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt AgeBand</s:String>
             <s:String>Package\Contants Stage to NDS\Add SourceID AgeBand</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output1]</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output7]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output23]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output24]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output10]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output17]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output16]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output9]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -22630,7 +22666,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\Lookup Code CasualtyType"
           TopLeft="152.651878407851,150.745842797564" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output10]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output9]"
           TopLeft="222.518545074518,192.345842797564">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22666,7 +22702,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output10]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output9]"
           TopLeft="288.385211741184,192.345842797564">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22702,7 +22738,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output21]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output19]"
           TopLeft="258.570384937435,117.580393145324">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22720,11 +22756,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output5]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output7]"
           TopLeft="455.040878825461,277.987257691278">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22742,11 +22780,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output9]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output8]"
           TopLeft="258.865875685574,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22764,7 +22804,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -22783,11 +22825,11 @@ and SourceID=?</property>
             <s:String>Package\Contants Stage to NDS\Add SourceID CasualtyType</s:String>
             <s:String>Package\Contants Stage to NDS\CasualtyType NDS</s:String>
             <s:String>Package\Contants Stage to NDS\Lookup Code CasualtyType</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output10]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output10]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output21]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output5]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output9]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output9]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output9]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output19]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output7]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output8]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -22887,7 +22929,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output16]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output24]"
           TopLeft="480.361333607991,296.214679218448">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22905,11 +22947,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output10]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output2]"
           TopLeft="299.861474915984,141.089306130998">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22927,7 +22971,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22949,7 +22995,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -22970,8 +23018,8 @@ and SourceID=?</property>
             <s:String>Package\Contants Stage to NDS\Update UrbanOrRuralArea NDS</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output4]</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output5]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output16]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output10]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output24]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output2]</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output4]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
@@ -23000,7 +23048,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\Lookup Code CasualtySeverity"
           TopLeft="175.370132763,163.597150167341" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output2]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output6]"
           TopLeft="250.036799429667,205.197150167341">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23036,7 +23084,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output1]"
           TopLeft="320.703466096333,205.197150167341">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23090,11 +23138,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output9]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output3]"
           TopLeft="460.802386737481,309.531375780733">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23112,11 +23162,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output1]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output2]"
           TopLeft="284.56786012765,48.374509821796">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23134,7 +23186,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -23153,11 +23207,11 @@ and SourceID=?</property>
             <s:String>Package\Contants Stage to NDS\CasualtySeverity NDS</s:String>
             <s:String>Package\Contants Stage to NDS\Updade CasualtySeverity NDS</s:String>
             <s:String>Package\Contants Stage to NDS\Lookup Code CasualtySeverity</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output2]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output6]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output1]</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output9]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output1]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output3]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output2]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -23221,7 +23275,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output1]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output2]"
           TopLeft="343.880162362866,203.3549041522">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23257,7 +23311,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output8]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output4]"
           TopLeft="315.881749689457,131.812419488714">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23275,11 +23329,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output19]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output21]"
           TopLeft="479.975800024673,307.322225422953">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23297,7 +23353,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23319,7 +23377,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -23339,9 +23399,9 @@ and SourceID=?</property>
             <s:String>Package\Contants Stage to NDS\Add SourceID AgeGroup</s:String>
             <s:String>Package\Contants Stage to NDS\Age_Group Stage</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output7]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output1]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output8]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output19]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output2]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output4]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output21]</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output6]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
@@ -23370,7 +23430,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\Accident_Severity NDS"
           TopLeft="378.535720638477,336.426475229351" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output11]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output10]"
           TopLeft="265.556622796865,207.618718828757">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23406,7 +23466,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output11]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output10]"
           TopLeft="336.223289463531,207.618718828757">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23442,7 +23502,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output15]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output12]"
           TopLeft="471.428577370791,310.997062075793">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23460,11 +23520,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output7]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output5]"
           TopLeft="300.889956130198,133.401694614985">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23482,11 +23544,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output1]"
           TopLeft="297.76495607698,49.9676470990413">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23504,7 +23568,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -23523,11 +23589,11 @@ and SourceID=?</property>
             <s:String>Package\Contants Stage to NDS\Add SourceID AccidentSeverity</s:String>
             <s:String>Package\Contants Stage to NDS\Accident_Severity Stage</s:String>
             <s:String>Package\Contants Stage to NDS\Accident_Severity NDS</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output11]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output11]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output15]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output7]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output10]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output10]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output12]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output5]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output1]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -23591,7 +23657,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output4]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output]"
           TopLeft="331.090948897609,199.015777531628">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23627,7 +23693,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output20]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output25]"
           TopLeft="292.024282230942,124.798753317858">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23645,11 +23711,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output22]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output20]"
           TopLeft="484.228577370789,297.61470894694">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23667,11 +23735,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output11]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output]"
           TopLeft="288.452853598692,53.7911765644295">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23689,7 +23759,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -23709,10 +23781,10 @@ and SourceID=?</property>
             <s:String>Package\Contants Stage to NDS\Local_Authority_District NDS</s:String>
             <s:String>Package\Contants Stage to NDS\Update LocalAuthorityDistrict NDS</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output8]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output4]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output25]</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output20]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output22]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output11]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -23740,7 +23812,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\BuiltUpRoad NDS"
           TopLeft="376.750006322346,329.735298664924" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output1]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output2]"
           TopLeft="261.302856344759,210.48636592779">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23812,7 +23884,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output1]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output13]"
           TopLeft="453.778577264351,298.570591313284">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23830,7 +23902,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23852,11 +23926,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output3]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output11]"
           TopLeft="291.517142028634,59.526470762512">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23874,7 +23950,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -23893,11 +23971,11 @@ and SourceID=?</property>
             <s:String>Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt BuiltUpRoad</s:String>
             <s:String>Package\Contants Stage to NDS\Add SourceID BuiltUpRoad</s:String>
             <s:String>Package\Contants Stage to NDS\BuiltUpRoad NDS</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output1]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output2]</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output6]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output1]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output13]</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output11]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output3]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output11]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -23925,7 +24003,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\Vehicle_Type Stage"
           TopLeft="201.672496275658,15.0588236634708" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output9]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output5]"
           TopLeft="257.684401083178,197.10401279893">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23961,7 +24039,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output12]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output11]"
           TopLeft="321.417734416512,197.10401279893">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23997,7 +24075,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output4]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output6]"
           TopLeft="453.825005843388,291.66699644522">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24015,11 +24093,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output18]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output22]"
           TopLeft="289.551067749845,123.842870951508">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24037,7 +24117,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -24059,7 +24141,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -24078,10 +24162,10 @@ and SourceID=?</property>
             <s:String>Package\Contants Stage to NDS\Update VehicleType NDS</s:String>
             <s:String>Package\Contants Stage to NDS\Add SourceID VehicleType</s:String>
             <s:String>Package\Contants Stage to NDS\Vehicle_Type Stage</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output9]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output12]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output4]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output18]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output5]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output11]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output6]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output22]</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output12]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
@@ -24094,7 +24178,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\JourneyPurpose NDS"
           TopLeft="374.071434848169,325.911769199537" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output3]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output9]"
           TopLeft="461.932148685326,288.055885283466">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24112,7 +24196,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
@@ -24120,7 +24206,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt JourneyPurpose"
           TopLeft="321.392862522482,246.455885283466" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output3]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output4]"
           TopLeft="325.262774049292,197.104012798941">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24160,7 +24246,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\Lookup Code JourneyPurpose"
           TopLeft="181.529440715959,155.504012798941" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output17]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output23]"
           TopLeft="288.990154978865,126.391890595108">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24178,7 +24264,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -24226,7 +24314,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\Add SourceID JourneyPurpose"
           TopLeft="177.250869241772,84.7918905951076" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output8]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output7]"
           TopLeft="288.097297820803,58.5705883961649">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24244,7 +24332,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -24259,15 +24349,15 @@ and SourceID=?</property>
           <GroupLayout.ChildrenIds>
             <s:String>Package\Contants Stage to NDS\Journey_Purpose Stage</s:String>
             <s:String>Package\Contants Stage to NDS\JourneyPurpose NDS</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output3]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output9]</s:String>
             <s:String>Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt JourneyPurpose</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output3]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output4]</s:String>
             <s:String>Package\Contants Stage to NDS\Lookup Code JourneyPurpose</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output17]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output23]</s:String>
             <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output3]</s:String>
             <s:String>Package\Contants Stage to NDS\Update JourneyPurpose NDS</s:String>
             <s:String>Package\Contants Stage to NDS\Add SourceID JourneyPurpose</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output8]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output7]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -24279,7 +24369,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt RoadType"
           TopLeft="317.821433890232,263.661767877713" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output2]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output3]"
           TopLeft="329.647099220488,218.133424858566">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24315,7 +24405,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output25]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output15]"
           TopLeft="444.114291474042,305.261767877713">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24333,7 +24423,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
@@ -24341,7 +24433,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\Lookup Code RoadType"
           TopLeft="204.580432553821,176.533424858566" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output6]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output1]"
           TopLeft="299.380432553821,143.279145733899">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24359,11 +24451,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output6]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output12]"
           TopLeft="269.113765887155,218.133424858566">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24411,7 +24505,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\RoadType NDS"
           TopLeft="369.607149057852,343.117651793782" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output2]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output3]"
           TopLeft="296.701861079634,62.3941178615529">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24429,7 +24523,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -24444,15 +24540,15 @@ and SourceID=?</property>
           <GroupLayout.ChildrenIds>
             <s:String>Package\Contants Stage to NDS\Road_Type Stage</s:String>
             <s:String>Package\Contants Stage to NDS\Add CreatedAt, UpdatedAt RoadType</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output2]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output25]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output3]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output15]</s:String>
             <s:String>Package\Contants Stage to NDS\Lookup Code RoadType</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output6]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output6]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output1]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output12]</s:String>
             <s:String>Package\Contants Stage to NDS\Update RoadTypeNDS</s:String>
             <s:String>Package\Contants Stage to NDS\Add SourceID RoadType</s:String>
             <s:String>Package\Contants Stage to NDS\RoadType NDS</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output2]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output3]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
         <NodeLayout
@@ -24480,7 +24576,7 @@ and SourceID=?</property>
           Id="Package\Contants Stage to NDS\Lookup Code TimeOfDay"
           TopLeft="186.928574518281,194.361764504793" />
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output5]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Match Output]"
           TopLeft="253.328574518281,235.961764504793">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24516,7 +24612,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output8]"
+          Id="Package\Contants Stage to NDS.Paths[Lookup Error Output12]"
           TopLeft="315.728574518281,235.961764504793">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24552,7 +24648,7 @@ and SourceID=?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output2]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output10]"
           TopLeft="285.885717381507,150.038235312892">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24570,11 +24666,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[Derived Column Output13]"
+          Id="Package\Contants Stage to NDS.Paths[Derived Column Output18]"
           TopLeft="462.985720319165,340.429411603835">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24592,11 +24690,13 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output7]"
+          Id="Package\Contants Stage to NDS.Paths[OLE DB Source Output5]"
           TopLeft="286.560717498587,64.3058825942471">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24614,7 +24714,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <GroupLayout
@@ -24633,11 +24735,11 @@ and SourceID=?</property>
             <s:String>Package\Contants Stage to NDS\Time_of_Day Stage</s:String>
             <s:String>Package\Contants Stage to NDS\Update TimeOfDay NDS</s:String>
             <s:String>Package\Contants Stage to NDS\Lookup Code TimeOfDay</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output5]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output8]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output2]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output13]</s:String>
-            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output7]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Match Output]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Lookup Error Output12]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output10]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[Derived Column Output18]</s:String>
+            <s:String>Package\Contants Stage to NDS.Paths[OLE DB Source Output5]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
       </GraphLayout>
@@ -25331,7 +25433,7 @@ and SourceID=?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-143.024720052084,34.0333333333333,96.3827734375,11.609375"
+              BoundingBox="-143.024720052083,34.0333333333333,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -25559,13 +25661,13 @@ and SourceID=?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="220,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage"
-          TopLeft="278,42" />
-        <NodeLayout
           Size="145.6,41.6"
           Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\TownCity NDS"
           TopLeft="793.333333333334,543.333333333333" />
+        <NodeLayout
+          Size="136,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date"
+          TopLeft="458.333333333333,438" />
         <NodeLayout
           Size="183.2,41.6"
           Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup TownCity NDS"
@@ -25575,13 +25677,17 @@ and SourceID=?</property>
           Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Add timestamps"
           TopLeft="786.333333333333,444.666666666667" />
         <NodeLayout
-          Size="165.6,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, pcd7"
-          TopLeft="637,147" />
+          Size="185.6,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Convert lsoa, postcode"
+          TopLeft="623.428571197451,148.529411786155" />
         <NodeLayout
-          Size="136,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date"
-          TopLeft="458.333333333333,438" />
+          Size="220,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage"
+          TopLeft="278,42" />
+        <NodeLayout
+          Size="185.6,41.6"
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command"
+          TopLeft="433.666666666666,541.333333333333" />
         <NodeLayout
           Size="172,41.6"
           Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Lookup County NDS"
@@ -25590,54 +25696,6 @@ and SourceID=?</property>
           Size="180.8,41.6"
           Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Add SourceID column"
           TopLeft="628.666666666667,41" />
-        <NodeLayout
-          Size="185.6,41.6"
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Update date command"
-          TopLeft="433.666666666666,541.333333333333" />
-        <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Derived Column Output2]"
-          TopLeft="719.433333333334,82.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64.4"
-              Start="0,0"
-              End="0,56.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Derived Column Output1]"
-          TopLeft="864.833333333333,486.266666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57.0666666666659"
-              Start="0,0"
-              End="0,49.5666666666659">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5666666666659" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Derived Column Output]"
           TopLeft="526.4,479.6">
@@ -25662,18 +25720,18 @@ and SourceID=?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Data Conversion Output]"
-          TopLeft="719.066666666667,188.6">
+          TopLeft="717.280952265393,190.129411786155">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,54.066666666667"
+              EndConnector="0,52.5372548805117"
               Start="0,0"
-              End="0,46.566666666667">
+              End="0,45.0372548805117">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46.566666666667" />
+                    End="0,45.0372548805117" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25800,17 +25858,53 @@ and SourceID=?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Derived Column Output2]"
+          TopLeft="717.647618932059,82.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65.9294117861553"
+              Start="0,0"
+              End="0,58.4294117861553">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.4294117861553" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postcodes LSOA_PCD Stage to TownCity NDS.Paths[Derived Column Output1]"
+          TopLeft="864.833333333333,486.266666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.0666666666659"
+              Start="0,0"
+              End="0,49.5666666666659">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5666666666659" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Postcodes LSOA_PCD Stage to TownCity NDS\TownCity NDS">
     <Properties>
@@ -25830,7 +25924,7 @@ and SourceID=?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -25840,8 +25934,16 @@ and SourceID=?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Postcodes LSOA_PCD Stage to TownCity NDS\Postcodes + LSOA_PCD Stage">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -25930,7 +26032,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26096,7 +26200,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26118,7 +26224,9 @@ and SourceID=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
