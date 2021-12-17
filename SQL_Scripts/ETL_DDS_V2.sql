@@ -1,6 +1,6 @@
-Create database ETL_DDS
+Create database ETL_DDS_V2
 go
-Use ETL_DDS
+Use ETL_DDS_V2
 go
 Create table FactCasualties(
 	CasualtyIndex int,
@@ -11,17 +11,30 @@ Create table FactCasualties(
 	CasualtyTypeIndex int,
 	GenderIndex int,
 	AgeBandIndex int,
-	TimeOfDayIndex int,
-	AccidentSeverityIndex int,
-	UrbanOrRuralAreaIndex int,
-	RoadTypeIndex int,
 	AgeGroupIndex int,
-	VehicleTypeIndex int,
-	JourneyPurposeIndex int,
-	BuiltUpRoadIndex int,
-	TownCityIndex int,
 	DateIndex int,
 	PRIMARY KEY (CasualtyIndex)
+)
+go
+Create table FactAccidents(
+	AccidentID int,
+	AccidentSeverityIndex int,
+	DateIndex int,
+	TimeOfDayIndex int,
+	UrbanOrRuralAreaIndex int,
+	RoadTypeIndex int,
+	TownCityIndex int,
+	PRIMARY KEY (AccidentID)
+)
+go
+Create table FactVehicles(
+	VehicleIndex int,
+	AccidentSeverityIndex int,
+	JourneyPurposeIndex int,
+	BuiltUpRoadIndex int,
+	VehicleTypeIndex int,
+	DateIndex int,
+	PRIMARY KEY (VehicleIndex)
 )
 go
 Create table DimTimeOfDay(
@@ -159,8 +172,8 @@ Create table DimCasualtyType(
 )
 Go
 
-ALTER TABLE FactCasualties
-ADD CONSTRAINT fk_Casualties_TimeOfDay
+ALTER TABLE FactAccidents
+ADD CONSTRAINT fk_Accidents_TimeOfDay
   FOREIGN KEY (TimeOfDayIndex)
   REFERENCES DimTimeOfDay (TimeOfDayIndex);
 
@@ -179,13 +192,13 @@ ADD CONSTRAINT fk_Casualties_Gender
   FOREIGN KEY (GenderIndex)
   REFERENCES DimGender (GenderIndex);
 
-ALTER TABLE FactCasualties
-ADD CONSTRAINT fk_Casualties_JourneyPurpose
+ALTER TABLE FactVehicles
+ADD CONSTRAINT fk_Vehicles_JourneyPurpose
   FOREIGN KEY (JourneyPurposeIndex)
   REFERENCES DimJourneyPurpose (JourneyPurposeIndex);
 
-ALTER TABLE FactCasualties
-ADD CONSTRAINT fk_Casualties_BuiltUpRoad
+ALTER TABLE FactVehicles
+ADD CONSTRAINT fk_Vehicles_BuiltUpRoad
   FOREIGN KEY (BuiltUpRoadIndex)
   REFERENCES DimBuiltUpRoad (BuiltUpRoadIndex);
 
@@ -194,18 +207,18 @@ ADD CONSTRAINT fk_Casualties_AgeGroup
   FOREIGN KEY (AgeGroupIndex)
   REFERENCES DimAgeGroup (AgeGroupIndex);
 
-ALTER TABLE FactCasualties
-ADD CONSTRAINT fk_Casualties_RoadType
+ALTER TABLE FactAccidents
+ADD CONSTRAINT fk_Accidents_RoadType
   FOREIGN KEY (RoadTypeIndex)
   REFERENCES DimRoadType (RoadTypeIndex);
 
-ALTER TABLE FactCasualties
-ADD CONSTRAINT fk_Casualties_UrbanOrRuralArea
+ALTER TABLE FactAccidents
+ADD CONSTRAINT fk_Accidents_UrbanOrRuralArea
   FOREIGN KEY (UrbanOrRuralAreaIndex)
   REFERENCES DimUrbanRural (UrbanRuralIndex);
 
-ALTER TABLE FactCasualties
-ADD CONSTRAINT fk_Casualties_VehicleType
+ALTER TABLE FactVehicles
+ADD CONSTRAINT fk_Vehicles_VehicleType
   FOREIGN KEY (VehicleTypeIndex)
   REFERENCES DimVehicleType (VehicleTypeIndex);
 
@@ -219,8 +232,8 @@ ADD CONSTRAINT fk_Casualties_CasualtySeverity
   FOREIGN KEY (CasualtySeverityIndex)
   REFERENCES DimCasualtySeverity (CasualtySeverityIndex);
 
-ALTER TABLE FactCasualties
-ADD CONSTRAINT fk_Casualties_TownCity
+ALTER TABLE FactAccidents
+ADD CONSTRAINT fk_Accidents_TownCity
   FOREIGN KEY (TownCityIndex)
   REFERENCES DimTownCity (TownCityIndex);
 
@@ -229,8 +242,23 @@ ADD CONSTRAINT fk_Casualties_Day
   FOREIGN KEY (DateIndex)
   REFERENCES DimDate (DateIndex);
 
-ALTER TABLE FactCasualties
-ADD CONSTRAINT fk_Casualties_AccidentSeverity
+ALTER TABLE FactAccidents
+ADD CONSTRAINT fk_Accidents_Day
+  FOREIGN KEY (DateIndex)
+  REFERENCES DimDate (DateIndex);
+
+ALTER TABLE FactVehicles
+ADD CONSTRAINT fk_Vehicles_Day
+  FOREIGN KEY (DateIndex)
+  REFERENCES DimDate (DateIndex);
+
+ALTER TABLE FactAccidents
+ADD CONSTRAINT fk_Accidents_AccidentSeverity
+  FOREIGN KEY (AccidentSeverityIndex)
+  REFERENCES DimAccidentSeverity (AccidentSeverityIndex);
+
+ALTER TABLE FactVehicles
+ADD CONSTRAINT fk_Vehicles_AccidentSeverity
   FOREIGN KEY (AccidentSeverityIndex)
   REFERENCES DimAccidentSeverity (AccidentSeverityIndex);
 

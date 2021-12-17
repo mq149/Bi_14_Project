@@ -104,6 +104,8 @@ CREATE TABLE TownCity
 	CityName varchar(50),
 	County int,
 	SourceID int,
+	[latitude] [varchar](50),
+	[longitude] [varchar](50),
 	CreatedAt datetime,
 	UpdatedAt datetime
 	CONSTRAINT PK_TC PRIMARY KEY(TownCityIndex)
